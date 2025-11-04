@@ -8,4 +8,9 @@ pnpm-debug.log*
 .npm-cache/
 .astro/
 **/src/env.d.ts
+# Deploy keys (não versionar)
+shiba_pages_ed25519
+shiba_pages_ed25519.pub
+*.pem
+*.key
 
