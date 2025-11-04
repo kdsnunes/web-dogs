@@ -1,0 +1,19 @@
+{
+  "name": "@shiba/ui",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "main": "./package.json",
+  "exports": {
+    ".": "./package.json",
+    "./components/*": "./src/components/*",
+    "./styles/*": "./src/styles/*"
+  },
+  "files": [
+    "src/components",
+    "src/styles",
+    "package.json"
+  ],
+  "license": "MIT"
+}
+

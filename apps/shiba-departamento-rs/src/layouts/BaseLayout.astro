@@ -1,0 +1,22 @@
+---
+import Header from '@shiba/ui/components/Header.astro';
+import Footer from '@shiba/ui/components/Footer.astro';
+import '@shiba/ui/styles/theme.css';
+
+const { title = 'Departamento da Raça Shiba Inu – RS' } = Astro.props;
+---
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header title={title} />
+    <main class="container prose">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+  </html>
+

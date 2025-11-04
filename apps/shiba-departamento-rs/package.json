@@ -1,0 +1,17 @@
+{
+  "name": "@apps/shiba-departamento-rs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^4.15.0"
+  },
+  "dependencies": {
+    "@shiba/ui": "workspace:*"
+  }
+}
+

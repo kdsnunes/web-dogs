@@ -1,0 +1,21 @@
+{
+  "name": "web-dogs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:rs": "npm --workspace @apps/shiba-departamento-rs run dev",
+    "build:rs": "npm --workspace @apps/shiba-departamento-rs run build",
+    "dev:br": "npm --workspace @apps/shiba-conselho run dev",
+    "build:br": "npm --workspace @apps/shiba-conselho run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": "true",
+  "workspaces": [
+    "apps/shiba-departamento-rs",
+    "apps/shiba-conselho",
+    "packages/ui"
+  ]
+}

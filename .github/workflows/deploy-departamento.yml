@@ -1,0 +1,43 @@
+name: Deploy Departamento RS (Astro)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'apps/shiba-departamento-rs/**'
+      - 'packages/ui/**'
+      - 'package.json'
+      - 'package-lock.json'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      - name: Build site (shiba-departamento-rs)
+        run: |
+          npm --workspace @apps/shiba-departamento-rs run build
+
+      - name: Publish to gh-pages of external repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_TOKEN }}
+          external_repository: OWNER/site-departamento-rs
+          publish_dir: ./apps/shiba-departamento-rs/dist
+          publish_branch: gh-pages
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+

@@ -1,0 +1,43 @@
+:root {
+  --bg: #0b0c0f;
+  --surface: #121419;
+  --border: #1e2230;
+  --text: #e8ecf2;
+  --text-muted: #b7c0d5;
+  --accent: #e85d34; /* aka shiba red */
+  --accent-2: #f7a46c;
+  --accent-3: #ffd2a2;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.prose h1 { font-size: 2rem; margin: 1.5rem 0 0.75rem; }
+.prose h2 { font-size: 1.5rem; margin: 1.25rem 0 0.5rem; }
+.prose p { color: var(--text-muted); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #101010;
+  background: linear-gradient(180deg, var(--accent-3), var(--accent));
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 24px color-mix(in oklab, var(--accent), transparent 70%);
+}
+
+/* subtle divider */
+.divider { height: 1px; background: var(--border); margin: 24px 0; }
+
