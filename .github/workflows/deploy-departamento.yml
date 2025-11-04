@@ -35,7 +35,7 @@ jobs:
       - name: Publish to gh-pages of external repo
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          personal_token: ${{ secrets.GH_TOKEN }}
           external_repository: kdsnunes/site-departamento-rs
           publish_dir: ./apps/shiba-departamento-rs/dist
           publish_branch: gh-pages
