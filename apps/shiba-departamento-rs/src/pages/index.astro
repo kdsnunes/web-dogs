@@ -3,7 +3,47 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Departamento da Raça Shiba Inu – RS">
-  <h1>Departamento da Raça Shiba Inu – RS</h1>
-  <p>Preservar, promover e conectar apaixonados pela raça Shiba Inu no Rio Grande do Sul.</p>
+  <section class="hero">
+    <div class="kanji" aria-hidden="true">柴</div>
+    <div class="content">
+      <h1>Departamento da Raça Shiba Inu – RS</h1>
+      <p>Preservar, promover e conectar apaixonados pela raça Shiba Inu no Rio Grande do Sul.</p>
+      <div style="margin-top:16px">
+        <a href="/contato" class="btn">Fale conosco</a>
+      </div>
+    </div>
+  </section>
+  <div class="divider" />
+  <section>
+    <h2>Próximos eventos</h2>
+    <p class="muted">Em breve.</p>
+  </section>
 </BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 36px 0 12px;
+  }
+  .kanji {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    font-family: ui-serif, "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: 96px;
+    line-height: 1;
+    background: radial-gradient(65% 65% at 50% 35%, var(--accent-3), var(--accent) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .content h1 { margin-bottom: 8px; }
+  .muted { color: var(--text-muted); }
+</style>
 

@@ -11,8 +11,8 @@ const { title = 'Departamento da Raça Shiba Inu – RS' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
   </head>
-  <body>
-    <Header title={title} />
+  <body class="pattern-seigaiha">
+    <Header title={title} logoSrc="/logo.png" />
     <main class="container prose">
       <slot />
     </main>

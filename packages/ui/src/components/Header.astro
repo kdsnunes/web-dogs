@@ -1,10 +1,15 @@
 ---
-const title: string = Astro.props?.title ?? "Shiba Inu";
+interface Props { title?: string; logoSrc?: string }
+const { title = "Shiba Inu", logoSrc }: Props = Astro.props;
 ---
 <header class="shiba-header">
   <div class="container">
     <a href="/" class="brand" aria-label="Página inicial">
-      <span class="logo">柴</span>
+      {logoSrc ? (
+        <img src={logoSrc} alt="Logotipo" class="logo-img" width="28" height="28" />
+      ) : (
+        <span class="logo">柴</span>
+      )}
       <span class="name">{title}</span>
     </a>
     <nav class="nav">
@@ -49,6 +54,7 @@ const title: string = Astro.props?.title ?? "Shiba Inu";
     background-clip: text;
     color: transparent;
   }
+  .logo-img { height: 28px; width: auto; display: block; }
   .name { font-weight: 600; letter-spacing: 0.2px; }
   .nav { display: inline-flex; gap: 16px; }
   .nav a {
