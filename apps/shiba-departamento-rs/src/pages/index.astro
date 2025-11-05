@@ -3,47 +3,50 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Departamento da Raça Shiba Inu – RS">
-  <section class="hero">
-    <div class="kanji" aria-hidden="true">柴</div>
-    <div class="content">
-      <h1>Departamento da Raça Shiba Inu – RS</h1>
-      <p>Preservar, promover e conectar apaixonados pela raça Shiba Inu no Rio Grande do Sul.</p>
-      <div style="margin-top:16px">
-        <a href="/contato" class="btn">Fale conosco</a>
+  <section class="intro">
+    <div class="intro-media">
+      <img src="/logo.png" alt="Logotipo do Departamento Shiba Inu RS" class="intro-logo" />
+    </div>
+    <div class="intro-text">
+      <h1 class="home-title">Departamento da Raça Shiba Inu – RS</h1>
+      <p>
+        O Departamento da Raça Shiba Inu – Rio Grande do Sul tem como missão promover, preservar e divulgar o verdadeiro Shiba Inu japonês, respeitando os padrões oficiais estabelecidos pela NIPPO e CBKC/FCI.
+      </p>
+      <p>
+        Reunimos criadores, expositores e admiradores da raça, trabalhando juntos para fortalecer a presença do Shiba Inu nas exposições, incentivar a criação responsável e compartilhar o conhecimento sobre sua história, temperamento e essência.
+      </p>
+      <p>
+        Nosso compromisso é representar o Shiba Inu com integridade e respeito às suas origens — mantendo viva a tradição, o espírito (Kan-i), o equilíbrio (Ryō-sei) e a simplicidade (Soboku) que definem o caráter único dessa raça.
+      </p>
+      <div class="intro-actions">
+        <a href="/sobre" class="btn">Leia Mais</a>
+        <a href="#" class="btn secondary" aria-disabled="true">Encontre criadores</a>
       </div>
     </div>
   </section>
-  <div class="divider" />
-  <section>
-    <h2>Próximos eventos</h2>
-    <p class="muted">Em breve.</p>
+
+  <section class="institucional">
+    <h3>Filiado a CBKC/FCI</h3>
+    <p>O Departamento da Raça Shiba Inu – RS atua sob orientação da FECIRS (Federação de Cinofilia do Rio Grande do Sul) e é oficialmente vinculado à CBKC (Confederação Brasileira de Cinofilia), entidade representante da FCI (Fédération Cynologique Internationale) no Brasil.</p>
+    <p>Isso garante que todas as nossas atividades sigam os padrões internacionais de cinofilia, reconhecidos mundialmente. Trabalhamos alinhados às diretrizes que unem os clubes caninos de todo o mundo em prol da preservação e valorização das raças puras.</p>
   </section>
 </BaseLayout>
 
 <style>
-  .hero {
-    position: relative;
+  .intro {
     display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
-    gap: 16px;
-    padding: 36px 0 12px;
+    gap: 20px;
+    align-items: start;
+    padding: 28px 0 16px;
   }
-  .kanji {
-    position: absolute;
-    right: 0;
-    top: -10px;
-    font-family: ui-serif, "Hiragino Mincho ProN", "Yu Mincho", serif;
-    font-size: 96px;
-    line-height: 1;
-    background: radial-gradient(65% 65% at 50% 35%, var(--accent-3), var(--accent) 70%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    opacity: 0.35;
-    pointer-events: none;
+  @media (min-width: 820px) {
+    .intro { grid-template-columns: 380px 1fr; gap: 28px; }
   }
-  .content h1 { margin-bottom: 8px; }
-  .muted { color: var(--text-muted); }
+  .intro-logo { width: 100%; height: auto; max-width: 360px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.08); background: var(--surface); padding: 10px; }
+  .home-title { font-family: "Yuji Mai", serif; font-size: 2.2rem; line-height: 1.1; margin: 4px 0 10px; color: var(--accent); }
+  .intro-actions { margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .institucional { margin: 28px 0 8px; padding: 16px; background: color-mix(in oklab, var(--surface), white 40%); border: 1px solid var(--border); border-radius: 12px; }
 </style>
 

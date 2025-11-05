@@ -1,21 +1,20 @@
 :root {
-  --bg: #0b0c0f;
-  --surface: #121419;
-  --border: #1e2230;
-  --text: #e8ecf2;
-  --text-muted: #b7c0d5;
-  --accent: #e85d34; /* aka shiba red */
-  --accent-2: #f7a46c;
-  --accent-3: #ffd2a2;
-  --indigo: #274060; /* Aizome */
-  --washi: #fff5e6; /* Paper-like cream */
+  /* Washi light palette */
+  --bg: #F5F0E6;
+  --surface: #EAD8C0;
+  --border: #D9CBB4;
+  --text: #2C2C2C;
+  --text-muted: #5a5a5a;
+  --accent: #B3161E; /* beni red */
+  --accent-2: #8C7851; /* brown tea */
+  --accent-3: #D4AF37; /* soft gold */
 }
 
 html, body {
   background: var(--bg);
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  line-height: 1.6;
+  font-family: "Noto Sans JP", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  line-height: 1.7;
 }
 
 .container {
@@ -24,26 +23,35 @@ html, body {
   padding: 0 20px;
 }
 
-.prose h1 { font-size: 2rem; margin: 1.5rem 0 0.75rem; }
-.prose h2 { font-size: 1.5rem; margin: 1.25rem 0 0.5rem; }
-.prose p { color: var(--text-muted); }
+.prose h1 { font-size: 2rem; margin: 1.5rem 0 0.75rem; font-family: "Shippori Mincho B1", "Yuji Syuku", serif; color: var(--accent); letter-spacing: 0.5px; }
+.prose h2 { font-size: 1.5rem; margin: 1.25rem 0 0.5rem; font-family: "Shippori Mincho B1", "Yuji Syuku", serif; color: var(--accent); }
+.prose h3 { font-family: "Shippori Mincho B1", "Yuji Syuku", serif; color: var(--accent); }
+.prose p { color: var(--text); }
+
+a { color: var(--accent); text-decoration-color: color-mix(in oklab, var(--accent), var(--bg) 60%); }
+a:hover { color: color-mix(in oklab, var(--accent), black 10%); background: #0000; }
 
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #101010;
-  background: linear-gradient(180deg, var(--accent-3), var(--accent));
+  color: #fff;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--accent), white 0%), color-mix(in oklab, var(--accent), black 8%));
   padding: 10px 14px;
   border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 4px 24px color-mix(in oklab, var(--accent), transparent 70%);
+  box-shadow: 0 8px 24px color-mix(in oklab, var(--accent), transparent 80%);
+}
+
+.btn.secondary {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--accent-2), white 10%), color-mix(in oklab, var(--accent-2), black 8%));
+  color: #fff;
 }
 
 /* subtle divider */
 .divider { height: 1px; background: var(--border); margin: 24px 0; }
 
-/* Japanese patterns as subtle backgrounds */
+/* Japanese patterns & washi background */
 .pattern-seigaiha {
   background-color: var(--bg);
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'><path d='M0 20q10-20 20 0 10-20 20 0' fill='none' stroke='%231e2230' stroke-width='1' stroke-opacity='0.25'/></svg>");
@@ -54,5 +62,16 @@ html, body {
   background-color: var(--bg);
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path d='M20 0l10 20-10 20L10 20 20 0zm0 0L0 10l10 10L0 30l20-10L40 30 30 20 40 10 20 0' fill='none' stroke='%231e2230' stroke-width='1' stroke-opacity='0.18'/></svg>");
   background-size: 40px 40px;
+}
+
+.washi-bg {
+  background-color: var(--bg);
+  /* Try external texture first, then gentle paper grain fallback */
+  background-image:
+    url('/textures/washi-light.png'),
+    radial-gradient(100% 100% at 0 0, #ffffff40 0%, #0000 70%),
+    radial-gradient(100% 100% at 100% 100%, #00000010 0%, #0000 70%);
+  background-size: cover, auto, auto;
+  background-attachment: fixed, fixed, fixed;
 }
 

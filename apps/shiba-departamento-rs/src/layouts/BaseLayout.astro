@@ -10,9 +10,12 @@ const { title = 'Departamento da Raça Shiba Inu – RS' } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=RocknRoll+One&family=Shippori+Mincho+B1:wght@400;600;700&family=Yuji+Mai&display=swap" rel="stylesheet">
   </head>
-  <body class="pattern-seigaiha">
-    <Header title={title} logoSrc="/logo.png" />
+  <body class="washi-bg">
+    <Header title={title} />
     <main class="container prose">
       <slot />
     </main>
