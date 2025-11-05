@@ -1,4 +1,10 @@
 <footer class="shiba-footer">
+  <div class="partners">
+    <div class="container partners-inner">
+      <span class="label">Parceiros: <strong>Farmina Pet Foods</strong></span>
+      <img src="/farmina_logo.png" alt="Farmina Pet Foods" class="partner-logo" />
+    </div>
+  </div>
   <div class="container">
     <p>© {new Date().getFullYear()} Shiba Inu. Todos os direitos reservados.</p>
     <p class="jp" aria-hidden="true">柴犬</p>
@@ -21,5 +27,9 @@
     justify-content: space-between;
   }
   .jp { font-family: ui-serif, "Hiragino Mincho ProN", "Yu Mincho", serif; opacity: 0.6; }
+  .partners { background: color-mix(in oklab, var(--surface), white 30%); border-bottom: 1px solid var(--border); }
+  .partners-inner { display: flex; align-items: center; gap: 14px; padding: 10px 20px; }
+  .partners .label { color: var(--text-muted); font-weight: 600; }
+  .partner-logo { height: 56px; width: auto; opacity: 0.95; }
 </style>
 

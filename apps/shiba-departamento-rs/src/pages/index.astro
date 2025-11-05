@@ -4,11 +4,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Departamento da Raça Shiba Inu – RS">
   <section class="intro">
+    <h1 class="home-title">Departamento Gaucho da Raça Shiba Inu</h1>
     <div class="intro-media">
       <img src="/logo.png" alt="Logotipo do Departamento Shiba Inu RS" class="intro-logo" />
     </div>
     <div class="intro-text">
-      <h1 class="home-title">Departamento da Raça Shiba Inu – RS</h1>
       <p>
         O Departamento da Raça Shiba Inu – Rio Grande do Sul tem como missão promover, preservar e divulgar o verdadeiro Shiba Inu japonês, respeitando os padrões oficiais estabelecidos pela NIPPO e CBKC/FCI.
       </p>
@@ -19,16 +19,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Nosso compromisso é representar o Shiba Inu com integridade e respeito às suas origens — mantendo viva a tradição, o espírito (Kan-i), o equilíbrio (Ryō-sei) e a simplicidade (Soboku) que definem o caráter único dessa raça.
       </p>
       <div class="intro-actions">
-        <a href="/sobre" class="btn">Leia Mais</a>
-        <a href="#" class="btn secondary" aria-disabled="true">Encontre criadores</a>
+        <a href="/sobre" class="btn-wabi">Leia Mais</a>
+        <a href="#" class="btn-wabi" aria-disabled="true">Encontre Criadores</a>
       </div>
     </div>
   </section>
 
   <section class="institucional">
-    <h3>Filiado a CBKC/FCI</h3>
-    <p>O Departamento da Raça Shiba Inu – RS atua sob orientação da FECIRS (Federação de Cinofilia do Rio Grande do Sul) e é oficialmente vinculado à CBKC (Confederação Brasileira de Cinofilia), entidade representante da FCI (Fédération Cynologique Internationale) no Brasil.</p>
-    <p>Isso garante que todas as nossas atividades sigam os padrões internacionais de cinofilia, reconhecidos mundialmente. Trabalhamos alinhados às diretrizes que unem os clubes caninos de todo o mundo em prol da preservação e valorização das raças puras.</p>
+    <div class="inst-grid">
+      <img src="/cbkc_logo.png" alt="CBKC" class="inst-logo" />
+      <div>
+        <h3>Filiado a CBKC/FCI</h3>
+        <p>O Departamento da Raça Shiba Inu – RS atua sob orientação da FECIRS (Federação de Cinofilia do Rio Grande do Sul) e é oficialmente vinculado à CBKC (Confederação Brasileira de Cinofilia), entidade representante da FCI (Fédération Cynologique Internationale) no Brasil.</p>
+        <p>Isso garante que todas as nossas atividades sigam os padrões internacionais de cinofilia, reconhecidos mundialmente. Trabalhamos alinhados às diretrizes que unem os clubes caninos de todo o mundo em prol da preservação e valorização das raças puras.</p>
+      </div>
+      <img src="/fci_logo.png" alt="FCI" class="inst-logo" />
+    </div>
   </section>
 </BaseLayout>
 
@@ -41,12 +47,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 28px 0 16px;
   }
   @media (min-width: 820px) {
-    .intro { grid-template-columns: 380px 1fr; gap: 28px; }
+    .intro { grid-template-columns: 420px 1fr; gap: 28px; }
   }
-  .intro-logo { width: 100%; height: auto; max-width: 360px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.08); background: var(--surface); padding: 10px; }
-  .home-title { font-family: "Yuji Mai", serif; font-size: 2.2rem; line-height: 1.1; margin: 4px 0 10px; color: var(--accent); }
+  .intro-logo { width: 100%; height: auto; max-width: 420px; border-radius: 10px; box-shadow: none; background: transparent; padding: 0; }
+  .home-title { font-family: "RocknRoll One", sans-serif; font-size: 2.4rem; line-height: 1.1; margin: 0 0 12px; color: var(--accent); text-align: center; grid-column: 1 / -1; }
   .intro-actions { margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap; }
 
   .institucional { margin: 28px 0 8px; padding: 16px; background: color-mix(in oklab, var(--surface), white 40%); border: 1px solid var(--border); border-radius: 12px; }
+  .inst-grid { display: grid; grid-template-columns: 1fr; align-items: center; gap: 16px; }
+  .inst-logo { width: 120px; height: auto; justify-self: center; background: transparent; padding: 0; box-shadow: none; }
+  @media (min-width: 900px) {
+    .inst-grid { grid-template-columns: 140px 1fr 140px; }
+    .inst-logo { justify-self: start; }
+    .inst-grid > .inst-logo:last-child { justify-self: end; }
+  }
 </style>
 
