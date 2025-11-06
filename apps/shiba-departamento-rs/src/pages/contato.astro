@@ -3,7 +3,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Contato — Shiba Inu RS">
-  <h1>Contato</h1>
-  <p>Em breve: formulário e canais oficiais.</p>
+  <section class="contact">
+    <h1>Contato</h1>
+    <div class="stack">
+      <div class="row">
+        <strong>E-mail:</strong>
+        <a class="link" href="mailto:inu.shiba.rs@gmail.com">inu.shiba.rs@gmail.com</a>
+      </div>
+
+      <div class="row">
+        <strong>Instagram:</strong>
+        <a class="link" href="https://instagram.com/departamento.shina.inu.rs" target="_blank" rel="noopener noreferrer">
+          <svg class="ig" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+          </svg>
+          <span>@departamento.shina.inu.rs</span>
+        </a>
+      </div>
+
+      <p class="muted">Desculpe, estamos com o site ainda em construção. Aguarde que logo teremos mais canais de contato.</p>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .contact { margin: 0 0 24px; padding: 16px; background: color-mix(in oklab, var(--surface), white 40%); border: 1px solid var(--border); border-radius: 12px; }
+  .contact h1 { margin-top: 0; }
+  .stack { display: grid; gap: 12px; }
+  .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .link { color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+  .link:hover { color: var(--accent); text-decoration: underline; }
+  .ig { width: 20px; height: 20px; }
+  .muted { color: var(--text-muted); margin-top: 8px; }
+</style>
 
