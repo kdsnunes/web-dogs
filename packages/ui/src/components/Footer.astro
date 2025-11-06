@@ -1,8 +1,17 @@
 <footer class="shiba-footer">
   <div class="partners">
-    <div class="container partners-inner">
-      <span class="label">Parceiros: <strong>Farmina Pet Foods</strong></span>
-      <img src="/farmina_logo.png" alt="Farmina Pet Foods" class="partner-logo" />
+    <div class="container partners-bar">
+      <span class="label-left">Parceiros:</span>
+      <div class="partners-inner">
+        <div class="partner">
+          <span class="name">Farmina Pet Foods</span>
+          <img src="/farmina_logo.png" alt="Farmina Pet Foods" class="partner-logo" />
+        </div>
+        <div class="partner">
+          <span class="name">The Shiba Shop</span>
+          <img src="/the_shiba_shop.svg" alt="The Shiba Shop" class="partner-logo" />
+        </div>
+      </div>
     </div>
   </div>
   <div class="container">
@@ -28,8 +37,10 @@
   }
   .jp { font-family: ui-serif, "Hiragino Mincho ProN", "Yu Mincho", serif; opacity: 0.6; }
   .partners { background: color-mix(in oklab, var(--surface), white 30%); border-bottom: 1px solid var(--border); }
-  .partners-inner { display: flex; align-items: center; gap: 14px; padding: 10px 20px; }
-  .partners .label { color: var(--text-muted); font-weight: 600; }
-  .partner-logo { height: 56px; width: auto; opacity: 0.95; }
+  .partners-bar { display: flex; align-items: center; gap: 16px; padding: 12px 20px; }
+  .label-left { color: var(--text-muted); font-weight: 700; margin-right: auto; }
+  .partners-inner { display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
+  .partner { display: inline-flex; align-items: center; gap: 10px; color: var(--text-muted); font-weight: 600; }
+  .partner-logo { height: 64px; width: auto; opacity: 0.98; }
 </style>
 

@@ -2,8 +2,68 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Sobre — Shiba Inu RS">
-  <h1>Sobre</h1>
-  <p>Conteúdo em breve.</p>
+<BaseLayout title="Quem Somos — Departamento da Raça Shiba Inu – RS">
+  <section class="about prose">
+    <h1>Quem Somos</h1>
+    <p>
+      O Departamento da Raça Shiba Inu – Rio Grande do Sul é uma entidade dedicada à preservação, promoção e valorização do verdadeiro Shiba Inu japonês.
+    </p>
+    <p>
+      Nasceu do propósito de reunir criadores, expositores e admiradores da raça, criando um espaço de troca de conhecimento, ética e respeito às origens.
+    </p>
+    <p>
+      Inspirado nos valores da NIPPO (Nihon Ken Hozonkai), buscamos manter viva a herança cultural e genética do Shiba Inu, uma das mais antigas raças do Japão.
+    </p>
+    <p>
+      Nosso trabalho envolve ações educativas, exposições, encontros e parcerias, criadores e profissionais da área, fortalecendo a cinofilial e promovendo o bem-estar dos cães.
+    </p>
+  </section>
+
+  <section class="board prose">
+    <h2>Direção do departamento</h2>
+    <p>
+      O Departamento é formado por pessoas comprometidas com a raça, atuando de forma voluntária para o desenvolvimento da cinofilia e o fortalecimento da comunidade Shiba Inu no Rio Grande do Sul.
+    </p>
+
+    <div class="roles-grid">
+      <dl class="roles-col">
+        <div class="row"><dt>Direção Geral</dt><dd>Kleber Nunes</dd></div>
+        <div class="row"><dt>Direção Administrativa / Tesouraria</dt><dd>Fernando Chuang</dd></div>
+        <div class="row"><dt>Direção de Divulgação</dt><dd>William Soares</dd></div>
+      </dl>
+      <dl class="roles-col">
+        <div class="row"><dt>Vice Direção</dt><dd>Leonor Guerra</dd></div>
+        <div class="row"><dt>Direção de Exposições e Eventos</dt><dd>Viviane Chuang</dd></div>
+        <div class="row"><dt>Direção Técnica Veterinária</dt><dd>Dr. Márcio Medeiros</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="purpose prose">
+    <h2>Propósito</h2>
+    <p>
+      Conectar criadores, proprietários, e entusiastas através da cultura, do respeito e do amor pela raça Shiba Inu.
+    </p>
+    <p>
+      Preservar o passado e construir um futuro onde o Shiba continue a ser símbolo de beleza, coragem e equilíbrio.
+    </p>
+  </section>
 </BaseLayout>
+
+<style>
+  .about, .board, .purpose { margin: 24px 0; }
+  /* Fundo da seção principal - mesmo estilo da seção .institucional da home */
+  .about { background: color-mix(in oklab, var(--surface), white 40%); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .board { background: color-mix(in oklab, var(--surface), white 40%); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .purpose { background: color-mix(in oklab, var(--surface), white 40%); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .roles-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 8px; }
+  .roles-col { display: grid; gap: 8px; }
+  .roles-col .row { display: grid; grid-template-columns: 1fr; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .roles-col dt { margin: 0; font-weight: 700; color: var(--text); }
+  .roles-col dd { margin: 0; }
+  @media (min-width: 720px) {
+    .roles-grid { grid-template-columns: 1fr 1fr; }
+    .roles-col .row { grid-template-columns: 1fr 2fr; align-items: baseline; }
+  }
+</style>
 

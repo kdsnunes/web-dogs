@@ -4,6 +4,9 @@ import Footer from '@shiba/ui/components/Footer.astro';
 import '@shiba/ui/styles/theme.css';
 
 const { title = 'Departamento da Raça Shiba Inu – RS' } = Astro.props;
+const pathname = Astro.url?.pathname ?? '/';
+const isHome = pathname === '/';
+const isEventDetail = pathname.startsWith('/eventos/') && pathname !== '/eventos';
 ---
 <html lang="pt-BR">
   <head>
@@ -15,8 +18,18 @@ const { title = 'Departamento da Raça Shiba Inu – RS' } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&family=RocknRoll+One&family=Shippori+Mincho+B1:wght@400;600;700&family=Yuji+Mai&display=swap" rel="stylesheet">
   </head>
   <body class="washi-bg">
-    <Header title={title} />
+    <Header title={title} logoSrc={isHome ? undefined : '/logo.png'} />
     <main class="container prose">
+      {isEventDetail && (
+        <div class="back-bar">
+          <button class="btn-enso" onclick="history.back()" aria-label="Voltar">
+            <svg viewBox="0 0 100 100" class="icon-enso" aria-hidden="true" focusable="false">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="8" stroke-dasharray="220 60" stroke-linecap="round"></circle>
+              <path d="M50 25 L35 50 L50 75" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+      )}
       <slot />
     </main>
     <Footer />
@@ -24,4 +37,8 @@ const { title = 'Departamento da Raça Shiba Inu – RS' } = Astro.props;
   </html>
 
 <style>
+  .back-bar { display: flex; align-items: center; margin: 8px 0 8px; }
+  .btn-enso { background: none; border: none; cursor: pointer; color: var(--text); transition: transform 0.2s ease; padding: 0; }
+  .btn-enso:hover { color: var(--accent); transform: scale(1.1); }
+  .icon-enso { width: 36px; height: 36px; }
 </style>

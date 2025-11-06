@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="12º Festival do Japão — RS">
+  <section class="event-detail">
+    <h1>12º Festival do Japão — RS</h1>
+    <p class="event-meta">Local: <strong>Expo-Inter • Esteio</strong> — Datas: <strong>15 e 16/06</strong> — Pavilhão Cultural: <strong>Galpão 52</strong></p>
+
+    <img src="/events/festival_japao_2025.webp" alt="12º Festival do Japão RS — Expo-Inter, Esteio" class="hero" />
+
+    <div class="content">
+      <h2>Sobre o evento</h2>
+      <p>
+        Em breve, compartilharemos fotos e relatos deste encontro especial de estréia do
+        <strong>Departamento Gaúcho da Raça Shiba Inu</strong> no 12º Festival do Japão — RS.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .event-detail { margin: 0 0 24px; padding: 16px; background: color-mix(in oklab, var(--surface), white 40%); border: 1px solid var(--border); border-radius: 12px; }
+  .event-detail h1 { margin-top: 0; }
+  .event-meta { color: var (--text-muted); }
+  .hero { width: 100%; height: auto; border-radius: 10px; margin: 12px 0 24px; box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+  .content h2 { margin-top: 0; }
+</style>
+

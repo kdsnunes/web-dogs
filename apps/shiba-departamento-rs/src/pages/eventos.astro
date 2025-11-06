@@ -1,9 +1,48 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const events = [
+  {
+    slug: '12-festival-do-japao-rs-2025',
+    title: '12º Festival do Japão — RS',
+    image: '/events/festival_japao_2025.webp',
+    date: new Date('2025-06-16'),
+    details: 'Expo-Inter • Esteio — 15 e 16/06 • Pavilhão Cultural: Galpão 52',
+  },
+];
+events.sort((a, b) => b.date.getTime() - a.date.getTime());
 ---
 
 <BaseLayout title="Eventos — Shiba Inu RS">
-  <h1>Eventos</h1>
-  <p>Em breve: calendário de eventos e atividades.</p>
+  <section class="events">
+    <h1>Eventos</h1>
+    <div class="events-list">
+      {events.map((e) => (
+        <article class="event">
+          <a href={`/eventos/${e.slug}`} class="event-link" aria-label={`Abrir evento: ${e.title}`}>
+            <img src={e.image} alt={e.title} class="event-cover" loading="lazy" />
+            <div class="event-meta">
+              <h2 class="event-title">{e.title}</h2>
+              <p class="event-details">{e.details}</p>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .events { margin: 0 0 24px; padding: 16px; background: color-mix(in oklab, var(--surface), white 40%); border: 1px solid var(--border); border-radius: 12px; }
+  .events h1 { margin-top: 0; }
+  .events-list { display: grid; gap: 24px; }
+  .event-link { display: grid; grid-template-columns: 1fr; gap: 12px; text-decoration: none; color: inherit; }
+  .event-link:hover .event-title { text-decoration: underline; }
+  .event-cover { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+  .event-title { font-family: "Shippori Mincho B1", "Yuji Syuku", serif; color: var(--accent); margin: 0; }
+  .event-details { margin: 0; color: var(--text-muted); }
+  @media (min-width: 900px) {
+    .event-link { grid-template-columns: 46% 1fr; align-items: center; }
+  }
+</style>
 
