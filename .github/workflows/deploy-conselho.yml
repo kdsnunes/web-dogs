@@ -1,4 +1,4 @@
-name: Deploy Conselho Brasil (Astro)
+name: Deploy Conselho Shiba Inu (Astro)
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
       - 'packages/ui/**'
       - 'package.json'
       - 'package-lock.json'
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -35,9 +36,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.GH_TOKEN }}
-          external_repository: kdsnunes/site-conselho-brasil
+          external_repository: kdsnunes/site-conselho-shiba
           publish_dir: ./apps/shiba-conselho/dist
           publish_branch: gh-pages
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
-
