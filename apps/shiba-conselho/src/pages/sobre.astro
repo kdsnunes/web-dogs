@@ -2,8 +2,166 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Sobre — Conselho Shiba Inu Brasil">
-  <h1>Sobre</h1>
-  <p>Conteúdo em breve.</p>
+<BaseLayout title="O Conselho — Conselho da Raça Shiba Inu do Brasil">
+
+  <!-- 1. O Conselho -->
+  <section class="section-kamon">
+    <h1>O Conselho</h1>
+    <p>
+      O Conselho Brasileiro da Raça Shiba Inu é uma instância de orientação técnica e institucional
+      dedicada à preservação, padronização e fortalecimento da raça no território nacional.
+    </p>
+    <p>
+      Sua atuação está fundamentada no respeito às origens japonesas do Shiba Inu, aos princípios
+      estabelecidos pela NIPPO (Nihon Ken Hozonkai) e às normativas reconhecidas internacionalmente
+      pela CBKC e pela FCI.
+    </p>
+    <p>
+      O Conselho não substitui os Departamentos estaduais da raça, mas atua como referência nacional,
+      promovendo alinhamento técnico, uniformidade de entendimento sobre o padrão oficial e boas
+      práticas de criação e divulgação.
+    </p>
+    <p>
+      Sua missão central é garantir que o desenvolvimento da raça no Brasil ocorra com responsabilidade,
+      conhecimento e fidelidade às suas características históricas e morfológicas.
+    </p>
+  </section>
+
+  <div class="kamon-divider"></div>
+
+  <!-- 2. Diretrizes -->
+  <section class="section-kamon">
+    <h2>Diretrizes</h2>
+    <p>
+      O Conselho Brasileiro da Raça Shiba Inu fundamenta sua atuação em três pilares essenciais,
+      voltados ao desenvolvimento técnico, ético e sustentável da raça no Brasil:
+    </p>
+
+    <h3>Criadores</h3>
+    <p>
+      O Conselho busca apoiar e orientar criadores na adoção de práticas responsáveis, promovendo:
+    </p>
+    <ul>
+      <li>O bem-estar animal como princípio central da criação;</li>
+      <li>A preservação do padrão oficial da raça;</li>
+      <li>O compromisso com a integridade genética e a responsabilidade ética.</li>
+    </ul>
+    <p>
+      A atuação junto aos criadores tem caráter orientativo e formativo, contribuindo para o
+      fortalecimento da raça de forma consciente e estruturada.
+    </p>
+
+    <div class="line-divider"></div>
+
+    <h3>Juízes</h3>
+    <p>
+      O Conselho reconhece o papel fundamental dos juízes na preservação da tipicidade da raça.
+      Por isso, promove:
+    </p>
+    <ul>
+      <li>Educação técnica sobre o padrão do Shiba Inu;</li>
+      <li>Esclarecimentos sobre características estruturais e funcionais da raça;</li>
+      <li>Incentivo à uniformidade de interpretação do padrão, respeitando sua origem, função e finalidade histórica.</li>
+    </ul>
+    <p>
+      O objetivo é contribuir para julgamentos consistentes, tecnicamente fundamentados e
+      alinhados às diretrizes internacionais.
+    </p>
+
+    <div class="line-divider"></div>
+
+    <h3>Comunidade</h3>
+    <p>
+      O Conselho também atua junto à comunidade de proprietários e admiradores da raça, promovendo:
+    </p>
+    <ul>
+      <li>Educação sobre as características corretas do Shiba Inu;</li>
+      <li>Orientação para identificação de criadores responsáveis e comprometidos com o bem-estar animal;</li>
+      <li>Incentivo à valorização do padrão e da criação ética.</li>
+    </ul>
+    <p>
+      Ao fortalecer a informação e a consciência da comunidade, o Conselho contribui para um
+      ambiente mais transparente e responsável no desenvolvimento da raça no Brasil.
+    </p>
+  </section>
+
+  <div class="kamon-divider"></div>
+
+  <!-- 3. Estrutura Organizacional -->
+  <section class="section-kamon">
+    <h2>Estrutura Organizacional</h2>
+    <p>
+      A estrutura organizacional do Conselho Brasileiro da Raça Shiba Inu é definida em conformidade
+      com as diretrizes institucionais da Confederação Brasileira de Cinofilia (CBKC).
+    </p>
+    <p>
+      A nomeação da coordenação e dos conselheiros é prerrogativa da CBKC, assegurando legitimidade
+      institucional e alinhamento com o sistema oficial de representação da cinofilia no Brasil.
+    </p>
+    <p>
+      A atual composição do Conselho é formada pelos seguintes membros:
+    </p>
+
+    <div class="organizacao">
+      <div class="cargo">
+        <span class="titulo-cargo">Coordenador</span>
+        <span class="nome">Kleber Nunes</span>
+      </div>
+
+      <div class="cargo">
+        <span class="titulo-cargo">Vice-Coordenador</span>
+        <span class="nome">William Soares</span>
+      </div>
+
+      <div class="cargo">
+        <span class="titulo-cargo">Conselheiros</span>
+        <span class="nome">Caroline Dionisio</span>
+        <span class="nome">Luciano Nicacio</span>
+      </div>
+    </div>
+
+    <p>
+      O Conselho atua de maneira colaborativa e técnica, com foco na orientação institucional,
+      na preservação do padrão da raça e na promoção de boas práticas em âmbito nacional.
+    </p>
+    <p>
+      Sua estrutura busca garantir equilíbrio entre representatividade, conhecimento técnico e
+      responsabilidade institucional, contribuindo para o desenvolvimento sustentável e ético
+      da raça Shiba Inu no Brasil.
+    </p>
+  </section>
+
 </BaseLayout>
 
+<style>
+  .organizacao {
+    margin-top: 2.5rem;
+    max-width: 720px;
+  }
+  .cargo {
+    margin-bottom: 2.5rem;
+  }
+  .titulo-cargo {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+  }
+  .nome {
+    display: block;
+    font-size: 1.2rem;
+    font-family: "Shippori Mincho B1", serif;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+  }
+  ul {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0 1rem;
+  }
+  li {
+    margin-bottom: 0.4rem;
+    line-height: 1.7;
+  }
+</style>

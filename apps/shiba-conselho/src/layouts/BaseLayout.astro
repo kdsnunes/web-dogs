@@ -1,22 +1,226 @@
 ---
-import Header from '@shiba/ui/components/Header.astro';
-import Footer from '@shiba/ui/components/Footer.astro';
+import HeaderConselho from '../components/HeaderConselho.astro';
+import FooterConselho from '../components/FooterConselho.astro';
 import '@shiba/ui/styles/theme.css';
 
 const { title = 'Conselho da Raça Shiba Inu do Brasil' } = Astro.props;
+const pathname = Astro.url?.pathname ?? '/';
+const isHome = pathname === '/';
+const isEventDetail = pathname.startsWith('/eventos/') && pathname !== '/eventos';
 ---
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Shippori+Mincho+B1:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <Header title={title} />
+    <HeaderConselho title={title} logoSrc={isHome ? undefined : '/logo.png'} />
     <main class="container prose">
+      {isEventDetail && (
+        <div class="back-bar">
+          <a href="/eventos" class="link-kamon" aria-label="Voltar aos eventos">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            Eventos
+          </a>
+        </div>
+      )}
       <slot />
     </main>
-    <Footer />
+    <FooterConselho />
   </body>
-  </html>
+</html>
 
+<style is:global>
+  /* ═══════════════════════════════════════════
+     KAMON MINIMAL — Conselho da Raça Shiba Inu
+     ═══════════════════════════════════════════ */  /* ── Paleta ── */
+  :root {
+    --bg-main: #FAFAFA;
+    --bg-alt: #F1F1F1;
+    --text-main: #1E1E1E;
+    --text-muted: #6E6E6E;
+    --accent: #A11B1F;
+    --ink-blue: #1E2230;
+
+    /* Mapeamento p/ variáveis do tema compartilhado */
+    --bg: var(--bg-main);
+    --surface: var(--bg-alt);
+    --border: #D8D8D8;
+    --text: var(--text-main);
+    --accent-2: var(--ink-blue);
+    --accent-3: var(--ink-blue);
+  }
+
+  /* ── Reset & Base ── */
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html, body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Noto Serif JP", serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Tipografia ── */
+  .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: var(--ink-blue);
+    margin-bottom: 1.5rem;
+  }
+  .prose h2 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: var(--ink-blue);
+    margin: 3rem 0 1rem;
+  }
+  .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: var(--ink-blue);
+    margin: 2rem 0 0.8rem;
+  }
+  .prose p {
+    color: var(--text-main);
+    margin-bottom: 1rem;
+  }
+  .prose a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  .prose a:hover {
+    border-bottom-color: var(--accent);
+    background: none;
+  }
+
+  /* ── Botão Kamon (selo seco) ── */
+  .btn-kamon {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1.5px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    font-family: "Noto Serif JP", serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .btn-kamon:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* Botão secundário (ink-blue) */
+  .btn-kamon--secondary {
+    border-color: var(--ink-blue);
+    color: var(--ink-blue);
+  }
+  .btn-kamon--secondary:hover {
+    background: var(--ink-blue);
+    color: #fff;
+  }  /* ── Link Kamon (navegação/textual) ── */
+  .link-kamon {
+    position: relative;
+    color: var(--text-main);
+    text-decoration: none;
+    padding-bottom: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+  }
+  .link-kamon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+  .link-kamon:hover::after {
+    width: 100%;
+  }
+
+  /* Sobrescrever btn-wabi do tema compartilhado */
+  .btn-wabi {
+    padding: 10px 24px;
+    border: 1.5px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    font-family: "Noto Serif JP", serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.4px;
+  }
+  .btn-wabi::after { display: none; }
+  .btn-wabi:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  /* ── Divisor Kamon ── */
+  .kamon-divider {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    margin: 3rem auto;
+  }
+
+  /* Divisor fino */
+  .line-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 2.5rem 0;
+  }
+
+  /* ── Seção padrão ── */
+  .section-kamon {
+    margin: 2rem 0;
+    padding: 2rem 2rem;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+  }
+  .section-kamon h1:first-child,
+  .section-kamon h2:first-child { margin-top: 0; }
+
+  /* ── Fundo ── */
+  .washi-bg {
+    background-color: var(--bg-main);
+    background-image: none;
+  }
+
+  /* Header — fundo institucional (componente próprio) */
+  .shiba-header {
+    background: var(--ink-blue);
+  }
+
+</style>
+
+<style>
+  .back-bar {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0 0.5rem;
+  }
+</style>

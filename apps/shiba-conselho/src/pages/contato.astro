@@ -3,7 +3,58 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Contato — Conselho Shiba Inu Brasil">
-  <h1>Contato</h1>
-  <p>Em breve: formulário e canais oficiais.</p>
+
+  <section class="section-kamon">
+    <h1>Contato</h1>
+
+    <dl class="contact-list">
+      <div class="contact-row">
+        <dt>E-mail</dt>
+        <dd>Em breve</dd>
+      </div>
+      <div class="contact-row">
+        <dt>Instagram</dt>
+        <dd>Em breve</dd>
+      </div>
+    </dl>
+
+    <div class="line-divider"></div>
+
+    <p class="notice">
+      Estamos estruturando os canais oficiais do Conselho.
+      Em breve disponibilizaremos e-mail e redes sociais.
+    </p>
+  </section>
+
 </BaseLayout>
 
+<style>
+  .contact-list {
+    margin: 1.5rem 0 0;
+    padding: 0;
+  }
+  .contact-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+  }
+  .contact-row dt {
+    margin: 0;
+    font-weight: 600;
+    color: var(--ink-blue);
+    font-size: 0.9rem;
+    letter-spacing: 0.2px;
+  }
+  .contact-row dd {
+    margin: 0;
+    color: var(--text-muted);
+  }
+  .notice {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+</style>
