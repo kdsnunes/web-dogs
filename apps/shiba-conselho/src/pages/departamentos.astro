@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const departamentos = [
+  {
+    nome: 'Departamento da Raça Shiba Inu – Rio Grande do Sul',
+    estado: 'Rio Grande do Sul',
+    direcao: 'Kleber Nunes',
+    site: 'https://shibainurs.com.br',
+    siteLabel: 'shibainurs.com.br',
+  },
+  {
+    nome: 'Departamento da Raça Shiba Inu – São Paulo',
+    estado: 'São Paulo',
+    direcao: 'Cássio Martins · Luciano Nicacio',
+    site: null,
+    siteLabel: null,
+  },
+  {
+    nome: 'Departamento da Raça Shiba Inu – Pernambuco',
+    estado: 'Pernambuco',
+    direcao: 'André Stamford',
+    site: null,
+    siteLabel: null,
+  },
+];
+---
+
+<BaseLayout title="Departamentos da Raça — Conselho Shiba Inu Brasil">
+
+  <section class="section-kamon">
+    <h1>Departamentos da Raça</h1>
+    <p>
+      Os Departamentos da Raça Shiba Inu constituem as representações regionais vinculadas ao
+      Conselho Brasileiro da Raça Shiba Inu, atuando em âmbito estadual na promoção responsável
+      da cinofilia da raça.
+    </p>
+    <p>
+      Cada Departamento desenvolve suas atividades de forma autônoma em seu respectivo estado,
+      observando as diretrizes técnicas e institucionais estabelecidas pelo Conselho, bem como
+      as normas da CBKC e da FCI.
+    </p>
+    <p>
+      Por meio dos Departamentos, busca-se fortalecer a presença organizada da raça no Brasil,
+      promovendo a comunidade sobre a raça, exposições especializadas, encontros institucionais
+      e ações voltadas ao bem-estar animal e à preservação do padrão oficial.
+    </p>
+    <p>
+      A estrutura descentralizada permite que as particularidades regionais sejam respeitadas,
+      ao mesmo tempo em que se mantém alinhamento nacional quanto aos princípios e objetivos da raça.
+    </p>
+  </section>
+
+  <div class="kamon-divider"></div>
+
+  <section class="section-kamon departamentos">
+    {departamentos.map((d) => (
+      <article class="departamento-item">
+        <h3>{d.nome}</h3>
+        <div class="meta">
+          <p><strong>Estado:</strong> {d.estado}</p>
+          <p><strong>Direção:</strong> {d.direcao}</p>
+          <p>
+            <strong>Site:</strong>{' '}
+            {d.site ? (
+              <a href={d.site} class="link-kamon" target="_blank" rel="noopener noreferrer">
+                {d.siteLabel}
+              </a>
+            ) : (
+              <span class="em-breve">Em breve</span>
+            )}
+          </p>
+        </div>
+      </article>
+    ))}
+  </section>
+
+</BaseLayout>
+
+<style>
+  .departamentos {
+    padding-top: 0.5rem;
+  }
+  .departamento-item {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .departamento-item:first-child {
+    padding-top: 0.5rem;
+  }
+  .departamento-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0.5rem;
+  }
+  .departamento-item h3 {
+    margin: 0 0 1.2rem;
+    font-size: 1.3rem;
+  }
+  .meta p {
+    margin: 0.3rem 0;
+    color: var(--text-muted);
+  }
+  .meta strong {
+    color: var(--text-main);
+  }
+  .em-breve {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+</style>
