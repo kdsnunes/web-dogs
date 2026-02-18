@@ -1,7 +1,16 @@
 <footer class="conselho-footer">
   <div class="container">
     <p>© {new Date().getFullYear()} Conselho da Raça Shiba Inu do Brasil</p>
-    <p class="jp" aria-hidden="true">柴犬</p>
+    <div class="footer-right">
+      <a href="https://www.instagram.com/cbr.shibainu" class="ig-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Conselho">
+        <svg viewBox="0 0 24 24" class="icon-ig" aria-hidden="true" focusable="false">
+          <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
+      </a>
+      <span class="jp" aria-hidden="true">柴犬</span>
+    </div>
   </div>
 </footer>
 
@@ -23,6 +32,23 @@
     color: rgba(255,255,255,0.5);
     font-size: 0.85rem;
     margin: 0;
+  }
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .ig-link {
+    color: rgba(255,255,255,0.5);
+    transition: color 0.25s ease;
+  }
+  .ig-link:hover {
+    color: #fff;
+  }
+  .icon-ig {
+    width: 20px;
+    height: 20px;
+    display: block;
   }
   .jp {
     font-family: ui-serif, "Hiragino Mincho ProN", "Yu Mincho", serif;
