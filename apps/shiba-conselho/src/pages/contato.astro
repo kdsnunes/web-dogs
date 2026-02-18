@@ -14,7 +14,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <div class="contact-row">
         <dt>Instagram</dt>
-        <dd>Em breve</dd>
+        <dd>
+          <a href="https://www.instagram.com/cbr.shibainu" class="instagram-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Conselho">
+            <svg viewBox="0 0 24 24" class="icon-instagram" aria-hidden="true" focusable="false">
+              <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+            <span>@cbr.shibainu</span>
+          </a>
+        </dd>
       </div>
     </dl>
 
@@ -22,7 +31,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <p class="notice">
       Estamos estruturando os canais oficiais do Conselho.
-      Em breve disponibilizaremos e-mail e redes sociais.
+      Em breve disponibilizaremos e-mail e demais canais de contato.
     </p>
   </section>
 
@@ -39,7 +48,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     gap: 12px;
     padding: 14px 0;
     border-bottom: 1px solid var(--border);
-    align-items: baseline;
+    align-items: center;
   }
   .contact-row dt {
     margin: 0;
@@ -51,6 +60,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .contact-row dd {
     margin: 0;
     color: var(--text-muted);
+  }
+  .instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .instagram-link:hover {
+    color: var(--accent);
+  }
+  .icon-instagram {
+    width: 20px;
+    height: 20px;
   }
   .notice {
     color: var(--text-muted);
