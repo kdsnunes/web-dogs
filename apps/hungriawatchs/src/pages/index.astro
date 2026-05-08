@@ -1,17 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const featured = [
-  { name: 'Rolex Submariner', desc: 'Full Steel 41mm Automático', price: 'R$ 89.900' },
-  { name: 'Audemars Piguet Royal Oak', desc: 'Blue Dial 41mm Automático', price: 'R$ 249.900' },
-  { name: 'Omega Speedmaster', desc: 'Moonwatch Professional 42mm', price: 'R$ 45.900' },
-  { name: 'IWC Portugieser', desc: 'Chronograph 41mm Automático', price: 'R$ 52.900' },
-  { name: 'Patek Philippe Nautilus', desc: 'Blue Dial 40mm Automático', price: 'R$ 599.900' },
-  { name: 'Breitling Navitimer', desc: 'B01 Chronograph 43mm', price: 'R$ 38.900' },
+const brands = [
+  { name: 'Rolex', logo: '/brands/rolex.png' },
+  { name: 'Omega', logo: '/brands/omega.png' },
+  { name: 'Tudor', logo: '/brands/tudor-watches.png' },
+  { name: 'Seiko', logo: '/brands/seiko.png' },
+  { name: 'Franck Muller', logo: '/brands/franck-muller-geneve.png' },
+  { name: 'Tissot', logo: '/brands/tissot.png' },
+  { name: 'IWC', logo: '/brands/iwc-schaffhausen.png' },
 ];
 
-const categories = [
-  'Rolex', 'Audemars Piguet', 'Patek Philippe', 'Omega', 'IWC', 'Breitling',
+const featured = [
+  { name: 'Rolex GMT-Master II', desc: 'Bruce Wayne 2025', img: '/watches/rolex-rolex-gmt-master-ii-bruce-wayne-2025-00.png' },
+  { name: 'Omega Seamaster 300', desc: 'Orange Index', img: '/watches/omega-seamaster-omega-seamaster-300-orange-index-00.png' },
+  { name: 'Omega Snoopy 2026', desc: 'Edição Especial', img: '/watches/omega-snoopy-omega-snoopy-2026.png' },
+  { name: 'Tudor Black Bay 58 GMT', desc: 'Automático', img: '/watches/tudor-tudor-black-bay-58-gmt-00.png' },
+  { name: 'Franck Muller Vanguard', desc: 'Black V41SCDTBRNR', img: '/watches/frank-muller-frank-muller-vanguard-black-v41scdtbrnr-00.png' },
+  { name: 'Seiko 5 Sprite GMT', desc: 'Automático SSK035K1', img: '/watches/seiko-seiko-5-seiko-5-sprite-gmt-automatic-mens-ssk035k1-00.png' },
 ];
 ---
 
@@ -21,19 +27,19 @@ const categories = [
   <section class="hero">
     <div class="hero-inner">
       <h1>Alta Relojoaria<br><span>com procedência</span></h1>
-      <p class="hero-sub">Relógios seminovos de luxo com garantia, revisados e autenticados.</p>
+      <p class="hero-sub">Relógios de luxo com garantia, revisados e autenticados.</p>
       <a href="/relogios" class="btn-gold">Ver Coleção</a>
     </div>
   </section>
 
-  <!-- Categorias -->
+  <!-- Marcas -->
   <section class="categories">
     <div class="container">
       <h2>Marcas</h2>
       <div class="cat-grid">
-        {categories.map((cat) => (
+        {brands.map((b) => (
           <a href="/relogios" class="cat-item">
-            <span class="cat-name">{cat}</span>
+            <img src={b.logo} alt={b.name} class="brand-logo" />
           </a>
         ))}
       </div>
@@ -48,12 +54,11 @@ const categories = [
         {featured.map((item) => (
           <article class="product-card">
             <div class="product-img">
-              <div class="placeholder-img"></div>
+              <img src={item.img} alt={item.name} loading="lazy" />
             </div>
             <div class="product-info">
               <h3>{item.name}</h3>
               <p class="product-desc">{item.desc}</p>
-              <span class="product-price">{item.price}</span>
             </div>
           </article>
         ))}
@@ -66,14 +71,13 @@ const categories = [
     <div class="container">
       <h2>Atendimento personalizado</h2>
       <p>Fale com nossos especialistas pelo WhatsApp para encontrar o relógio ideal.</p>
-      <a href="#" class="btn-gold">Fale Conosco</a>
+      <a href="https://wa.me/5547992902838?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20rel%C3%B3gios!" class="btn-gold" target="_blank" rel="noopener">Fale Conosco</a>
     </div>
   </section>
 
 </BaseLayout>
 
 <style>
-  /* Hero */
   .hero {
     position: relative;
     min-height: 70vh;
@@ -110,7 +114,6 @@ const categories = [
     margin: 0 auto 2.5rem;
   }
 
-  /* Botão dourado */
   .btn-gold {
     display: inline-block;
     padding: 14px 36px;
@@ -127,7 +130,7 @@ const categories = [
     color: var(--bg-primary);
   }
 
-  /* Categorias */
+  /* Marcas */
   .categories {
     padding: 5rem 0;
     border-bottom: 1px solid var(--border);
@@ -136,42 +139,40 @@ const categories = [
     text-align: center;
     margin-bottom: 2.5rem;
     font-size: 2rem;
-    color: var(--text-primary);
   }
   .cat-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
-  @media (min-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (min-width: 900px) { .cat-grid { grid-template-columns: repeat(6, 1fr); } }
+  @media (min-width: 600px) { .cat-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 900px) { .cat-grid { grid-template-columns: repeat(7, 1fr); } }
   .cat-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 12px;
+    padding: 20px 16px;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
     transition: all 0.2s ease;
-    text-align: center;
   }
   .cat-item:hover {
     border-color: var(--accent);
     background: rgba(201,169,110,0.05);
   }
-  .cat-name {
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: var(--text-secondary);
+  .brand-logo {
+    height: 28px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
   }
-  .cat-item:hover .cat-name { color: var(--accent); }
+  .cat-item:hover .brand-logo { opacity: 1; }
 
   /* Destaques */
-  .featured {
-    padding: 5rem 0;
-  }
+  .featured { padding: 5rem 0; }
   .featured h2 {
     text-align: center;
     margin-bottom: 3rem;
@@ -179,7 +180,7 @@ const categories = [
   }
   .product-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     gap: 24px;
   }
   @media (min-width: 600px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -192,16 +193,21 @@ const categories = [
     transition: border-color 0.2s ease;
   }
   .product-card:hover { border-color: var(--accent); }
-
-  .product-img { position: relative; }
-  .placeholder-img {
-    width: 100%;
+  .product-img {
     aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, #222 100%);
+    overflow: hidden;
+    background: var(--bg-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover .product-img img { transform: scale(1.03); }
 
   .product-info { padding: 20px; }
   .product-info h3 {
@@ -213,12 +219,6 @@ const categories = [
   .product-desc {
     color: var(--text-muted);
     font-size: 0.85rem;
-    margin-bottom: 12px;
-  }
-  .product-price {
-    color: var(--accent);
-    font-size: 1.05rem;
-    font-weight: 600;
   }
 
   /* CTA */
@@ -227,10 +227,7 @@ const categories = [
     text-align: center;
     border-top: 1px solid var(--border);
   }
-  .cta h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
+  .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
   .cta p {
     color: var(--text-secondary);
     margin-bottom: 2rem;
