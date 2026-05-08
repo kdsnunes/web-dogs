@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import catalog from '../data/catalog.json';
 
 const brands = [
   { name: 'Rolex', logo: '/brands/rolex.png' },
@@ -11,14 +12,10 @@ const brands = [
   { name: 'IWC', logo: '/brands/iwc-schaffhausen.png' },
 ];
 
-const featured = [
-  { name: 'Rolex GMT-Master II', desc: 'Bruce Wayne 2025', img: '/watches/rolex-rolex-gmt-master-ii-bruce-wayne-2025-00.png' },
-  { name: 'Omega Seamaster 300', desc: 'Orange Index', img: '/watches/omega-seamaster-omega-seamaster-300-orange-index-00.png' },
-  { name: 'Omega Snoopy 2026', desc: 'Edição Especial', img: '/watches/omega-snoopy-omega-snoopy-2026.png' },
-  { name: 'Tudor Black Bay 58 GMT', desc: 'Automático', img: '/watches/tudor-tudor-black-bay-58-gmt-00.png' },
-  { name: 'Franck Muller Vanguard', desc: 'Black V41SCDTBRNR', img: '/watches/frank-muller-frank-muller-vanguard-black-v41scdtbrnr-00.png' },
-  { name: 'Seiko 5 Sprite GMT', desc: 'Automático SSK035K1', img: '/watches/seiko-seiko-5-seiko-5-sprite-gmt-automatic-mens-ssk035k1-00.png' },
-];
+const featured = catalog
+  .flatMap(b => b.models)
+  .filter(m => m.featured)
+  .slice(0, 6);
 ---
 
 <BaseLayout title="Hungria Watchs — Alta Relojoaria">
@@ -28,7 +25,7 @@ const featured = [
     <div class="hero-inner">
       <h1>Alta Relojoaria<br><span>com procedência</span></h1>
       <p class="hero-sub">Relógios de luxo com garantia, revisados e autenticados.</p>
-      <a href="/relogios" class="btn-gold">Ver Coleção</a>
+      <a href="/catalogo" class="btn-gold">Ver Coleção</a>
     </div>
   </section>
 
@@ -38,7 +35,7 @@ const featured = [
       <h2>Marcas</h2>
       <div class="cat-grid">
         {brands.map((b) => (
-          <a href="/relogios" class="cat-item">
+          <a href="/catalogo" class="cat-item">
             <img src={b.logo} alt={b.name} class="brand-logo" />
           </a>
         ))}
@@ -54,11 +51,11 @@ const featured = [
         {featured.map((item) => (
           <article class="product-card">
             <div class="product-img">
-              <img src={item.img} alt={item.name} loading="lazy" />
+              <img src={item.images[0]} alt={item.name} loading="lazy" />
             </div>
             <div class="product-info">
               <h3>{item.name}</h3>
-              <p class="product-desc">{item.desc}</p>
+              {item.price && <span class="product-price">{item.price}</span>}
             </div>
           </article>
         ))}
@@ -216,9 +213,10 @@ const featured = [
     font-weight: 500;
     margin-bottom: 4px;
   }
-  .product-desc {
-    color: var(--text-muted);
-    font-size: 0.85rem;
+  .product-price {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 600;
   }
 
   /* CTA */

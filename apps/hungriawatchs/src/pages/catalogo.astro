@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import catalog from '../data/catalog.json';
+---
+
+<BaseLayout title="Catálogo — Hungria Watchs">
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Catálogo</h1>
+      <p class="subtitle">Peças autenticadas e revisadas. Entre em contato para valores e disponibilidade.</p>
+    </div>
+  </section>
+
+  {catalog.map((section) => (
+    <section class="brand-section">
+      <div class="container">
+        <h2 class="brand-title">{section.brand}</h2>
+        <div class="product-grid">
+          {section.models.map((w) => (
+            <article class="product-card">
+              <div class="carousel" data-count={w.images.length}>
+                <div class="carousel-track">
+                  {w.images.map((img, i) => (
+                    <div class="carousel-slide" data-index={i}>
+                      <img src={img} alt={`${w.name} - foto ${i + 1}`} loading="lazy" />
+                    </div>
+                  ))}
+                </div>
+                {w.images.length > 1 && (
+                  <div class="carousel-dots">
+                    {w.images.map((_, i) => (
+                      <button class={`dot ${i === 0 ? 'active' : ''}`} data-slide={i} aria-label={`Foto ${i + 1}`}></button>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div class="product-info">
+                <h3>{w.name}</h3>
+                {w.price && <span class="product-price">{w.price}</span>}
+                {!w.price && <span class="product-consult">Consulte</span>}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="cta-bottom">
+    <div class="container">
+      <p>Interessado em alguma peça? Fale conosco pelo WhatsApp.</p>
+      <a href="https://wa.me/5547992902838?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20um%20rel%C3%B3gio!" class="btn-gold" target="_blank" rel="noopener">Consultar Disponibilidade</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: 5rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  .page-header h1 { font-size: 2.5rem; margin-bottom: 0.8rem; }
+  .subtitle { color: var(--text-secondary); font-size: 1rem; }
+
+  .brand-section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 500px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 768px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1100px) { .product-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .product-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+  .product-card:hover { border-color: var(--accent); }
+
+  /* Carousel */
+  .carousel {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--bg-secondary);
+  }
+  .carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  .carousel-slide {
+    min-width: 100%;
+    height: 100%;
+  }
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 2;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.25);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+  }
+  .dot.active {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .product-info { padding: 14px 16px; }
+  .product-info h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  .product-price {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .product-consult {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+
+  .cta-bottom {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .cta-bottom p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  .btn-gold {
+    display: inline-block;
+    padding: 14px 36px;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  .btn-gold:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const dots = carousel.querySelectorAll('.dot');
+    if (!track || dots.length === 0) return;
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.dataset.slide || '0');
+        track.style.transform = `translateX(-${idx * 100}%)`;
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      });
+    });
+
+    let startX = 0;
+    let currentSlide = 0;
+    const count = parseInt(carousel.dataset.count || '1');
+
+    carousel.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', (e) => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0 && currentSlide < count - 1) currentSlide++;
+        else if (diff < 0 && currentSlide > 0) currentSlide--;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach(d => d.classList.remove('active'));
+        if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+      }
+    }, { passive: true });
+  });
+</script>
