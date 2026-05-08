@@ -7,7 +7,9 @@
     "dev:rs": "npm --workspace @apps/shiba-departamento-rs run dev",
     "build:rs": "npm --workspace @apps/shiba-departamento-rs run build",
     "dev:br": "npm --workspace @apps/shiba-conselho run dev",
-    "build:br": "npm --workspace @apps/shiba-conselho run build"
+    "build:br": "npm --workspace @apps/shiba-conselho run build",
+    "dev:hw": "npm --workspace @apps/hungriawatchs run dev",
+    "build:hw": "npm --workspace @apps/hungriawatchs run build"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
   "workspaces": [
     "apps/shiba-departamento-rs",
     "apps/shiba-conselho",
+    "apps/hungriawatchs",
     "packages/ui"
   ]
 }
