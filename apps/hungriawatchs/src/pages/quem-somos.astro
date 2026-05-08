@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Quem Somos — Hungria Watchs">
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Quem Somos</h1>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container">
+      <div class="text-block">
+        <p>
+          A Hungria Watchs é especializada em relógios de alta relojoaria seminovos.
+          Trabalhamos exclusivamente com peças originais, revisadas e autenticadas,
+          garantindo procedência e qualidade em cada transação.
+        </p>
+        <p>
+          Com anos de experiência no mercado de luxo, oferecemos atendimento
+          personalizado e consultoria especializada para colecionadores e entusiastas
+          que buscam peças com história e valor.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-item">
+          <h3>Autenticidade</h3>
+          <p>Todas as peças são verificadas e acompanham certificado de autenticidade.</p>
+        </div>
+        <div class="value-item">
+          <h3>Garantia</h3>
+          <p>Oferecemos garantia em todos os relógios comercializados.</p>
+        </div>
+        <div class="value-item">
+          <h3>Consultoria</h3>
+          <p>Atendimento especializado para encontrar a peça ideal para você.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: 5rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .content {
+    padding: 4rem 0;
+  }
+  .text-block {
+    max-width: 720px;
+    margin: 0 auto 4rem;
+    text-align: center;
+  }
+  .text-block p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 768px) {
+    .values-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .value-item {
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+  .value-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent);
+  }
+  .value-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+</style>
