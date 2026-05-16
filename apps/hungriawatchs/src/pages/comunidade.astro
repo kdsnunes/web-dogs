@@ -1,0 +1,82 @@
+---
+const whatsappLink = 'https://chat.whatsapp.com/CYs7GVqTNVtLWNmZpqgoj5';
+---
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comunidade — Hungria Watchs</title>
+    <meta http-equiv="refresh" content="3;url={whatsappLink}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page">
+      <img src="/logo.png" alt="Hungria Watchs" class="logo" />
+      <h1>Comunidade Hungria Watchs</h1>
+      <p>Você está sendo direcionado para nossa comunidade exclusiva no WhatsApp.</p>
+      <a href={whatsappLink} class="btn">Entrar Agora</a>
+      <span class="hint">Redirecionando automaticamente em 3 segundos...</span>
+    </div>
+  </body>
+</html>
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0D0D0D;
+    color: #fff;
+    font-family: "Inter", -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page {
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 480px;
+  }
+  .logo {
+    height: 56px;
+    width: auto;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: #A0A0A0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  .btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background: #25D366;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    margin-bottom: 1.5rem;
+  }
+  .btn:hover {
+    background: #20bd5a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+  }
+  .hint {
+    display: block;
+    color: #666;
+    font-size: 0.8rem;
+  }
+</style>
