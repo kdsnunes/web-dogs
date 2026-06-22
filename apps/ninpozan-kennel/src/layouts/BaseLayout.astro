@@ -1,11 +1,78 @@
 ---
-const { title = 'Ninpozan Kennel' } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title = 'Ninpozan Kennel — Criação de Shiba Inu',
+  description = 'Ninpozan Kennel: criação responsável de Shiba Inu em Blumenau, SC. Campeões brasileiros, linhagem de sangue internacional e filhotes disponíveis.',
+  ogImage = '/glastonbury.png',
+  canonicalURL = Astro.url.href,
+} = Astro.props;
+
+const siteName = 'Ninpozan Kennel';
+const siteUrl = 'https://ninpozankennel.com.br';
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 ---
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullOgImage} />
+
+    <!-- Extras SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Ninpozan Kennel" />
+    <meta name="geo.region" content="BR-SC" />
+    <meta name="geo.placename" content="Blumenau" />
+    <meta name="theme-color" content="#006039" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ninpozan Kennel",
+      "alternateName": "Ninpozan Shiba Inu Kennel",
+      "url": siteUrl,
+      "logo": `${siteUrl}/nippo.png`,
+      "description": "Criação responsável de Shiba Inu em Blumenau, Santa Catarina. Campeões brasileiros com linhagem internacional.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Blumenau",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-51-99148-1685",
+        "contactType": "customer service",
+        "availableLanguage": "Portuguese"
+      },
+      "sameAs": [
+        "https://www.instagram.com/ninpozan.shiba.inu"
+      ]
+    })} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
