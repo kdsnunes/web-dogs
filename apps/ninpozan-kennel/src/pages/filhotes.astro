@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const ultimaAtualizacao = '21/06/2026';
+---
+
+<BaseLayout title="Filhotes Disponíveis — Ninpozan Kennel">
+
+  <section class="page-header">
+    <div class="container">
+      <a href="/" class="back-link">← Início</a>
+      <div class="divider">
+        <span class="divider-symbol">◆</span>
+      </div>
+      <h1>Filhotes Disponíveis</h1>
+      <p class="page-update">Última atualização: {ultimaAtualizacao}</p>
+    </div>
+  </section>
+
+  <section class="filhotes">
+    <div class="container">
+      <div class="filhotes-grid">
+        <div class="filhote-item panel">
+          <img src="/filhote-1.png" alt="Filhote Shiba Inu" loading="lazy" />
+        </div>
+        <div class="filhote-item panel">
+          <img src="/filhote-2.png" alt="Filhote Shiba Inu" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="filhotes-desc panel">
+        <p>Temos 2 filhotes vermelhos para companhia/pet. 3 meses de idade, ambos com temperamento incrível.</p>
+      </div>
+
+      <div class="filhotes-cta">
+        <a href="https://wa.me/5551991481685?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20filhotes%20dispon%C3%ADveis!" class="btn-panel" target="_blank" rel="noopener">Entrar em Contato</a>
+      </div>
+    </div>
+  </section>
+
+
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--sumi);
+    margin-bottom: 1rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--verde-rolex); }
+  .page-header h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 2.5rem;
+    color: var(--verde-deep);
+    margin-bottom: 0.8rem;
+  }
+  .page-update {
+    font-size: 0.8rem;
+    color: var(--sumi-light);
+    letter-spacing: 0.5px;
+    font-style: italic;
+  }
+
+  /* Filhotes */
+  .filhotes {
+    padding: 3rem 0 5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .filhotes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  @media (min-width: 600px) {
+    .filhotes-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .filhote-item {
+    overflow: hidden;
+    background: var(--papel);
+  }
+  .filhote-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+  }
+
+  .filhotes-desc {
+    margin-top: 3px;
+    padding: 2rem;
+    text-align: center;
+    background: var(--papel);
+  }
+  .filhotes-desc p {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.1rem;
+    color: var(--nanquim);
+    line-height: 1.7;
+  }
+
+  .filhotes-cta {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  .btn-panel {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 3px solid var(--nanquim);
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--nanquim);
+    background: var(--papel);
+    transition: all 0.2s ease;
+  }
+  .btn-panel:hover {
+    background: var(--verde-rolex);
+    border-color: var(--verde-rolex);
+    color: #fff;
+  }
+
+</style>

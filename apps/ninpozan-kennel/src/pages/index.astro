@@ -1,0 +1,367 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const conquistas = [
+  { titulo: 'Shiba Nº 1 do Brasil', ano: '2026' },
+  { titulo: 'Shiba Jovem Nº 1', ano: '2026' },
+  { titulo: 'Shiba Jovem Nº 1', ano: '2025' },
+  { titulo: 'Shiba Jovem Nº 1', ano: '2024' },
+];
+---
+
+<BaseLayout title="Ninpozan Kennel">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-frame panel">
+      <div class="hero-content">
+        <div class="hanko">忍</div>
+        <h1 class="hero-title">
+          <span class="title-jp">忍宝山</span>
+          <span class="title-main">Ninpozan</span>
+          <span class="title-sub">Shiba-Inu Kennel</span>
+        </h1>
+        <p class="hero-tagline">Preservando a raça com paixão!</p>
+      </div>
+      <div class="hero-accent"></div>
+    </div>
+  </section>
+
+  <!-- Apresentação -->
+  <section class="apresentacao">
+    <div class="container">
+      <div class="divider">
+        <span class="divider-symbol">◆</span>
+      </div>
+
+      <div class="apresentacao-content">
+        <h2>Bem-vindo ao Ninpozan Shiba Inu.</h2>
+        <p>Somos um canil familiar, idealizado por Kleber & Anne, localizado em Blumenau, Santa Catarina. Desde 2024, por amor à raça, decidimos começar à criação do Shiba Inu com seriedade, seleção criteriosa e profundo respeito à essência da raça. O bem-estar animal sempre em primeiro lugar!</p>
+        <p>Nosso trabalho é guiado pelo padrão FCI e pela preservação da raça conforme foi detalhado pela Nippo.</p>
+        <p>Em pouco tempo de criação, temos orgulho de estar entre os principais nomes da raça no Brasil, sempre presentes no topo dos rankings CBKC. Nosso canil é casa do Shiba Inu mais vencedor em exposições de conformação no país, com mais de 90 CCs conquistados em apenas dois anos, além de múltiplas vitórias de grupo.</p>
+        <p>Nossa linhagem de sangue descende diretamente de cães campeões mundiais, vencedores de grandes shows no Reino Unido e Europa, reunindo genética, tipo racial e qualidades para Dog Shows, sem abrir mão da saúde, do temperamento e da convivência familiar.</p>
+        <p>Criamos Shibas para representar a raça com excelência, dentro e fora das pistas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registros -->
+  <section class="registros">
+    <div class="container">
+      <div class="registros-grid">
+        <div class="registro-item">
+          <img src="/fci.png" alt="FCI" class="registro-logo" />
+        </div>
+        <div class="registro-item registro-destaque">
+          <img src="/nippo.png" alt="NIPPO" class="registro-logo" />
+          <span class="registro-label">Canil registrado na NIPPO (Japão)</span>
+        </div>
+        <div class="registro-item">
+          <img src="/cbkc.png" alt="CBKC" class="registro-logo registro-logo-blend" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conquistas -->
+  <section class="conquistas">
+    <div class="container">
+      <div class="divider">
+        <span class="divider-symbol">◆</span>
+      </div>
+
+      <div class="conquistas-list">
+        {conquistas.map((c) => (
+          <div class="conquista-item panel">
+            <span class="conquista-laurel">
+              <svg width="36" height="36" viewBox="0 0 64 64" fill="currentColor"><path d="M32 4c-1.5 3-3.5 5.5-4.5 7.5-.8 1.6-.5 3.5.8 4.5 1.8 1.4 4 .5 5-.8.6-1 1-2.2 1.2-3.5C35 8.5 33.5 6 32 4z"/><path d="M24.5 9c-2 2-3.8 4.5-4 7-.1 1.8 1 3.3 2.8 3.5 2.2.2 3.8-1.5 4-3.5.1-1.5-.3-3-1-4.5-.5-1-1.2-1.8-1.8-2.5z"/><path d="M39.5 9c2 2 3.8 4.5 4 7 .1 1.8-1 3.3-2.8 3.5-2.2.2-3.8-1.5-4-3.5-.1-1.5.3-3 1-4.5.5-1 1.2-1.8 1.8-2.5z"/><path d="M18 15c-2.2 1.5-4 4-4 6.5 0 1.8 1.2 3 3 3 2.2 0 3.5-2 3.5-4 0-1.5-.5-3-1.2-4.2-.4-.5-.8-1-1.3-1.3z"/><path d="M46 15c2.2 1.5 4 4 4 6.5 0 1.8-1.2 3-3 3-2.2 0-3.5-2-3.5-4 0-1.5.5-3 1.2-4.2.4-.5.8-1 1.3-1.3z"/><path d="M14 23c-2 1.8-3.5 4.2-3.2 6.8.2 1.8 1.5 2.8 3.2 2.5 2-.3 3-2.2 2.8-4.2-.2-1.5-.8-3-1.5-4-.4-.4-.8-.8-1.3-1.1z"/><path d="M50 23c2 1.8 3.5 4.2 3.2 6.8-.2 1.8-1.5 2.8-3.2 2.5-2-.3-3-2.2-2.8-4.2.2-1.5.8-3 1.5-4 .4-.4.8-.8 1.3-1.1z"/><path d="M12.5 33c-1.8 2-2.8 4.8-2 7.2.5 1.6 2 2.5 3.5 2 2-.6 2.5-2.8 2-4.8-.4-1.5-1.2-2.8-2-3.8-.4-.3-.9-.5-1.5-.6z"/><path d="M51.5 33c1.8 2 2.8 4.8 2 7.2-.5 1.6-2 2.5-3.5 2-2-.6-2.5-2.8-2-4.8.4-1.5 1.2-2.8 2-3.8.4-.3.9-.5 1.5-.6z"/><path d="M14 43c-1.2 2.2-1.5 5-.5 7.2.7 1.5 2.2 2 3.5 1.2 1.8-1 2-3.2 1.2-5-.6-1.3-1.5-2.5-2.5-3.2-.5-.2-1.1-.3-1.7-.2z"/><path d="M50 43c1.2 2.2 1.5 5 .5 7.2-.7 1.5-2.2 2-3.5 1.2-1.8-1-2-3.2-1.2-5 .6-1.3 1.5-2.5 2.5-3.2.5-.2 1.1-.3 1.7-.2z"/><path d="M18 52c-.5 2.5 0 5 1.5 6.8 1 1.2 2.5 1.5 3.5.5 1.4-1.4 1-3.5-.2-5-.8-1.2-2-2-3.2-2.3-.5-.1-1.1 0-1.6 0z"/><path d="M46 52c.5 2.5 0 5-1.5 6.8-1 1.2-2.5 1.5-3.5.5-1.4-1.4-1-3.5.2-5 .8-1.2 2-2 3.2-2.3.5-.1 1.1 0 1.6 0z"/><path d="M25 58c.5 2 2 3.5 4 4 1.2.3 2.2-.2 2.5-1.2.5-1.5-.5-3-2-3.5-1-.3-2-.2-3 0-.5.1-1 .3-1.5.7z"/><path d="M39 58c-.5 2-2 3.5-4 4-1.2.3-2.2-.2-2.5-1.2-.5-1.5.5-3 2-3.5 1-.3 2-.2 3 0 .5.1 1 .3 1.5.7z"/></svg>
+            </span>
+            <span class="conquista-ano">{c.ano}</span>
+            <span class="conquista-titulo">{c.titulo}</span>
+          </div>
+        ))}
+      </div>
+
+      <a href="/nossos-caes" class="conquista-destaque panel">
+        <span class="destaque-icon">★</span>
+        <p>Proprietário do Shiba mais vencedor do Brasil</p>
+        <span class="destaque-cta">Conheça nossos cães →</span>
+      </a>
+
+      <div class="divider">
+        <span class="divider-symbol">◆</span>
+      </div>
+
+      <!-- Nav links -->
+      <div class="home-nav">
+        <a href="/nossos-caes" class="btn-panel">Nossos Cães</a>
+        <a href="/contato" class="btn-panel">Contato</a>
+      </div>
+    </div>
+  </section>
+
+
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-frame {
+    max-width: 700px;
+    width: 100%;
+    padding: 4rem 3rem;
+    background: var(--papel);
+    position: relative;
+    text-align: center;
+  }
+  .hero-frame .hanko { margin: 0 auto 2rem; }
+  .hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 1.5rem;
+  }
+  .title-jp {
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    color: var(--verde-rolex);
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+  .title-main {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    color: var(--nanquim);
+    text-transform: uppercase;
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+  }
+  .title-sub {
+    font-size: 1.1rem;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    color: var(--sumi);
+    font-weight: 400;
+    margin-top: 4px;
+  }
+  .hero-tagline {
+    color: var(--sumi);
+    font-size: 1.05rem;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+  .hero-accent {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    width: 80px;
+    height: 80px;
+    border-right: 3px solid var(--dourado);
+    border-bottom: 3px solid var(--dourado);
+    opacity: 0.6;
+  }
+
+  @media (max-width: 600px) {
+    .hero-frame { padding: 3rem 1.5rem; }
+    .title-main { font-size: 2.8rem; }
+  }
+
+  /* ===== REGISTROS ===== */
+  .registros {
+    padding: 2rem 0 3rem;
+    position: relative;
+    z-index: 1;
+  }
+  .registros-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .registro-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .registro-logo {
+    height: 100px;
+    width: auto;
+  }
+  .registro-logo-blend {
+    border-radius: 50%;
+    background: #fff;
+    padding: 8px;
+    object-fit: cover;
+  }
+  .registro-label {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 0.8rem;
+    color: var(--sumi);
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+
+  /* ===== CONQUISTAS ===== */
+  .conquistas {
+    padding: 2rem 0 4rem;
+    position: relative;
+    z-index: 1;
+  }
+  .conquistas-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+    margin-bottom: 3px;
+  }
+  @media (min-width: 600px) {
+    .conquistas-list { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .conquistas-list { grid-template-columns: repeat(4, 1fr); }
+  }
+  .conquista-item {
+    padding: 1.8rem 1.5rem;
+    background: var(--papel);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+  }
+  .conquista-laurel {
+    color: var(--dourado);
+    opacity: 0.35;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .conquista-ano {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--verde-rolex);
+    line-height: 1;
+  }
+  .conquista-titulo {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--sumi);
+    font-weight: 500;
+  }
+
+  .conquista-destaque {
+    display: block;
+    padding: 2rem;
+    text-align: center;
+    background: var(--verde-rolex);
+    border-color: var(--verde-deep);
+    margin-top: 3px;
+    transition: all 0.2s ease;
+  }
+  .conquista-destaque:hover {
+    background: var(--verde-deep);
+    border-color: var(--nanquim);
+  }
+  .conquista-destaque::before { border-color: rgba(255,255,255,0.15); }
+  .destaque-icon {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--dourado-claro);
+    margin-bottom: 0.5rem;
+  }
+  .conquista-destaque p {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.6rem;
+  }
+  .destaque-cta {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .conquista-destaque:hover .destaque-cta { color: #fff; }
+
+  /* ===== NAV BUTTONS ===== */
+  .home-nav {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .btn-panel {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 3px solid var(--nanquim);
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--nanquim);
+    background: var(--papel);
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  .btn-panel:hover {
+    background: var(--verde-rolex);
+    border-color: var(--verde-rolex);
+    color: #fff;
+  }
+
+  /* ===== APRESENTAÇÃO ===== */
+  .apresentacao {
+    padding: 2rem 0;
+    position: relative;
+    z-index: 1;
+  }
+  .apresentacao-content {
+    max-width: 740px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .apresentacao-content h2 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.8rem;
+    color: var(--verde-rolex);
+    margin-bottom: 1.5rem;
+  }
+  .apresentacao-content p {
+    color: var(--sumi);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+  .apresentacao-content p:last-child {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: var(--nanquim);
+    font-style: italic;
+  }
+
+</style>

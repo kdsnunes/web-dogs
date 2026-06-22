@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const caes = [
+  { nome: 'Ch. Vormund Glastonbury', nascimento: '05/10/2024', img: '/glastonbury.png', link: '/nossos-caes/glastonbury' },
+  { nome: 'Ch. Vormund Nuka Cola', nascimento: '05/07/2024', img: '/nuka-cola.png', link: null },
+];
+---
+
+<BaseLayout title="Nossos Cães — Ninpozan Kennel">
+
+  <section class="page-header">
+    <div class="container">
+      <a href="/" class="back-link">← Início</a>
+      <div class="divider">
+        <span class="divider-symbol">犬</span>
+      </div>
+      <h1>Nossos Cães</h1>
+      <p class="page-desc">Cada exemplar Ninpozan é criado com dedicação, seleção genética rigorosa e respeito à raça.</p>
+    </div>
+  </section>
+
+  <section class="gallery pattern-seigaiha">
+    <div class="container">
+      <div class="gallery-grid">
+        {caes.map((c) => (
+          c.link ? (
+            <a href={c.link} class="gallery-item panel gallery-link">
+              <div class="gallery-img">
+                <img src={c.img} alt={c.nome} loading="lazy" />
+              </div>
+              <div class="gallery-caption">
+                <span class="caption-name">{c.nome}</span>
+                <span class="caption-detail">Nasc. {c.nascimento}</span>
+              </div>
+            </a>
+          ) : (
+            <article class="gallery-item panel">
+              <div class="gallery-img">
+                <img src={c.img} alt={c.nome} loading="lazy" />
+              </div>
+              <div class="gallery-caption">
+                <span class="caption-name">{c.nome}</span>
+                <span class="caption-detail">Nasc. {c.nascimento}</span>
+              </div>
+            </article>
+          )
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--sumi);
+    margin-bottom: 1rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--verde-rolex); }
+  .page-header h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 2.5rem;
+    color: var(--verde-deep);
+    margin-bottom: 0.8rem;
+  }
+  .page-desc {
+    color: var(--sumi);
+    font-size: 0.95rem;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    padding: 3rem 0 5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  @media (min-width: 500px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 900px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .gallery-item {
+    background: var(--papel);
+    overflow: hidden;
+  }
+  .gallery-img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--papel-escuro);
+  }
+  .gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery-caption {
+    padding: 12px 16px;
+    border-top: 2px solid var(--nanquim);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .caption-name {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--nanquim);
+  }
+  .caption-detail {
+    font-size: 0.75rem;
+    color: var(--sumi-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .gallery-link {
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  .gallery-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 96, 57, 0.15);
+  }
+  .gallery-link .gallery-caption::after {
+    content: '→';
+    font-size: 0.85rem;
+    color: var(--dourado);
+    margin-left: auto;
+    padding-left: 8px;
+  }
+
+</style>

@@ -1,0 +1,13 @@
+{
+  "name": "@apps/ninpozan-kennel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview"
+  },
+  "devDependencies": {
+    "astro": "^4.15.0"
+  }
+}

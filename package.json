@@ -9,7 +9,9 @@
     "dev:br": "npm --workspace @apps/shiba-conselho run dev",
     "build:br": "npm --workspace @apps/shiba-conselho run build",
     "dev:hw": "npm --workspace @apps/hungriawatchs run dev",
-    "build:hw": "npm --workspace @apps/hungriawatchs run build"
+    "build:hw": "npm --workspace @apps/hungriawatchs run build",
+    "dev:nk": "npm --workspace @apps/ninpozan-kennel run dev",
+    "build:nk": "npm --workspace @apps/ninpozan-kennel run build"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "apps/shiba-departamento-rs",
     "apps/shiba-conselho",
     "apps/hungriawatchs",
+    "apps/ninpozan-kennel",
     "packages/ui"
   ]
 }

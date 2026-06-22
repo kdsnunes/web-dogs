@@ -1,0 +1,282 @@
+---
+const { title = 'Ninpozan Kennel' } = Astro.props;
+---
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-texture"></div>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="header-brand">忍 Ninpozan</a>
+        <nav class="header-nav">
+          <a href="/">Início</a>
+          <a href="/nossos-caes">Nossos Cães</a>
+          <a href="/filhotes">Filhotes</a>
+          <a href="/contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+    <slot />
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-inner">
+          <div class="footer-partners">
+            <div class="partner">
+              <img src="/the-shiba-shop.png" alt="The Shiba Shop" class="partner-logo" />
+            </div>
+            <div class="footer-center">
+              <div class="hanko">忍</div>
+              <p class="footer-name">Ninpozan Kennel</p>
+              <p class="footer-slogan">Preservação e responsabilidade — Shiba Inu</p>
+            </div>
+            <div class="partner">
+              <img src="/farmina-nd.png" alt="Farmina N&D" class="partner-logo" />
+            </div>
+          </div>
+          <div class="footer-links">
+            <a href="https://www.instagram.com/ninpozan.shiba.inu" target="_blank" rel="noopener" class="footer-social">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+              <span>@ninpozan.shiba.inu</span>
+            </a>
+            <a href="mailto:ninpozan@gmail.com" class="footer-social">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>ninpozan@gmail.com</span>
+            </a>
+          </div>
+          <p class="footer-copy">© {new Date().getFullYear()} Ninpozan Kennel</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --verde-rolex: #006039;
+    --verde-deep: #004428;
+    --verde-light: #007A4A;
+    --dourado: #B8860B;
+    --dourado-claro: #D4A017;
+    --dourado-escuro: #8B6914;
+    --papel: #F5F0E8;
+    --papel-escuro: #EDE6D8;
+    --nanquim: #1A1A1A;
+    --sumi: #4A4A4A;
+    --sumi-light: #7A7A7A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--papel);
+    color: var(--nanquim);
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .page-texture {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.6;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    color: var(--nanquim);
+    line-height: 1.2;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; height: auto; display: block; }
+
+  /* Manga panel borders */
+  .panel {
+    border: 3px solid var(--nanquim);
+    position: relative;
+  }
+  .panel::before {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border: 1px solid rgba(0,96,57,0.2);
+    pointer-events: none;
+  }
+
+  /* Hanko stamp */
+  .hanko {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2.5px solid var(--verde-rolex);
+    border-radius: 4px;
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--verde-rolex);
+    transform: rotate(-3deg);
+    position: relative;
+  }
+  .hanko::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border: 1px solid var(--verde-rolex);
+    border-radius: 4px;
+    opacity: 0.3;
+    transform: rotate(1deg);
+  }
+
+  /* Section divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 3rem 0;
+  }
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--nanquim), transparent);
+    opacity: 0.15;
+  }
+  .divider-symbol {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.4rem;
+    color: var(--verde-rolex);
+    opacity: 0.7;
+  }
+
+  /* Seigaiha pattern (subtle background) */
+  .pattern-seigaiha {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28'%3E%3Cpath d='M56 26v2H28v-2c5-1 10-5 14-12S52 0 56 0v26zM0 26v2h28v-2C23 25 18 21 14 14S4 0 0 0v26z' fill='%23006039' fill-opacity='0.04'/%3E%3C/svg%3E");
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 4rem 0 2.5rem;
+    border-top: 3px solid var(--nanquim);
+    position: relative;
+    z-index: 1;
+  }
+  .footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .footer-inner { text-align: center; }
+  .footer-partners {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .partner { flex-shrink: 0; }
+  .partner-logo {
+    height: 130px;
+    width: auto;
+    border-radius: 6px;
+  }
+  .footer-center { text-align: center; }
+  .footer-center .hanko {
+    margin: 0 auto 0.8rem;
+    border-color: var(--dourado);
+    color: var(--dourado);
+  }
+  .footer-center .hanko::after { border-color: var(--dourado); }
+  .footer-name {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    color: var(--nanquim);
+  }
+  .footer-slogan {
+    font-size: 0.85rem;
+    color: var(--sumi);
+    font-style: italic;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+  .footer-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--sumi);
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+  }
+  .footer-social:hover { color: var(--verde-rolex); }
+  .footer-copy {
+    font-size: 0.75rem;
+    color: var(--sumi-light);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 1rem;
+  }
+  @media (max-width: 600px) {
+    .footer-partners { flex-direction: column; gap: 1.5rem; }
+  }
+
+  /* Header */
+  .site-header {
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid var(--nanquim);
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-brand {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--verde-rolex);
+    letter-spacing: 1px;
+  }
+  .header-nav {
+    display: flex;
+    gap: 24px;
+  }
+  .header-nav a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sumi);
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  .header-nav a:hover { color: var(--verde-rolex); }
+</style>
