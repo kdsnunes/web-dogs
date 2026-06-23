@@ -84,19 +84,13 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}
         { "@type": "Country", "name": "Brasil" }
       ],
       "knowsAbout": ["Shiba Inu", "Criação de Shiba Inu", "Dog Show", "Exposição canina", "CBKC", "FCI", "NIPPO"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Filhotes de Shiba Inu",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Filhote de Shiba Inu",
-              "description": "Filhotes de Shiba Inu com pedigree, vacinados, vermifugados e socializados. Linhagem de campeões."
-            }
-          }
-        ]
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Criação de Shiba Inu",
+          "description": "Filhotes de Shiba Inu com pedigree CBKC, vacinados, vermifugados e socializados. Linhagem de campeões mundiais e acompanhamento vitalício."
+        }
       },
       "contactPoint": [
         {
