@@ -30,6 +30,15 @@ const conquistas = [
     </div>
   </section>
 
+  <!-- Hero Image -->
+  <section class="hero-image">
+    <div class="container">
+      <div class="hero-img-frame panel">
+        <img src="/hero-shiba.png" alt="Shiba Inu do Ninpozan Kennel" width="1024" height="1024" fetchpriority="high" />
+      </div>
+    </div>
+  </section>
+
   <!-- Apresentação -->
   <section class="apresentacao">
     <div class="container">
@@ -185,6 +194,25 @@ const conquistas = [
   @media (max-width: 600px) {
     .hero-frame { padding: 3rem 1.5rem; }
     .title-main { font-size: 2.8rem; }
+  }
+
+  /* ===== HERO IMAGE ===== */
+  .hero-image {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 2rem;
+  }
+  .hero-img-frame {
+    max-width: 560px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: var(--papel-escuro);
+  }
+  .hero-img-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
   }
 
   /* ===== REGISTROS ===== */
