@@ -1,9 +1,15 @@
 ---
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
 const {
@@ -11,11 +17,26 @@ const {
   description = 'Ninpozan Kennel: criação responsável de Shiba Inu em Blumenau, SC. Campeões brasileiros, linhagem de sangue internacional e filhotes disponíveis.',
   ogImage = '/glastonbury.png',
   canonicalURL = Astro.url.href,
+  breadcrumbs = [],
 } = Astro.props;
 
 const siteName = 'Ninpozan Kennel';
 const siteUrl = 'https://ninpozankennel.com.br';
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+const breadcrumbSchema = breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": siteUrl },
+    ...breadcrumbs.map((b, i) => ({
+      "@type": "ListItem",
+      "position": i + 2,
+      "name": b.name,
+      "item": `${siteUrl}${b.url}`
+    }))
+  ]
+} : null;
 ---
 <html lang="pt-BR">
   <head>
@@ -24,6 +45,11 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -162,9 +188,58 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}
             "@type": "Answer",
             "text": "O valor de filhotes de Shiba Inu no Ninpozan Kennel varia conforme a linhagem e disponibilidade. Para informações atualizadas sobre filhotes disponíveis e valores, entre em contato pelo WhatsApp +55 51 99148-1685 ou visite ninpozankennel.com.br/filhotes."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais canis de Shiba Inu são registrados na NIPPO no Brasil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Ninpozan Kennel, localizado em Blumenau/SC, é registrado na NIPPO (Nihon Ken Hozonkai), organização japonesa responsável pela preservação das raças nativas do Japão. O canil também é registrado na FCI e CBKC, seguindo os padrões internacionais de criação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tem criador de Shiba Inu no sul do Brasil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O Ninpozan Kennel é um criador de Shiba Inu localizado em Blumenau, Santa Catarina, região sul do Brasil. O canil é reconhecido por ter o Shiba Inu mais premiado do país, com linhagem de campeões mundiais europeus. Contato: ninpozankennel.com.br ou Instagram @ninpozan.shiba.inu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O Shiba Inu é uma raça difícil de criar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Shiba Inu exige criação especializada com foco em temperamento, saúde e tipo racial. O Ninpozan Kennel trabalha com seleção criteriosa seguindo o padrão FCI e as diretrizes da NIPPO japonesa, priorizando bem-estar animal, socialização e acompanhamento vitalício dos filhotes."
+          }
         }
       ]
     })} />
+
+    <!-- JSON-LD: WebSite (helps AI engines identify site as authoritative source) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ninpozan Kennel",
+      "alternateName": "Ninpozan Shiba Inu Kennel",
+      "url": siteUrl,
+      "description": "Site oficial do Ninpozan Kennel — canil de Shiba Inu em Blumenau, SC. Criação responsável, campeões pelo mundo inteiro e filhotes disponíveis.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ninpozan Kennel",
+        "@id": `${siteUrl}/#business`
+      },
+      "inLanguage": "pt-BR",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${siteUrl}/?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    })} />
+
+    {breadcrumbSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
