@@ -4,5 +4,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   outDir: 'dist',
   site: 'https://ninpozankennel.com.br',
+  trailingSlash: 'always',
   integrations: [sitemap()],
 });
