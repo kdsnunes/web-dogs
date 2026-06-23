@@ -243,7 +243,9 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" /></noscript>
   </head>
   <body>
     <div class="page-texture"></div>
@@ -265,7 +267,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
         <div class="footer-inner">
           <div class="footer-partners">
             <div class="partner">
-              <img src="/the-shiba-shop.png" alt="The Shiba Shop" class="partner-logo" />
+              <img src="/the-shiba-shop.png" alt="The Shiba Shop" class="partner-logo" loading="lazy" width="130" height="130" />
             </div>
             <div class="footer-center">
               <div class="hanko">忍</div>
@@ -273,7 +275,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
               <p class="footer-slogan">Preservação e responsabilidade — Shiba Inu</p>
             </div>
             <div class="partner">
-              <img src="/farmina-nd.png" alt="Farmina N&D" class="partner-logo" />
+              <img src="/farmina-nd.png" alt="Farmina N&D" class="partner-logo" loading="lazy" width="130" height="130" />
             </div>
           </div>
           <div class="footer-links">
@@ -326,8 +328,11 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
     pointer-events: none;
     z-index: 0;
     background-image:
-      url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-    opacity: 0.6;
+      url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+  @media (max-width: 768px) {
+    .page-texture { display: none; }
   }
 
   h1, h2, h3, h4 {
