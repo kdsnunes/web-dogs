@@ -25,7 +25,7 @@ A biblioteca está organizada em **5 pilares** independentes, cada um com seus c
 | 3 | Padrão Oficial | `/estudos/shiba-inu/padrao-oficial/` | Pendente | → Como um juiz avalia, → FCI |
 | 4 | A Anatomia da Pelagem | `/estudos/shiba-inu/pelagem/` | Pendente | → Long Coat, → Urajiro, → Cores |
 | 5 | As Cores Oficiais | `/estudos/shiba-inu/cores/` | ✅ Publicado | → Genética das Cores (link), → Urajiro, → Sesame |
-| 6 | O que é Urajiro? | `/estudos/shiba-inu/urajiro/` | Pendente | → Cores, → Padrão Oficial |
+| 6 | O que é Urajiro? | `/estudos/shiba-inu/urajiro/` | ✅ Publicado | → Cores, → Padrão Oficial |
 | 7 | O Verdadeiro Sesame | `/estudos/shiba-inu/sesame/` | Pendente | → Genética Sesame, → Cores, → Dirty Red |
 | 8 | Long Coat / Fluffy | `/estudos/shiba-inu/long-coat/` | Pendente | → Genética Long Coat, → Pelagem |
 | 9 | Saúde do Shiba Inu | `/estudos/shiba-inu/saude/` | Pendente | → GM1, sub-páginas: Luxação Patela, Olhos, Alergias, Vacinas, Alimentação, Controle de Peso, Longevidade |
