@@ -44,6 +44,11 @@ const capitulo = 5;
       }
     },
     "mainEntityOfPage": articleUrl,
+    "image": [
+      "https://ninpozankennel.com.br/estudos/shiba-inu-vermelho-red.png",
+      "https://ninpozankennel.com.br/estudos/shiba-inu-preto-castanho-black-tan.png",
+      "https://ninpozankennel.com.br/estudos/shiba-inu-sesame-goma.png"
+    ],
     "keywords": "cores shiba inu, shiba inu vermelho, shiba inu preto e castanho, shiba inu sesame, padrão FCI shiba, NIPPO cores, urajiro shiba inu, shiba inu branco",
     "articleSection": pilarName,
     "inLanguage": "pt-BR",
@@ -175,6 +180,17 @@ const capitulo = 5;
 
         <p>Isso não significa, por si só, maior ou menor qualidade.</p>
 
+        <figure class="article-figure">
+          <img
+            src="/estudos/shiba-inu-vermelho-red.png"
+            alt="Shiba Inu vermelho (red) em posição de exposição, exibindo pelagem vermelha intensa e uniforme com urajiro bem definido"
+            width="600"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>Shiba Inu vermelho — a cor mais frequente e reconhecida da raça.</figcaption>
+        </figure>
+
         <div class="divider"><span class="divider-symbol">◆</span></div>
 
         <h2>O Preto e Castanho — Black & Tan ou Kuro (黒)</h2>
@@ -197,6 +213,29 @@ const capitulo = 5;
 
         <p>Pequenas diferenças na distribuição das marcações podem alterar significativamente a expressão visual do cão.</p>
 
+        <div class="article-figure-grid">
+          <figure class="article-figure">
+            <img
+              src="/estudos/shiba-inu-preto-castanho-black-tan.png"
+              alt="Shiba Inu preto e castanho (black and tan) em posição lateral, mostrando o equilíbrio entre preto, tan e urajiro"
+              width="600"
+              height="500"
+              loading="lazy"
+            />
+            <figcaption>Shiba Inu preto e castanho — equilíbrio entre três cores simultâneas.</figcaption>
+          </figure>
+          <figure class="article-figure">
+            <img
+              src="/estudos/shiba-inu-preto-castanho-black-tan-02.png"
+              alt="Shiba Inu preto e castanho visto de perfil, evidenciando a distribuição das marcações tan e a profundidade do preto"
+              width="600"
+              height="500"
+              loading="lazy"
+            />
+            <figcaption>Variação natural na distribuição das marcações castanhas (tan).</figcaption>
+          </figure>
+        </div>
+
         <div class="divider"><span class="divider-symbol">◆</span></div>
 
         <h2>O Sesame — Goma (胡麻)</h2>
@@ -214,6 +253,17 @@ const capitulo = 5;
         <p>Justamente por sua complexidade, esse tema merece um estudo próprio.</p>
 
         <p>Saiba mais em nosso artigo: <a href="/estudos/shiba-inu/sesame/">O Verdadeiro Sesame</a>.</p>
+
+        <figure class="article-figure">
+          <img
+            src="/estudos/shiba-inu-sesame-goma.png"
+            alt="Shiba Inu sesame (goma) exibindo a mistura equilibrada de pelos pretos e vermelhos característica dessa pelagem rara"
+            width="600"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>Shiba Inu sesame — uma das pelagens mais raras e complexas da raça.</figcaption>
+        </figure>
 
         <div class="divider"><span class="divider-symbol">◆</span></div>
 
@@ -471,6 +521,42 @@ const capitulo = 5;
     border: 2px solid var(--verde-rolex);
     background: var(--papel-escuro);
     margin-top: 2rem;
+  }
+
+  .article-figure {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .article-figure img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border: 2px solid var(--nanquim);
+    display: block;
+    margin: 0 auto;
+  }
+  .article-figure figcaption {
+    font-size: 0.8rem;
+    color: var(--sumi-light);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+  .article-figure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 2rem 0;
+  }
+  .article-figure-grid .article-figure {
+    margin: 0;
+  }
+  .article-figure-grid .article-figure img {
+    max-width: 100%;
+  }
+  @media (max-width: 600px) {
+    .article-figure-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .faq-section {
