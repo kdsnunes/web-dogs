@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const capitulos = [
+  { num: 1, titulo: 'Nossa História', slug: null },
+  { num: 2, titulo: 'Por que escolhemos criar Shiba Inu?', slug: null },
+  { num: 3, titulo: 'Como selecionamos nossos cães', slug: null },
+  { num: 4, titulo: 'Por que importamos cães do Reino Unido?', slug: null },
+  { num: 5, titulo: 'Nossas Linhagens', slug: null },
+  { num: 6, titulo: 'O futuro do nosso programa de criação', slug: null },
+  { num: 7, titulo: 'Acasalamentos planejados', slug: null },
+];
+---
+
+<BaseLayout
+  title="Ninpozan Kennel — Nossa Filosofia e História | Estudos"
+  description="A filosofia do Ninpozan Kennel: nossa história, linhagens de sangue, por que importamos cães do Reino Unido, como selecionamos nossos Shiba Inu e o futuro do nosso programa de criação."
+  breadcrumbs={[{ name: "Estudos", url: "/estudos/" }, { name: "Ninpozan Kennel", url: "/estudos/ninpozan/" }]}
+>
+
+  <section class="pilar-page">
+    <div class="container">
+      <a href="/estudos/" class="back-link">← Estudos</a>
+
+      <header class="pilar-header">
+        <span class="pilar-label">Pilar 5</span>
+        <h1>Ninpozan Kennel</h1>
+        <p class="pilar-subtitle">A Filosofia do Ninpozan Kennel</p>
+      </header>
+
+      <div class="capitulos-list">
+        {capitulos.map((c) => (
+          <div class={`capitulo-item ${c.slug ? 'disponivel' : 'em-breve'}`}>
+            {c.slug ? (
+              <a href={c.slug} class="capitulo-link">
+                <span class="capitulo-num">Capítulo {c.num}</span>
+                <h2 class="capitulo-titulo">{c.titulo}</h2>
+                <span class="capitulo-status">Ler →</span>
+              </a>
+            ) : (
+              <div class="capitulo-placeholder">
+                <span class="capitulo-num">Capítulo {c.num}</span>
+                <h2 class="capitulo-titulo">{c.titulo}</h2>
+                <span class="capitulo-status">Em breve</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--sumi);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--verde-rolex); }
+
+  .pilar-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--nanquim);
+  }
+  .pilar-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dourado);
+    font-weight: 600;
+  }
+  .pilar-header h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 2.2rem;
+    color: var(--verde-deep);
+    margin: 0.5rem 0 0.3rem;
+  }
+  .pilar-subtitle {
+    font-size: 0.9rem;
+    color: var(--sumi);
+    font-style: italic;
+  }
+
+  .capitulos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 4rem;
+  }
+  .capitulo-item {
+    border-bottom: 1px solid rgba(0, 96, 57, 0.08);
+  }
+  .capitulo-link,
+  .capitulo-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1rem;
+    transition: background 0.2s;
+  }
+  .capitulo-link:hover {
+    background: var(--papel-escuro);
+  }
+  .capitulo-num {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sumi-light);
+    min-width: 80px;
+  }
+  .capitulo-titulo {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.05rem;
+    color: var(--verde-deep);
+    flex: 1;
+  }
+  .em-breve .capitulo-titulo {
+    color: var(--sumi-light);
+  }
+  .capitulo-status {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .disponivel .capitulo-status {
+    color: var(--dourado);
+  }
+  .em-breve .capitulo-status {
+    color: var(--sumi-light);
+    opacity: 0.6;
+  }
+
+  @media (max-width: 600px) {
+    .pilar-header h1 { font-size: 1.7rem; }
+    .capitulo-link, .capitulo-placeholder {
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+    .capitulo-num { min-width: 100%; }
+  }
+</style>

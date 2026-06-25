@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pilares = [
+  {
+    numero: '壱',
+    titulo: 'Conhecendo o Shiba Inu',
+    descricao: 'O guia completo: história, temperamento, padrão oficial, pelagem, cores e saúde da raça.',
+    slug: '/estudos/shiba-inu/',
+    capitulos: 9,
+  },
+  {
+    numero: '弐',
+    titulo: 'Criação Responsável',
+    descricao: 'O que define uma criação séria: seleção, planejamento, interpretação de pedigrees e avaliação de filhotes.',
+    slug: '/estudos/criacao/',
+    capitulos: 11,
+  },
+  {
+    numero: '参',
+    titulo: 'Exposições de Conformação',
+    descricao: 'Como funcionam as exposições caninas: julgamentos, títulos, rankings e os maiores eventos do mundo.',
+    slug: '/estudos/exposicoes/',
+    capitulos: 13,
+  },
+  {
+    numero: '四',
+    titulo: 'Genética',
+    descricao: 'Genética aplicada ao Shiba Inu: cores, loci, hereditariedade, consanguinidade e diversidade genética.',
+    slug: '/estudos/genetica/',
+    capitulos: 13,
+  },
+  {
+    numero: '伍',
+    titulo: 'Ninpozan Kennel',
+    descricao: 'Nossa história, filosofia, linhagens e o futuro do nosso programa de criação.',
+    slug: '/estudos/ninpozan/',
+    capitulos: 7,
+  },
+];
+---
+
+<BaseLayout
+  title="Estudos sobre Shiba Inu — Ninpozan Kennel"
+  description="Biblioteca técnica sobre o Shiba Inu: criação responsável, genética, padrão da raça, exposições de conformação e preservação baseada nas referências japonesas (NIPPO)."
+  breadcrumbs={[{ name: "Estudos", url: "/estudos/" }]}
+>
+
+  <section class="page-header">
+    <div class="container">
+      <a href="/" class="back-link">← Início</a>
+      <div class="divider">
+        <span class="divider-symbol">學</span>
+      </div>
+      <h1>Estudos</h1>
+      <p class="missao">Missão: Preservar o Shiba através da educação, da transparência e da divulgação de conhecimento técnico baseado nas referências japonesas (NIPPO).</p>
+    </div>
+  </section>
+
+  <section class="pilares-section">
+    <div class="container">
+      <div class="pilares-grid">
+        {pilares.map((p) => (
+          <a href={p.slug} class="pilar-card panel">
+            <span class="pilar-numero">{p.numero}</span>
+            <h2 class="pilar-titulo">{p.titulo}</h2>
+            <p class="pilar-desc">{p.descricao}</p>
+            <span class="pilar-meta">{p.capitulos} capítulos</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--sumi);
+    margin-bottom: 1rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--verde-rolex); }
+  .page-header h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 2.8rem;
+    color: var(--verde-deep);
+    margin-bottom: 1.2rem;
+  }
+  .missao {
+    color: var(--sumi);
+    font-size: 0.9rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+    line-height: 1.7;
+    border-left: 3px solid var(--dourado);
+    padding-left: 1rem;
+    text-align: left;
+  }
+
+  .pilares-section {
+    padding: 3rem 0 5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .pilares-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .pilar-card {
+    display: block;
+    padding: 2.5rem 2rem;
+    background: var(--papel-escuro);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .pilar-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 96, 57, 0.1);
+  }
+  .pilar-numero {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--verde-rolex);
+    opacity: 0.15;
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+  }
+  .pilar-titulo {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.4rem;
+    color: var(--verde-deep);
+    margin-bottom: 0.8rem;
+  }
+  .pilar-desc {
+    font-size: 0.9rem;
+    color: var(--sumi);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    max-width: 90%;
+  }
+  .pilar-meta {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--dourado);
+    font-weight: 600;
+  }
+
+  @media (min-width: 700px) {
+    .pilares-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .pilares-grid > :last-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .page-header h1 { font-size: 2.2rem; }
+    .pilar-card { padding: 2rem 1.5rem; }
+  }
+</style>

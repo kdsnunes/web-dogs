@@ -1,16 +1,16 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const articleTitle = 'Cão Pet ou Cão para Exposição? Entenda a diferença e por que ambos podem representar a mesma qualidade de criação';
 const articleDescription = 'Qual a diferença entre um filhote pet e um filhote para show? Entenda como funciona a seleção na criação responsável de Shiba Inu e por que qualidade não é definida pelo destino do filhote.';
 const articleDate = '2026-06-25';
-const articleUrl = 'https://ninpozankennel.com.br/artigos/pet-vs-show/';
+const articleUrl = 'https://ninpozankennel.com.br/estudos/criacao/pet-vs-show/';
 ---
 
 <BaseLayout
   title={`${articleTitle} — Ninpozan Kennel`}
   description={articleDescription}
-  breadcrumbs={[{ name: "Artigos", url: "/artigos/" }, { name: "Pet vs Show", url: "/artigos/pet-vs-show/" }]}
+  breadcrumbs={[{ name: "Estudos", url: "/estudos/" }, { name: "Criação Responsável", url: "/estudos/criacao/" }, { name: "Pet vs Show", url: "/estudos/criacao/pet-vs-show/" }]}
 >
 
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -49,9 +49,10 @@ const articleUrl = 'https://ninpozankennel.com.br/artigos/pet-vs-show/';
   <article class="article-page">
     <div class="container">
 
-      <a href="/artigos/" class="back-link">← Artigos</a>
+      <a href="/estudos/criacao/" class="back-link">← Criação Responsável</a>
 
       <header class="article-header">
+        <span class="article-capitulo">Capítulo 2</span>
         <time datetime={articleDate} class="article-date">25 de junho de 2026</time>
         <h1>{articleTitle}</h1>
         <p class="article-author">Por <strong>Ninpozan Kennel</strong> — Blumenau, SC</p>
@@ -259,6 +260,15 @@ const articleUrl = 'https://ninpozankennel.com.br/artigos/pet-vs-show/';
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 2px solid var(--nanquim);
+  }
+  .article-capitulo {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dourado);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
   }
   .article-date {
     font-size: 0.75rem;
