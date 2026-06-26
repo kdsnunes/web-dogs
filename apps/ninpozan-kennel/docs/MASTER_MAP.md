@@ -23,7 +23,7 @@ A biblioteca está organizada em **5 pilares** independentes, cada um com seus c
 | 1 | História do Shiba Inu | `/estudos/shiba-inu/historia/` | Pendente | → NIPPO Grand National, → Ninpozan história |
 | 2 | Temperamento | `/estudos/shiba-inu/temperamento/` | ✅ Publicado | → Temperamento na Reprodução, → Criação Responsável, → Saúde, → Sesame |
 | 3 | Padrão Oficial | `/estudos/shiba-inu/padrao-oficial/` | Pendente | → Como um juiz avalia, → FCI |
-| 4 | A Anatomia da Pelagem | `/estudos/shiba-inu/pelagem/` | Pendente | → Long Coat, → Urajiro, → Cores |
+| 4 | A Anatomia da Pelagem | `/estudos/shiba-inu/pelagem/` | ✅ Publicado | → Long Coat, → Urajiro, → Cores, → Genética Cores, → Exposições |
 | 5 | As Cores Oficiais | `/estudos/shiba-inu/cores/` | ✅ Publicado | → Genética das Cores (link), → Urajiro, → Sesame |
 | 6 | O que é Urajiro? | `/estudos/shiba-inu/urajiro/` | ✅ Publicado | → Cores, → Padrão Oficial |
 | 7 | O Verdadeiro Sesame | `/estudos/shiba-inu/sesame/` | Pendente | → Genética Sesame, → Cores, → Dirty Red |

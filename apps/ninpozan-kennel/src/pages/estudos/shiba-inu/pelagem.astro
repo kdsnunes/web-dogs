@@ -1,0 +1,587 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const articleTitle = 'A Anatomia da Pelagem do Shiba Inu — Dupla Pelagem, Função e Cuidados';
+const articleDescription = 'Como funciona a pelagem dupla do Shiba Inu? Entenda o pelo de cobertura, o subpelo, a troca sazonal, por que não tosar e a função histórica da pelagem na raça.';
+const articleDate = '2026-06-26';
+const articleModified = '2026-06-26';
+const articleUrl = 'https://ninpozankennel.com.br/estudos/shiba-inu/pelagem/';
+const pilarName = 'Conhecendo o Shiba Inu';
+const pilarUrl = '/estudos/shiba-inu/';
+const capitulo = 4;
+---
+
+<BaseLayout
+  title={`${articleTitle} — Ninpozan Kennel`}
+  description={articleDescription}
+  breadcrumbs={[
+    { name: "Estudos", url: "/estudos/" },
+    { name: pilarName, url: pilarUrl },
+    { name: "Pelagem", url: "/estudos/shiba-inu/pelagem/" }
+  ]}
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": articleTitle,
+    "description": articleDescription,
+    "datePublished": articleDate,
+    "dateModified": articleModified,
+    "url": articleUrl,
+    "author": {
+      "@type": "Organization",
+      "name": "Ninpozan Kennel",
+      "url": "https://ninpozankennel.com.br"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ninpozan Kennel",
+      "url": "https://ninpozankennel.com.br",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ninpozankennel.com.br/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": articleUrl,
+    "image": [
+      "https://ninpozankennel.com.br/estudos/shiba-inu-pelo-cobertura-textura.png",
+      "https://ninpozankennel.com.br/estudos/shiba-inu-subpelo-black-tan.png"
+    ],
+    "keywords": "pelagem shiba inu, dupla pelagem shiba, subpelo shiba inu, pelo de cobertura shiba, tosar shiba inu, troca de pelo shiba, muda shiba inu, double coat shiba, escovação shiba inu",
+    "articleSection": pilarName,
+    "inLanguage": "pt-BR",
+    "about": [
+      { "@type": "Thing", "name": "Shiba Inu" },
+      { "@type": "Thing", "name": "Pelagem canina" },
+      { "@type": "Thing", "name": "Dupla pelagem" }
+    ]
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O Shiba Inu possui pelagem dupla?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A raça apresenta duas camadas distintas de pelos: o pelo de cobertura, responsável principalmente pela proteção externa, e o subpelo, que atua como isolante térmico."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O subpelo faz o Shiba Inu sentir mais calor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. O subpelo não produz calor. Sua função é reduzir a troca térmica entre o corpo e o ambiente, ajudando o cão tanto em temperaturas baixas quanto elevadas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "É recomendado tosar um Shiba Inu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Em condições normais, a tosa não é recomendada, pois interfere na estrutura natural da pelagem e pode comprometer sua função de proteção e isolamento térmico."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O Shiba Inu troca muito pelo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A raça apresenta trocas sazonais bastante intensas, principalmente durante a primavera e o outono, embora cães que vivem em ambientes climatizados possam apresentar mudas distribuídas ao longo do ano."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Uma pelagem mais longa é sinal de maior qualidade no Shiba Inu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. A qualidade da pelagem é avaliada pela textura, densidade, estrutura e conformidade com o padrão oficial da raça, e não simplesmente pela quantidade de pelos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Por que a pelagem do Shiba Inu parece tão volumosa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grande parte desse volume é produzida pelo subpelo denso, que afasta os pelos de cobertura do corpo e cria a silhueta característica da raça."
+        }
+      }
+    ]
+  })} />
+
+  <article class="article-page">
+    <div class="container">
+
+      <a href={pilarUrl} class="back-link">← {pilarName}</a>
+
+      <header class="article-header">
+        <span class="article-capitulo">Capítulo {capitulo}</span>
+        <time datetime={articleDate} class="article-date">26 de junho de 2026</time>
+        <h1>A Anatomia da Pelagem do Shiba Inu</h1>
+        <p class="article-author">Por <strong>Ninpozan Kennel</strong> — Blumenau, SC</p>
+      </header>
+
+      <div class="article-body">
+
+        <p class="lead">Quando observamos um Shiba Inu pela primeira vez, uma das características que mais chama a atenção é sua pelagem.</p>
+
+        <p>Densa, firme ao toque, naturalmente volumosa e extremamente elegante, ela contribui de forma decisiva para a silhueta característica da raça.</p>
+
+        <p>Entretanto, enxergar a pelagem apenas como um elemento estético é um dos maiores equívocos que podemos cometer.</p>
+
+        <p>No Shiba Inu, praticamente cada detalhe da pelagem possui uma função.</p>
+
+        <p>Sua textura, seu comprimento, sua densidade e até mesmo seu ciclo de crescimento são resultado de milhares de anos de adaptação ao ambiente montanhoso do Japão, onde pequenos cães precisavam enfrentar chuva, neve, vegetação densa e grandes variações de temperatura enquanto auxiliavam caçadores.</p>
+
+        <p>A pelagem do Shiba Inu não existe para torná-lo bonito.</p>
+
+        <p><strong>Ela existe porque, durante séculos, tornou possível que a raça sobrevivesse e desempenhasse sua função.</strong></p>
+
+        <p>Compreender essa origem é também compreender por que o padrão oficial dedica tanta atenção à qualidade da pelagem.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>A pelagem é parte da função da raça</h2>
+
+        <p>Antes de tornar-se um cão de companhia admirado em todo o mundo, o Shiba Inu era um pequeno cão de caça.</p>
+
+        <p>Seu trabalho consistia em localizar, levantar e acompanhar pequenas presas em regiões montanhosas do Japão, atravessando bambuzais, arbustos densos, pedras, riachos e áreas sujeitas a mudanças bruscas de clima.</p>
+
+        <p>Essas condições exigiam muito mais do que agilidade. Exigiam proteção.</p>
+
+        <p>A pelagem passou a desempenhar exatamente esse papel.</p>
+
+        <p>Ela precisava proteger a pele contra galhos e vegetação espinhosa, reduzir a perda de calor durante o inverno, impedir que a umidade permanecesse em contato direto com o corpo e, ao mesmo tempo, permitir que o cão continuasse leve e ágil durante o trabalho.</p>
+
+        <p><strong>Em outras palavras, a pelagem do Shiba Inu foi moldada pela função. Sua aparência atual é consequência direta dessa história.</strong></p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>O que é uma pelagem dupla?</h2>
+
+        <p>O Shiba Inu possui aquilo que chamamos de pelagem dupla (double coat).</p>
+
+        <p>Isso significa que sua cobertura é formada por duas camadas completamente diferentes, cada uma desempenhando funções específicas.</p>
+
+        <p>A camada externa é conhecida como <strong>pelo de cobertura</strong>.</p>
+
+        <p>A camada interna recebe o nome de <strong>subpelo</strong>.</p>
+
+        <p>Embora trabalhem em conjunto, elas possuem estruturas, texturas e funções bastante distintas.</p>
+
+        <p>É justamente essa combinação que permite ao Shiba enfrentar diferentes condições ambientais mantendo conforto e proteção.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>O pelo de cobertura</h2>
+
+        <p>O pelo de cobertura é formado por fios mais longos, retos e relativamente rígidos.</p>
+
+        <p>É a parte da pelagem que enxergamos primeiro.</p>
+
+        <p>Sua principal função não é aquecer o cão.</p>
+
+        <p><strong>Sua função é proteger.</strong></p>
+
+        <p>Esses pelos ajudam a:</p>
+
+        <ul>
+          <li>Repelir água da chuva</li>
+          <li>Impedir que sujeira alcance facilmente a pele</li>
+          <li>Proteger contra pequenos ferimentos provocados por vegetação</li>
+          <li>Reduzir os efeitos da radiação solar</li>
+          <li>Preservar a integridade do subpelo</li>
+        </ul>
+
+        <p>Por essa razão, o padrão da raça descreve um pelo firme, reto e de boa textura.</p>
+
+        <p>Uma pelagem excessivamente macia pode parecer bonita aos olhos de um proprietário, mas deixa de cumprir adequadamente parte de sua função original.</p>
+
+        <figure class="article-figure">
+          <img
+            src="/estudos/shiba-inu-pelo-cobertura-textura.png"
+            alt="Detalhe da textura do pelo de cobertura do Shiba Inu vermelho, mostrando fios retos e firmes característicos da raça"
+            width="500"
+            height="400"
+            loading="lazy"
+          />
+          <figcaption>Pelo de cobertura do Shiba Inu — fios retos, firmes e com textura funcional.</figcaption>
+        </figure>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>O subpelo: um isolante natural</h2>
+
+        <p>Logo abaixo do pelo de cobertura encontra-se o subpelo.</p>
+
+        <p>Essa camada é formada por pelos muito mais curtos, finos e extremamente densos.</p>
+
+        <p>Sua função principal é atuar como um isolante térmico.</p>
+
+        <p>É importante compreender que o subpelo não produz calor.</p>
+
+        <p>O calor corporal é gerado pelo metabolismo do próprio animal.</p>
+
+        <p>O que o subpelo faz é reduzir a velocidade com que esse calor é perdido para o ambiente durante o frio e, da mesma forma, dificultar que o calor externo atinja rapidamente a pele durante temperaturas elevadas.</p>
+
+        <p>Esse princípio é semelhante ao funcionamento do isolamento térmico utilizado em residências ou roupas técnicas.</p>
+
+        <p>Quanto melhor o isolamento, menor será a troca de temperatura entre o ambiente externo e o corpo.</p>
+
+        <p><strong>Por isso, uma pelagem corretamente desenvolvida protege tanto do frio quanto do calor.</strong></p>
+
+        <figure class="article-figure">
+          <img
+            src="/estudos/shiba-inu-subpelo-black-tan.png"
+            alt="Detalhe do subpelo denso de um Shiba Inu preto e castanho, evidenciando a camada interna curta e espessa que atua como isolante térmico"
+            width="500"
+            height="400"
+            loading="lazy"
+          />
+          <figcaption>Subpelo do Shiba Inu preto e castanho — camada densa e curta que atua como isolante térmico natural.</figcaption>
+        </figure>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Quanto mais pelo, mais calor?</h2>
+
+        <p>Essa é uma das dúvidas mais frequentes entre proprietários.</p>
+
+        <p>A resposta costuma surpreender.</p>
+
+        <p><strong>Não.</strong></p>
+
+        <p>Uma pelagem dupla saudável não faz com que o Shiba Inu sinta necessariamente mais calor.</p>
+
+        <p>Na realidade, quando preservada em boas condições, ela funciona como uma barreira térmica natural.</p>
+
+        <p>Remover essa proteção pode aumentar a exposição da pele ao calor direto e à radiação solar, além de comprometer a capacidade natural do organismo de regular sua temperatura.</p>
+
+        <p>É justamente por isso que cães de dupla pelagem conseguem viver tanto em regiões frias quanto em locais de clima bastante quente, desde que recebam manejo adequado, sombra, hidratação e ambiente compatível com seu bem-estar.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>A troca de pelagem</h2>
+
+        <p>Outra característica marcante do Shiba Inu é a intensa troca de pelos.</p>
+
+        <p>Essa mudança faz parte do funcionamento normal da raça.</p>
+
+        <p>Historicamente, os períodos de muda acompanhavam principalmente as alterações das estações do ano.</p>
+
+        <p>Com a chegada do clima mais quente, grande parte do subpelo era substituída por uma cobertura menos densa. Quando o inverno se aproximava, uma nova camada era formada para oferecer maior isolamento térmico.</p>
+
+        <p>Hoje, muitos cães vivem em ambientes climatizados, com iluminação artificial e temperaturas relativamente constantes durante todo o ano.</p>
+
+        <p>Essas mudanças na rotina podem alterar parcialmente o ciclo natural da pelagem, fazendo com que alguns exemplares apresentem trocas menos concentradas ou até pequenas mudas distribuídas ao longo do ano.</p>
+
+        <p>Ainda assim, a muda intensa de primavera e de outono continua sendo perfeitamente normal em muitos indivíduos.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Escovação: muito além da estética</h2>
+
+        <p>Escovar um Shiba Inu não serve apenas para deixá-lo bonito.</p>
+
+        <p>A escovação desempenha diversas funções importantes para a saúde da pele e da pelagem.</p>
+
+        <p>Entre elas:</p>
+
+        <ul>
+          <li>Remover o subpelo morto</li>
+          <li>Estimular a circulação da pele</li>
+          <li>Distribuir a oleosidade natural dos fios</li>
+          <li>Reduzir o acúmulo de sujeira</li>
+          <li>Facilitar a observação de possíveis alterações dermatológicas</li>
+        </ul>
+
+        <p>Durante os períodos de troca de pelagem, a frequência das escovações normalmente aumenta, ajudando a remover o subpelo que naturalmente será substituído.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>É correto tosar um Shiba Inu?</h2>
+
+        <p><strong>De forma geral, não.</strong></p>
+
+        <p>A pelagem dupla representa uma estrutura funcional desenvolvida ao longo de milhares de anos de seleção natural e artificial.</p>
+
+        <p>A tosa altera essa estrutura, podendo comprometer sua capacidade de isolamento térmico, modificar a textura dos pelos durante o crescimento e, em alguns casos, provocar falhas permanentes na pelagem.</p>
+
+        <p>Existem situações médicas específicas nas quais procedimentos de tosa podem ser indicados por um médico-veterinário.</p>
+
+        <p>Fora desses casos, manter a pelagem em sua condição natural costuma ser a melhor escolha para preservar tanto a saúde quanto as características da raça.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>A pelagem nas exposições de conformação</h2>
+
+        <p>Uma dúvida comum entre proprietários é imaginar que cães com maior quantidade de pelos sejam automaticamente superiores em <a href="/estudos/exposicoes/">exposições</a>.</p>
+
+        <p>Na prática, não é assim que a avaliação funciona.</p>
+
+        <p>O juiz procura uma pelagem que esteja de acordo com o padrão da raça.</p>
+
+        <p>Isso inclui aspectos como:</p>
+
+        <ul>
+          <li>Textura correta</li>
+          <li>Dupla pelagem bem desenvolvida</li>
+          <li>Boa densidade</li>
+          <li>Comprimento adequado</li>
+          <li>Apresentação natural</li>
+        </ul>
+
+        <p>Uma pelagem excessivamente longa, macia ou artificialmente trabalhada pode afastar o exemplar da aparência funcional esperada para o Shiba Inu.</p>
+
+        <p>Assim como toda a raça, a pelagem deve transmitir equilíbrio, naturalidade e funcionalidade.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Em resumo</h2>
+
+        <p>A pelagem do Shiba Inu nunca foi desenvolvida para impressionar juízes ou chamar atenção em exposições.</p>
+
+        <p>Ela surgiu porque um pequeno cão japonês precisava atravessar montanhas, vegetação fechada, chuva, neve e grandes variações de temperatura durante sua rotina de caça.</p>
+
+        <p>Cada fio possui uma função. Cada camada desempenha um papel específico.</p>
+
+        <p>Quando compreendemos essa origem, deixamos de enxergar a pelagem apenas como um elemento estético e passamos a entendê-la como parte essencial da identidade funcional da raça.</p>
+
+        <p class="conclusion"><strong>Preservar a qualidade da pelagem significa, acima de tudo, preservar uma das características que tornaram o Shiba Inu exatamente aquilo que ele é hoje.</strong></p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="faq-section">
+
+          <div class="faq-item">
+            <h3>O Shiba Inu possui pelagem dupla?</h3>
+            <p>Sim. A raça apresenta duas camadas distintas de pelos: o pelo de cobertura, responsável principalmente pela proteção externa, e o subpelo, que atua como isolante térmico.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>O subpelo faz o cão sentir mais calor?</h3>
+            <p>Não. O subpelo não produz calor. Sua função é reduzir a troca térmica entre o corpo e o ambiente, ajudando o cão tanto em temperaturas baixas quanto elevadas.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>É recomendado tosar um Shiba Inu?</h3>
+            <p>Não. Em condições normais, a tosa não é recomendada, pois interfere na estrutura natural da pelagem e pode comprometer sua função de proteção e isolamento térmico.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>O Shiba troca muito pelo?</h3>
+            <p>Sim. A raça apresenta trocas sazonais bastante intensas, principalmente durante a primavera e o outono, embora cães que vivem em ambientes climatizados possam apresentar mudas distribuídas ao longo do ano.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Uma pelagem mais longa é sinal de maior qualidade?</h3>
+            <p>Não. A qualidade da pelagem é avaliada pela textura, densidade, estrutura e conformidade com o padrão oficial da raça, e não simplesmente pela quantidade de pelos.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Por que a pelagem do Shiba parece tão volumosa?</h3>
+            <p>Grande parte desse volume é produzida pelo subpelo denso, que afasta os pelos de cobertura do corpo e cria a silhueta característica da raça.</p>
+          </div>
+
+        </div>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Continue seus estudos</h2>
+
+        <ul class="reading-list">
+          <li><a href="/estudos/shiba-inu/cores/">As Cores do Shiba Inu</a></li>
+          <li><a href="/estudos/shiba-inu/urajiro/">O que é Urajiro?</a></li>
+          <li><a href="/estudos/shiba-inu/long-coat/">Long Coat (Fluffy): o que é e por que acontece?</a></li>
+          <li><a href="/estudos/genetica/cores/">Genética das Cores do Shiba Inu</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+  </article>
+
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--sumi);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--verde-rolex); }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--nanquim);
+  }
+  .article-capitulo {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dourado);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .article-date {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sumi-light);
+  }
+  .article-header h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 2rem;
+    color: var(--verde-deep);
+    line-height: 1.3;
+    margin: 1rem 0 0.8rem;
+  }
+  .article-author {
+    font-size: 0.85rem;
+    color: var(--sumi);
+  }
+
+  .article-body {
+    margin-bottom: 4rem;
+  }
+  .article-body p {
+    font-size: 1rem;
+    color: var(--nanquim);
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+  }
+  .article-body .lead {
+    font-size: 1.1rem;
+    color: var(--sumi);
+    font-style: italic;
+    border-left: 3px solid var(--dourado);
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .article-body h2 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.4rem;
+    color: var(--verde-deep);
+    margin: 2.5rem 0 1rem;
+  }
+  .article-body ul {
+    margin: 1rem 0 1.5rem 1.5rem;
+    list-style: none;
+  }
+  .article-body ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--sumi);
+    line-height: 1.6;
+  }
+  .article-body ul li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: var(--dourado);
+    font-size: 0.6rem;
+    top: 0.4rem;
+  }
+  .article-body a {
+    color: var(--verde-rolex);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  .article-body a:hover {
+    color: var(--dourado);
+  }
+  .article-body .conclusion {
+    font-size: 1.05rem;
+    text-align: center;
+    padding: 1.5rem;
+    border: 2px solid var(--verde-rolex);
+    background: var(--papel-escuro);
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+
+  .article-figure {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .article-figure img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border: 2px solid var(--nanquim);
+    display: block;
+    margin: 0 auto;
+  }
+  .article-figure figcaption {
+    font-size: 0.8rem;
+    color: var(--sumi-light);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+
+  .faq-section {
+    margin-top: 1.5rem;
+  }
+  .faq-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 96, 57, 0.08);
+  }
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+  .faq-item h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.1rem;
+    color: var(--verde-deep);
+    margin-bottom: 0.8rem;
+  }
+  .faq-item p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .reading-list {
+    margin-top: 1rem;
+  }
+  .reading-list li {
+    margin-bottom: 0.8rem;
+  }
+  .reading-list a {
+    font-size: 1rem;
+    color: var(--verde-rolex);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .reading-list a:hover {
+    color: var(--dourado);
+  }
+
+  @media (max-width: 600px) {
+    .article-header h1 { font-size: 1.5rem; }
+    .article-body h2 { font-size: 1.2rem; }
+  }
+</style>
