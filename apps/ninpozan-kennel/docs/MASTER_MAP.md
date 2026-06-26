@@ -28,7 +28,7 @@ A biblioteca está organizada em **5 pilares** independentes, cada um com seus c
 | 6 | O que é Urajiro? | `/estudos/shiba-inu/urajiro/` | ✅ Publicado | → Cores, → Padrão Oficial |
 | 7 | O Verdadeiro Sesame | `/estudos/shiba-inu/sesame/` | Pendente | → Genética Sesame, → Cores, → Dirty Red |
 | 8 | Long Coat / Fluffy | `/estudos/shiba-inu/long-coat/` | ✅ Publicado | → Genética Long Coat, → Pelagem |
-| 9 | Saúde do Shiba Inu | `/estudos/shiba-inu/saude/` | Pendente | → GM1, sub-páginas: Luxação Patela, Olhos, Alergias, Vacinas, Alimentação, Controle de Peso, Longevidade |
+| 9 | Saúde do Shiba Inu | `/estudos/shiba-inu/saude/` | ✅ Publicado | → GM1, Long Coat, Diversidade Genética, Criação Responsável, Pedigree, Seleção Matrizes, Pet vs Show |
 
 ---
 

@@ -1,0 +1,808 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const articleTitle = 'Saúde do Shiba Inu: genética, prevenção e criação responsável';
+const articleDescription = 'Guia completo sobre a saúde do Shiba Inu: doenças hereditárias (GM1, luxação de patela, olhos), exames genéticos, bem-estar animal e como escolher um filhote de um programa de criação responsável.';
+const articleDate = '2026-06-25';
+const articleModified = '2026-06-25';
+const articleUrl = 'https://ninpozankennel.com.br/estudos/shiba-inu/saude/';
+const pilarName = 'Conhecendo o Shiba Inu';
+const pilarUrl = '/estudos/shiba-inu/';
+const capitulo = 9;
+---
+
+<BaseLayout
+  title={`${articleTitle} — Ninpozan Kennel`}
+  description={articleDescription}
+  breadcrumbs={[
+    { name: "Estudos", url: "/estudos/" },
+    { name: pilarName, url: pilarUrl },
+    { name: "Saúde do Shiba Inu", url: "/estudos/shiba-inu/saude/" }
+  ]}
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": articleTitle,
+    "description": articleDescription,
+    "datePublished": articleDate,
+    "dateModified": articleModified,
+    "url": articleUrl,
+    "author": {
+      "@type": "Organization",
+      "name": "Ninpozan Kennel",
+      "url": "https://ninpozankennel.com.br"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ninpozan Kennel",
+      "url": "https://ninpozankennel.com.br",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ninpozankennel.com.br/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": articleUrl,
+    "keywords": "saúde shiba inu, GM1 gangliosidose shiba, luxação patela shiba inu, exames genéticos shiba, criação responsável saúde, doenças hereditárias shiba inu, teste GM1, displasia shiba inu, alergias shiba inu",
+    "articleSection": pilarName,
+    "inLanguage": "pt-BR",
+    "about": [
+      { "@type": "Thing", "name": "Shiba Inu" },
+      { "@type": "Thing", "name": "Saúde canina" },
+      { "@type": "Thing", "name": "Genética veterinária" },
+      { "@type": "Thing", "name": "Criação responsável" }
+    ]
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quais exames são indispensáveis antes de comprar um Shiba Inu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O teste genético para GM1, a avaliação de luxação de patela e os exames oftalmológicos dos reprodutores são considerados entre os mais importantes. Dependendo do programa de criação, outros exames complementares também podem ser realizados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Um cão portador de GM1 pode reproduzir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Um cão portador permanece clinicamente saudável. O importante é que o acasalamento seja planejado para evitar o nascimento de filhotes afetados, utilizando reprodutores geneticamente compatíveis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Todo criador realiza exames de saúde nos reprodutores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. A realização dos exames depende da filosofia de cada programa de criação. Por isso, é recomendável perguntar quais avaliações foram realizadas e solicitar os respectivos laudos sempre que possível."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Um filhote saudável garante que nunca desenvolverá doenças?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nenhum exame é capaz de oferecer essa garantia. Assim como acontece na medicina humana, fatores genéticos, ambientais e individuais influenciam a saúde ao longo da vida do cão."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A beleza dos pais indica que os filhotes serão saudáveis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não necessariamente. Estrutura e beleza são apenas parte da seleção. Saúde, temperamento, genética e histórico familiar também precisam ser considerados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que caracteriza um programa de criação responsável?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Um programa de criação responsável combina seleção genética criteriosa, exames de saúde, respeito ao bem-estar animal, acompanhamento dos cães ao longo da vida e um compromisso contínuo com a preservação da raça, e não apenas com a produção de novas ninhadas."
+        }
+      }
+    ]
+  })} />
+
+  <article class="article-page">
+    <div class="container">
+
+      <a href={pilarUrl} class="back-link">← {pilarName}</a>
+
+      <header class="article-header">
+        <span class="article-capitulo">Capítulo {capitulo}</span>
+        <time datetime={articleDate} class="article-date">25 de junho de 2026</time>
+        <h1>Saúde do Shiba Inu: genética, prevenção e criação responsável</h1>
+        <p class="article-author">Por <strong>Ninpozan Kennel</strong> — Blumenau, SC</p>
+      </header>
+
+      <div class="article-body">
+
+        <p class="lead">Quando pensamos na saúde de um cão, é comum que a atenção recaia sobre vacinas, alimentação, consultas veterinárias e rotina de cuidados. Todos esses fatores são fundamentais, mas representam apenas uma parte da história.</p>
+
+        <p>No Shiba Inu, assim como em qualquer raça pura preservada ao longo de muitas gerações, a saúde começa muito antes do nascimento de um filhote.</p>
+
+        <p><strong>Ela começa nas decisões tomadas pelo criador.</strong></p>
+
+        <p>Cada acasalamento representa uma escolha genética. Cada reprodutor selecionado transmite não apenas características como estrutura, temperamento e pelagem, mas também um patrimônio biológico construído ao longo de diversas gerações. É justamente por isso que programas de <a href="/estudos/criacao/">criação responsável</a> investem tanto tempo estudando pedigrees, realizando exames de saúde e planejando cuidadosamente cada combinação entre macho e fêmea.</p>
+
+        <p>Felizmente, o Shiba Inu é considerado uma raça relativamente saudável quando comparado a diversas outras raças caninas. Ao longo de sua história, foi preservado como um cão funcional, resistente e de grande rusticidade, características que contribuíram para manter uma população geneticamente bastante sólida.</p>
+
+        <p>Entretanto, isso não significa que a raça esteja livre de doenças hereditárias.</p>
+
+        <p>Pelo contrário.</p>
+
+        <p>Conhecer essas predisposições e utilizar as ferramentas atualmente disponíveis para reduzi-las é uma das maiores responsabilidades de qualquer programa sério de preservação da raça.</p>
+
+        <p>Mais importante do que afirmar que um cão é saudável é demonstrar, através de exames e planejamento, que todos os esforços foram realizados para preservar essa condição nas próximas gerações.</p>
+
+        <p>Este artigo tem justamente esse objetivo: explicar quais são as principais condições hereditárias observadas no Shiba Inu, quais exames devem ser realizados pelos reprodutores e quais perguntas um futuro proprietário deve fazer antes de escolher um filhote.</p>
+
+        <p>Porque, na criação responsável, a saúde nunca é fruto do acaso.</p>
+
+        <p><strong>Ela é resultado de conhecimento, planejamento e compromisso com a raça.</strong></p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>A saúde começa antes mesmo do nascimento</h2>
+
+        <p>Existe uma ideia bastante difundida de que um filhote saudável é aquele que recebeu vacinas, foi vermifugado e passou por uma avaliação veterinária antes de seguir para sua nova família.</p>
+
+        <p>Esses cuidados são indispensáveis.</p>
+
+        <p>No entanto, eles representam apenas a etapa final de um processo que começou meses — e muitas vezes anos — antes daquela ninhada existir.</p>
+
+        <p>Muito antes do nascimento dos filhotes, um programa de criação responsável já está avaliando aspectos como:</p>
+
+        <ul>
+          <li>Histórico de saúde das linhagens</li>
+          <li>Resultados de exames genéticos</li>
+          <li>Exames ortopédicos e oftalmológicos</li>
+          <li>Temperamento dos reprodutores</li>
+          <li>Estrutura e conformação</li>
+          <li>Diversidade genética</li>
+          <li>Compatibilidade entre os cães selecionados</li>
+        </ul>
+
+        <p>Cada uma dessas decisões influencia diretamente a probabilidade de produzir animais saudáveis e bem adaptados ao padrão da raça.</p>
+
+        <p>Por isso, ao escolher um filhote, conhecer apenas o próprio filhote não é suficiente.</p>
+
+        <p>É igualmente importante conhecer seus pais.</p>
+
+        <p>E, principalmente, compreender como aquele acasalamento foi planejado.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Bem-estar animal também faz parte da saúde</h2>
+
+        <p>Quando se fala em criação responsável, muitas pessoas pensam imediatamente em exames genéticos.</p>
+
+        <p>Embora eles sejam extremamente importantes, existe outro aspecto igualmente fundamental: o respeito ao bem-estar dos próprios reprodutores.</p>
+
+        <p>Uma fêmea não deve ser vista como um animal destinado simplesmente à produção de ninhadas.</p>
+
+        <p>Ela é, antes de tudo, um indivíduo cuja saúde física e emocional precisa ser preservada ao longo de toda a vida.</p>
+
+        <p>Por esse motivo, programas de criação éticos consideram fatores como:</p>
+
+        <ul>
+          <li>Idade adequada para o início da reprodução</li>
+          <li>Condição física da matriz</li>
+          <li>Intervalo entre as gestações</li>
+          <li>Número de ninhadas ao longo da vida</li>
+          <li>Recuperação completa após cada gestação</li>
+          <li>Acompanhamento veterinário contínuo</li>
+        </ul>
+
+        <p>Esses cuidados não existem apenas para proteger a fêmea.</p>
+
+        <p>Eles também contribuem para o desenvolvimento saudável dos filhotes.</p>
+
+        <p>Uma matriz bem condicionada, saudável e corretamente manejada possui melhores condições fisiológicas para enfrentar a gestação, o parto e o período de amamentação.</p>
+
+        <p>Da mesma forma, utilizar animais em idade excessivamente avançada para reprodução pode aumentar riscos maternos e neonatais e levanta importantes questões relacionadas ao bem-estar animal.</p>
+
+        <p><strong>Na criação responsável, preservar a saúde da raça também significa preservar a saúde daqueles que tornam essa preservação possível.</strong></p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>O que um futuro proprietário deve perguntar ao criador?</h2>
+
+        <p>Escolher um filhote é uma decisão que normalmente acompanhará a família pelos próximos quinze anos ou mais.</p>
+
+        <p>Por isso, um bom comprador não deve avaliar apenas fotografias ou títulos conquistados pelos pais.</p>
+
+        <p>Ele deve procurar compreender a origem daquela ninhada.</p>
+
+        <p>Perguntas como estas são perfeitamente naturais e fazem parte de uma escolha consciente:</p>
+
+        <ul>
+          <li>Qual a idade do pai e da mãe?</li>
+          <li>Quais exames de saúde eles realizaram?</li>
+          <li>Os resultados desses exames podem ser apresentados?</li>
+          <li>Quantas ninhadas essa fêmea já teve?</li>
+          <li>Quanto tempo ela descansou entre uma gestação e outra?</li>
+          <li>Existe acompanhamento veterinário durante a reprodução?</li>
+          <li>Como foi escolhido esse acasalamento?</li>
+        </ul>
+
+        <p>Um criador sério dificilmente se sentirá incomodado com esse tipo de pergunta.</p>
+
+        <p>Pelo contrário.</p>
+
+        <p>Elas demonstram que o futuro proprietário valoriza exatamente os mesmos princípios que orientam um programa responsável de criação.</p>
+
+        <p>A transparência fortalece a confiança entre criador e família e contribui para decisões muito mais conscientes.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Saúde não significa perfeição genética</h2>
+
+        <p>Um dos maiores equívocos na cinofilia moderna é imaginar que exista um cão geneticamente "perfeito".</p>
+
+        <p>Isso simplesmente não existe.</p>
+
+        <p>Toda população possui características desejáveis e desafios hereditários que precisam ser conhecidos e administrados.</p>
+
+        <p>O verdadeiro papel da genética na criação responsável não é eliminar completamente todos os riscos — algo biologicamente impossível.</p>
+
+        <p><strong>Seu objetivo é reduzir progressivamente a incidência dessas condições através da seleção criteriosa dos reprodutores e do planejamento consciente dos acasalamentos.</strong></p>
+
+        <p>Essa visão é muito diferente da simples exclusão indiscriminada de animais.</p>
+
+        <p>Em muitos casos, preservar a <a href="/estudos/genetica/diversidade/">diversidade genética</a> da população é tão importante quanto evitar determinadas características hereditárias.</p>
+
+        <p>Criar bem significa equilibrar saúde, variabilidade genética, temperamento, estrutura e preservação do tipo racial.</p>
+
+        <p>É justamente esse equilíbrio que diferencia um programa de preservação da raça de uma criação baseada apenas em resultados imediatos.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>As principais condições hereditárias do Shiba Inu</h2>
+
+        <p>Embora o Shiba Inu seja reconhecido como uma raça bastante saudável, algumas doenças hereditárias merecem atenção especial dentro dos programas de criação.</p>
+
+        <p>A boa notícia é que, atualmente, grande parte dessas condições pode ser monitorada através de exames específicos ou controlada por meio de seleção genética criteriosa.</p>
+
+        <p>O objetivo não é criar preocupação desnecessária.</p>
+
+        <p>Pelo contrário.</p>
+
+        <p>Conhecer essas doenças permite que futuros proprietários façam escolhas mais conscientes e incentiva programas de criação comprometidos com a preservação da saúde da raça.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h3>GM1 Gangliosidose</h3>
+
+        <p>Entre todas as doenças hereditárias conhecidas no Shiba Inu, a <a href="/estudos/genetica/gm1/">GM1 Gangliosidose</a> merece atenção especial.</p>
+
+        <p>Trata-se de uma doença neurodegenerativa hereditária causada por mutações no gene GLB1, responsável pela produção da enzima beta-galactosidase.</p>
+
+        <p>Quando essa enzima não funciona corretamente, determinadas substâncias passam a se acumular dentro das células, principalmente no sistema nervoso, provocando uma deterioração progressiva do organismo.</p>
+
+        <p>Felizmente, essa doença tornou-se relativamente rara em programas modernos de criação.</p>
+
+        <p>Isso ocorreu porque atualmente existe um teste genético altamente confiável capaz de identificar cães:</p>
+
+        <ul>
+          <li>Livres da mutação</li>
+          <li>Portadores</li>
+          <li>Afetados</li>
+        </ul>
+
+        <p>Como a GM1 possui herança autossômica recessiva, um filhote somente desenvolverá a doença quando receber a mutação tanto do pai quanto da mãe.</p>
+
+        <p>Por esse motivo, conhecer o resultado do exame dos reprodutores permite planejar acasalamentos que evitem o nascimento de animais afetados.</p>
+
+        <p><strong>Hoje, o teste para GM1 deve ser considerado um dos exames genéticos mais importantes da raça.</strong></p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h3>Luxação de Patela</h3>
+
+        <p>A luxação de patela é uma alteração ortopédica em que a patela (popularmente chamada de "rótula") desloca-se para fora de sua posição normal.</p>
+
+        <p>Sua gravidade pode variar desde casos discretos, praticamente imperceptíveis, até situações que comprometem significativamente a locomoção do animal.</p>
+
+        <p>Embora fatores ambientais também possam influenciar sua manifestação, existe importante componente hereditário.</p>
+
+        <p>Por isso, programas de criação responsáveis costumam submeter seus reprodutores a avaliações ortopédicas realizadas por médicos-veterinários capacitados.</p>
+
+        <p>Esse exame permite classificar a estabilidade da articulação e auxilia na seleção dos cães que participarão da reprodução.</p>
+
+        <p>Ao conversar com um criador, vale a pena perguntar se pai e mãe possuem avaliação oficial de patelas.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h3>Exames Oftalmológicos</h3>
+
+        <p>Os olhos sempre foram uma das características mais marcantes do Shiba Inu.</p>
+
+        <p>Além de sua expressão típica, preservar a saúde ocular da raça também representa uma prioridade.</p>
+
+        <p>Embora a maioria dos Shibas apresente excelente saúde ocular, algumas doenças hereditárias podem ocorrer, como determinadas formas de catarata, glaucoma e atrofia progressiva da retina (PRA), dependendo das linhagens.</p>
+
+        <p>Por esse motivo, muitos programas de criação realizam exames oftalmológicos periódicos conduzidos por médicos-veterinários especializados em oftalmologia.</p>
+
+        <p>Essas avaliações permitem detectar alterações antes mesmo do aparecimento de sinais clínicos e auxiliam na tomada de decisões reprodutivas.</p>
+
+        <p>Quando disponíveis, esses laudos representam uma importante demonstração do compromisso do criador com a saúde da raça.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h3>Displasia Coxofemoral</h3>
+
+        <p>Quando se fala em displasia coxofemoral, muitas pessoas imediatamente pensam em raças gigantes.</p>
+
+        <p>Entretanto, embora sua incidência seja significativamente menor no Shiba Inu, essa condição também pode ocorrer.</p>
+
+        <p>A displasia resulta de um desenvolvimento inadequado da articulação do quadril e possui origem multifatorial, envolvendo fatores genéticos e ambientais.</p>
+
+        <p>Por esse motivo, alguns programas de criação optam por realizar radiografias oficiais de quadris em seus reprodutores, especialmente quando trabalham com linhagens internacionais ou seguem protocolos mais abrangentes de controle de saúde.</p>
+
+        <p>Mesmo não sendo um exame obrigatório em muitos países, sua realização demonstra uma preocupação adicional com a preservação da raça.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h3>Alergias e Dermatopatias</h3>
+
+        <p>O Shiba Inu pode apresentar predisposição a determinadas doenças alérgicas de pele, como dermatite atópica e hipersensibilidades ambientais ou alimentares.</p>
+
+        <p>Diferentemente das doenças genéticas apresentadas anteriormente, essas condições normalmente não podem ser completamente previstas através de testes laboratoriais.</p>
+
+        <p>Ainda assim, o histórico familiar continua sendo extremamente importante.</p>
+
+        <p>Criadores experientes acompanham seus cães ao longo da vida e conhecem quais linhagens apresentam maior ou menor incidência de problemas dermatológicos.</p>
+
+        <p>Esse acompanhamento permite reduzir gradualmente a frequência dessas condições nas gerações futuras.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h3>Outras condições que merecem atenção</h3>
+
+        <p>Além das doenças já mencionadas, o Shiba Inu pode eventualmente apresentar outras alterações hereditárias ou de predisposição genética, ainda que com menor frequência.</p>
+
+        <p>Entre elas podem ser citadas:</p>
+
+        <ul>
+          <li>Hipotireoidismo</li>
+          <li>Algumas doenças autoimunes</li>
+          <li>Alterações oculares específicas</li>
+          <li>Problemas ortopédicos menos comuns</li>
+        </ul>
+
+        <p>É importante compreender que nenhuma raça está completamente livre de doenças hereditárias.</p>
+
+        <p>O verdadeiro diferencial está na forma como cada programa de criação lida com essas informações.</p>
+
+        <p>Criadores comprometidos procuram conhecer profundamente suas linhagens, acompanhar seus cães ao longo da vida e utilizar esse conhecimento para orientar futuras decisões reprodutivas.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Exames não substituem seleção</h2>
+
+        <p>Existe uma tendência crescente de acreditar que basta realizar exames genéticos para garantir uma criação de qualidade.</p>
+
+        <p>Na prática, isso está longe de ser suficiente.</p>
+
+        <p>Os exames representam ferramentas extremamente importantes, mas jamais substituem o olhar criterioso do criador.</p>
+
+        <p>Temperamento. Estrutura. Movimentação. Longevidade. Histórico familiar. Capacidade reprodutiva. Tipo racial.</p>
+
+        <p>Todos esses fatores continuam fazendo parte da seleção.</p>
+
+        <p>Um programa de preservação da raça utiliza exames para complementar o conhecimento do criador — nunca para substituí-lo.</p>
+
+        <p><strong>É justamente a combinação entre ciência, experiência e planejamento que permite reduzir riscos sem comprometer a diversidade genética da população.</strong></p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Quais exames devo solicitar ao criador?</h2>
+
+        <p>Uma das maiores vantagens da medicina veterinária moderna é que hoje muitas doenças hereditárias podem ser prevenidas através de planejamento genético e exames realizados antes mesmo do nascimento de uma ninhada.</p>
+
+        <p>Por isso, ao escolher um filhote, o futuro proprietário não deve sentir constrangimento em perguntar quais exames foram realizados pelos pais.</p>
+
+        <p>Muito pelo contrário.</p>
+
+        <p>Um programa de criação sério costuma valorizar esse tipo de pergunta, pois ela demonstra que o comprador compreende a importância da preservação da raça.</p>
+
+        <p>Embora os protocolos possam variar entre países e entre diferentes programas de criação, alguns exames são considerados especialmente importantes para o Shiba Inu.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h3>Exames considerados essenciais</h3>
+
+        <h4>Teste Genético para GM1</h4>
+
+        <p>A GM1 Gangliosidose é uma doença hereditária grave, mas atualmente pode ser completamente controlada através do planejamento genético.</p>
+
+        <p>O teste identifica se o cão é:</p>
+
+        <ul>
+          <li><strong>Clear</strong> (Livre): não possui a mutação genética</li>
+          <li><strong>Carrier</strong> (Portador): possui uma cópia da mutação, mas permanece clinicamente saudável</li>
+          <li><strong>Affected</strong> (Afetado): possui duas cópias da mutação e desenvolverá a doença</li>
+        </ul>
+
+        <p>Conhecer esse resultado permite planejar acasalamentos responsáveis e evitar o nascimento de filhotes afetados.</p>
+
+        <p>Por esse motivo, esse exame deve ser considerado indispensável em programas modernos de criação.</p>
+
+        <h4>Avaliação de Luxação de Patela</h4>
+
+        <p>A avaliação ortopédica das patelas ajuda a identificar alterações na estabilidade da articulação dos joelhos.</p>
+
+        <p>Embora fatores ambientais também possam influenciar seu desenvolvimento, conhecer a condição ortopédica dos reprodutores contribui para reduzir a incidência dessa alteração nas próximas gerações.</p>
+
+        <p>Sempre que possível, solicite ao criador informações sobre a avaliação oficial das patelas do pai e da mãe.</p>
+
+        <h4>Exame Oftalmológico</h4>
+
+        <p>Os olhos fazem parte da identidade do Shiba Inu.</p>
+
+        <p>Além da expressão típica da raça, preservar a saúde ocular também deve fazer parte de um programa de criação responsável.</p>
+
+        <p>Exames realizados por médicos-veterinários especializados em oftalmologia auxiliam na identificação precoce de doenças hereditárias e representam uma importante ferramenta de seleção.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h3>Exames complementares</h3>
+
+        <p>Dependendo das linhagens utilizadas e da filosofia do programa de criação, outros exames podem agregar informações importantes.</p>
+
+        <p>Entre eles destacam-se:</p>
+
+        <ul>
+          <li>Radiografias oficiais para avaliação dos quadris</li>
+          <li>Testes genéticos relacionados ao gene <a href="/estudos/shiba-inu/long-coat/">FGF5 (Long Coat)</a></li>
+          <li>Exames específicos recomendados conforme a origem das linhagens</li>
+        </ul>
+
+        <p>Embora alguns desses exames não estejam diretamente relacionados à saúde clínica do cão, eles auxiliam o criador no planejamento dos acasalamentos e na preservação das características da raça.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Mais importante do que um exame isolado</h2>
+
+        <p>Existe uma tendência natural de comparar criadores apenas pelo número de exames realizados.</p>
+
+        <p>Na prática, essa análise é incompleta.</p>
+
+        <p>Exames são ferramentas.</p>
+
+        <p>Quem realmente faz a diferença é a forma como essas informações são utilizadas.</p>
+
+        <p>Um programa de criação responsável interpreta cada resultado dentro de um contexto muito maior.</p>
+
+        <p>Ele considera:</p>
+
+        <ul>
+          <li>O <a href="/estudos/criacao/pedigree/">pedigree</a> completo</li>
+          <li>O histórico de saúde da família</li>
+          <li>O temperamento</li>
+          <li>A estrutura</li>
+          <li>A diversidade genética</li>
+          <li>Os objetivos de preservação da raça</li>
+        </ul>
+
+        <p>Um único exame nunca conta toda a história.</p>
+
+        <p><strong>É justamente a combinação entre conhecimento técnico, experiência prática e responsabilidade ética que permite tomar decisões equilibradas para o futuro da população.</strong></p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Como interpretar um programa de criação</h2>
+
+        <p>Ao visitar um canil, muitas pessoas observam apenas a beleza dos cães.</p>
+
+        <p>Embora isso seja compreensível, existem aspectos muito mais importantes para avaliar.</p>
+
+        <p>Procure observar se o criador demonstra conhecer profundamente seus próprios cães.</p>
+
+        <p>Um programa sério normalmente consegue explicar:</p>
+
+        <ul>
+          <li>Por que determinado acasalamento foi realizado</li>
+          <li>Quais qualidades buscava preservar</li>
+          <li>Quais características pretendia melhorar</li>
+          <li>Quais exames foram considerados durante o planejamento</li>
+          <li>Quais cuidados são adotados com as matrizes e reprodutores</li>
+        </ul>
+
+        <p>Essas respostas revelam muito mais sobre a qualidade da criação do que qualquer fotografia ou título isoladamente.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>O verdadeiro papel da transparência</h2>
+
+        <p>Criadores responsáveis costumam manter registros detalhados de seus cães.</p>
+
+        <p>Resultados de exames. Histórico reprodutivo. Informações sobre linhagens. Acompanhamento dos filhotes ao longo da vida.</p>
+
+        <p>Esses registros não existem apenas para organizar informações.</p>
+
+        <p>Eles representam uma ferramenta de melhoria contínua.</p>
+
+        <p>Quanto maior o conhecimento acumulado sobre cada geração, melhores tendem a ser as decisões tomadas nas gerações seguintes.</p>
+
+        <p>Por isso, transparência não deve ser vista como uma obrigação.</p>
+
+        <p><strong>Ela faz parte da própria filosofia de preservação da raça.</strong></p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Saúde também é acompanhamento</h2>
+
+        <p>O trabalho do criador não termina quando o filhote deixa o canil.</p>
+
+        <p>Programas comprometidos com a preservação da raça procuram acompanhar o desenvolvimento dos cães durante toda a vida.</p>
+
+        <p>Esse acompanhamento permite conhecer:</p>
+
+        <ul>
+          <li>Crescimento</li>
+          <li>Temperamento</li>
+          <li>Surgimento de doenças</li>
+          <li>Longevidade</li>
+          <li>Qualidade de vida</li>
+          <li>Desempenho reprodutivo</li>
+        </ul>
+
+        <p>Cada informação retorna ao programa de criação e ajuda a orientar futuras decisões.</p>
+
+        <p>Dessa forma, cada geração contribui para tornar a seguinte ainda melhor.</p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Em resumo</h2>
+
+        <p>A saúde de um Shiba Inu não depende apenas da genética, dos exames ou dos cuidados veterinários.</p>
+
+        <p>Ela é resultado de um conjunto de decisões tomadas ao longo de muitas gerações.</p>
+
+        <p>Exames modernos permitem reduzir riscos importantes.</p>
+
+        <p>Entretanto, somente quando esses exames são aliados ao conhecimento da raça, ao respeito pelo bem-estar animal e ao planejamento criterioso dos acasalamentos é que eles cumprem plenamente seu papel.</p>
+
+        <p>Ao escolher um filhote, procure conhecer não apenas os resultados dos exames, mas também a filosofia do programa de criação que deu origem àquela ninhada.</p>
+
+        <p class="conclusion"><strong>Porque preservar uma raça significa muito mais do que produzir cães saudáveis. Significa garantir que as próximas gerações continuem reunindo saúde, temperamento, funcionalidade e as características que tornaram o Shiba Inu uma das raças mais admiradas do mundo.</strong></p>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="faq-section">
+
+          <div class="faq-item">
+            <h3>Quais exames são indispensáveis antes de comprar um Shiba Inu?</h3>
+            <p>O teste genético para GM1, a avaliação de luxação de patela e os exames oftalmológicos dos reprodutores são considerados entre os mais importantes. Dependendo do programa de criação, outros exames complementares também podem ser realizados.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Um cão portador de GM1 pode reproduzir?</h3>
+            <p>Sim. Um cão portador permanece clinicamente saudável. O importante é que o acasalamento seja planejado para evitar o nascimento de filhotes afetados, utilizando reprodutores geneticamente compatíveis.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Todo criador realiza exames de saúde?</h3>
+            <p>Não. A realização dos exames depende da filosofia de cada programa de criação. Por isso, é recomendável perguntar quais avaliações foram realizadas e solicitar os respectivos laudos sempre que possível.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Um filhote saudável garante que nunca desenvolverá doenças?</h3>
+            <p>Nenhum exame é capaz de oferecer essa garantia. Assim como acontece na medicina humana, fatores genéticos, ambientais e individuais influenciam a saúde ao longo da vida do cão.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>A beleza dos pais indica que os filhotes serão saudáveis?</h3>
+            <p>Não necessariamente. Estrutura e beleza são apenas parte da seleção. Saúde, temperamento, genética e histórico familiar também precisam ser considerados.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>O que caracteriza um programa de criação responsável?</h3>
+            <p>Um programa de criação responsável combina seleção genética criteriosa, exames de saúde, respeito ao bem-estar animal, acompanhamento dos cães ao longo da vida e um compromisso contínuo com a preservação da raça, e não apenas com a produção de novas ninhadas.</p>
+          </div>
+
+        </div>
+
+        <div class="divider"><span class="divider-symbol">◆</span></div>
+
+        <h2>Continue seus estudos</h2>
+
+        <ul class="reading-list">
+          <li><a href="/estudos/genetica/gm1/">GM1 Gangliosidose no Shiba Inu</a></li>
+          <li><a href="/estudos/shiba-inu/long-coat/">Long Coat (Fluffy): o que é e por que acontece?</a></li>
+          <li><a href="/estudos/genetica/diversidade/">Diversidade Genética</a></li>
+          <li><a href="/estudos/criacao/selecao-matrizes/">Seleção de Matrizes e Reprodutores</a></li>
+          <li><a href="/estudos/criacao/pet-vs-show/">Pet vs Show</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+  </article>
+
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--sumi);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--verde-rolex); }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--nanquim);
+  }
+  .article-capitulo {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dourado);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .article-date {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sumi-light);
+  }
+  .article-header h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 2rem;
+    color: var(--verde-deep);
+    line-height: 1.3;
+    margin: 1rem 0 0.8rem;
+  }
+  .article-author {
+    font-size: 0.85rem;
+    color: var(--sumi);
+  }
+
+  .article-body {
+    margin-bottom: 4rem;
+  }
+  .article-body p {
+    font-size: 1rem;
+    color: var(--nanquim);
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+  }
+  .article-body .lead {
+    font-size: 1.1rem;
+    color: var(--sumi);
+    font-style: italic;
+    border-left: 3px solid var(--dourado);
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .article-body h2 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.4rem;
+    color: var(--verde-deep);
+    margin: 2.5rem 0 1rem;
+  }
+  .article-body h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.2rem;
+    color: var(--verde-deep);
+    margin: 2rem 0 0.8rem;
+  }
+  .article-body h4 {
+    font-size: 1rem;
+    color: var(--dourado);
+    font-weight: 600;
+    margin: 1.5rem 0 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .article-body ul {
+    margin: 1rem 0 1.5rem 1.5rem;
+    list-style: none;
+  }
+  .article-body ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--sumi);
+    line-height: 1.6;
+  }
+  .article-body ul li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: var(--dourado);
+    font-size: 0.6rem;
+    top: 0.4rem;
+  }
+  .article-body a {
+    color: var(--verde-rolex);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  .article-body a:hover {
+    color: var(--dourado);
+  }
+  .article-body .conclusion {
+    font-size: 1.05rem;
+    text-align: center;
+    padding: 1.5rem;
+    border: 2px solid var(--verde-rolex);
+    background: var(--papel-escuro);
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+
+  .faq-section {
+    margin-top: 1.5rem;
+  }
+  .faq-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 96, 57, 0.08);
+  }
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+  .faq-item h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.1rem;
+    color: var(--verde-deep);
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+  }
+  .faq-item p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .reading-list {
+    margin-top: 1rem;
+  }
+  .reading-list li {
+    margin-bottom: 0.8rem;
+  }
+  .reading-list a {
+    font-size: 1rem;
+    color: var(--verde-rolex);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .reading-list a:hover {
+    color: var(--dourado);
+  }
+
+  @media (max-width: 600px) {
+    .article-header h1 { font-size: 1.5rem; }
+    .article-body h2 { font-size: 1.2rem; }
+    .article-body h3 { font-size: 1.05rem; }
+  }
+</style>
