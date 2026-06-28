@@ -106,7 +106,7 @@ A biblioteca está organizada em **5 pilares** independentes, cada um com seus c
 
 | # | Capítulo | URL | Status | Links cruzados |
 |---|----------|-----|--------|----------------|
-| 1 | Nossa História | `/estudos/ninpozan/historia/` | Pendente | → Por que Shiba Inu, → Linhagens |
+| 1 | Nossa História | `/estudos/ninpozan/nossa-historia/` | ✅ Publicado | → Por que Shiba Inu, → Linhagens, → Temperamento, → Cores, → Saúde, → Criação Responsável |
 | 2 | Por que escolhemos criar Shiba Inu? | `/estudos/ninpozan/por-que-shiba/` | Pendente | → História do Shiba (Pilar 1), → Nossa História |
 | 3 | Como selecionamos nossos cães | `/estudos/ninpozan/selecao/` | Pendente | → Seleção de matrizes (Pilar 2), → Pedigree |
 | 4 | Por que importamos cães do Reino Unido? | `/estudos/ninpozan/importacao-uk/` | Pendente | → Linhagens, → Diversidade genética |
