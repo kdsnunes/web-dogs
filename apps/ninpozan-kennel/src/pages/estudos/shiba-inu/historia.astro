@@ -1,0 +1,2289 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const articleTitle = 'História do Shiba Inu: das origens pré-históricas às raças nativas do Japão';
+const articleDescription = 'A história completa do Shiba Inu: dos povos Jōmon e seus cães há 8.000 anos, passando pelo período Yayoi e a chegada de novos cães ao arquipélago, até a formação dos tipos regionais que deram origem às raças japonesas.';
+const articleDate = '2026-07-03';
+const articleModified = '2026-07-03';
+const articleUrl = 'https://ninpozankennel.com.br/estudos/shiba-inu/historia/';
+const pilarName = 'Conhecendo o Shiba Inu';
+const pilarUrl = '/estudos/shiba-inu/';
+const capitulo = 1;
+---
+
+<BaseLayout
+  title={`${articleTitle} — Ninpozan Kennel`}
+  description={articleDescription}
+  breadcrumbs={[
+    { name: "Estudos", url: "/estudos/" },
+    { name: pilarName, url: pilarUrl },
+    { name: "História", url: "/estudos/shiba-inu/historia/" }
+  ]}
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": articleTitle,
+    "description": articleDescription,
+    "datePublished": articleDate,
+    "dateModified": articleModified,
+    "url": articleUrl,
+    "image": [
+      "https://ninpozankennel.com.br/estudos/historia/esqueleto-cao-jomon-kamikuroiwa.png",
+      "https://ninpozankennel.com.br/estudos/historia/sitio-arqueologico-jomon-rock-shelter.png",
+      "https://ninpozankennel.com.br/estudos/historia/ceramica-jomon-periodo.png",
+      "https://ninpozankennel.com.br/estudos/historia/sannai-maruyama-aldeia-jomon.png"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "Ninpozan Kennel",
+      "url": "https://ninpozankennel.com.br"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ninpozan Kennel",
+      "url": "https://ninpozankennel.com.br",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ninpozankennel.com.br/nippo.png"
+      }
+    },
+    "mainEntityOfPage": articleUrl,
+    "keywords": "história shiba inu, origem shiba inu, período jōmon cães, cães japoneses ancestrais, kamikuroiwa rock shelter, arqueologia cães japão, nihon ken história, NIPPO história, jōmon dogs, pré-história cães japão",
+    "articleSection": pilarName,
+    "inLanguage": "pt-BR",
+    "about": [
+      { "@type": "Thing", "name": "Shiba Inu" },
+      { "@type": "Thing", "name": "Período Jōmon" },
+      { "@type": "Thing", "name": "Cães japoneses" },
+      { "@type": "Thing", "name": "Arqueologia" }
+    ]
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qual a origem do Shiba Inu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Shiba Inu descende dos cães nativos que acompanhavam os povos Jōmon no arquipélago japonês há mais de 8.000 anos. Evidências arqueológicas, como esqueletos encontrados em Kamikuroiwa Rock Shelter (Ehime), mostram que esses cães participavam ativamente da caça e possuíam importância social dentro das comunidades humanas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quem eram os povos Jōmon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Os Jōmon foram os primeiros habitantes do arquipélago japonês, vivendo entre aproximadamente 14.000 a.C. e 300 a.C. Desenvolveram cultura material sofisticada, produziram cerâmica (as mais antigas do mundo), construíram aldeias estáveis e mantinham relação extremamente próxima com cães, que participavam de atividades de caça."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Existem evidências arqueológicas dos ancestrais do Shiba Inu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Escavações em diversos sítios arqueológicos japoneses encontraram esqueletos completos de cães enterrados individualmente com cuidado, datados de até 8.000 anos atrás. O sítio de Kamikuroiwa Rock Shelter, em Ehime, contém alguns dos registros mais antigos de sepultamentos de cães no Japão."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Os cães do período Jōmon eram Shiba Inu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não exatamente. Os cães do período Jōmon são considerados ancestrais dos cães japoneses nativos modernos (incluindo o Shiba Inu), mas não podem ser chamados de Shiba Inu no sentido formal da raça. O Shiba Inu como raça definida surgiu muito depois, através de séculos de seleção funcional e, posteriormente, preservação organizada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Por que os cães eram enterrados no período Jōmon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O sepultamento cuidadoso de cães indica que esses animais possuíam importância social significativa nas comunidades Jōmon. Não eram descartados após a morte, mas enterrados individualmente em posições organizadas, sugerindo que eram valorizados como parceiros de caça e membros da comunidade."
+        }
+      }
+    ]
+  })} />
+
+  <article class="article-page has-toc">
+    <div class="article-layout">
+
+      <aside class="toc">
+        <nav class="toc-nav">
+          <span class="toc-title">Navegação</span>
+          <ol class="toc-list">
+            <li class="toc-part">Parte I — Jōmon</li>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#japao-antes-do-japao">O Japão antes do Japão</a></li>
+            <li><a href="#primeiros-caes">Os primeiros cães do arquipélago</a></li>
+            <li><a href="#muito-alem">Muito além de companheiros</a></li>
+            <li><a href="#nascimento-parceria">O nascimento de uma parceria</a></li>
+            <li><a href="#funcao-precedeu-raca">A função precedeu a raça</a></li>
+            <li class="toc-part">Parte II — Yayoi</li>
+            <li><a href="#periodo-yayoi">O período Yayoi</a></li>
+            <li><a href="#nova-forma-viver">Uma nova forma de viver</a></li>
+            <li><a href="#novos-caes">Novos cães no arquipélago?</a></li>
+            <li><a href="#selecao-funcional">O início da seleção funcional</a></li>
+            <li><a href="#geografia-moldou">A geografia moldou os cães</a></li>
+            <li><a href="#antes-pedigrees">Muito antes dos pedigrees</a></li>
+            <li class="toc-part">Parte III — Japão feudal</li>
+            <li><a href="#japao-feudal">O nascimento dos cães regionais</a></li>
+            <li><a href="#natureza-protege">A natureza protege a diversidade</a></li>
+            <li><a href="#selecao-funcional-seculos">Séculos de seleção funcional</a></li>
+            <li><a href="#tipos-regionais">Surgimento dos tipos regionais</a></li>
+            <li><a href="#shiba-nao-existia">O Shiba ainda não existia</a></li>
+            <li><a href="#alem-caca">Muito além da caça</a></li>
+            <li class="toc-part">Parte IV — Era Meiji</li>
+            <li><a href="#era-meiji">Quando o Shiba quase desapareceu</a></li>
+            <li><a href="#caes-estrangeiros">Cães estrangeiros no Japão</a></li>
+            <li><a href="#desaparecimento">O desaparecimento silencioso</a></li>
+            <li><a href="#patrimonio-ameacado">Um patrimônio ameaçado</a></li>
+            <li><a href="#movimento-preservacao">O movimento de preservação</a></li>
+            <li class="toc-part">Parte V — NIPPO</li>
+            <li><a href="#nippo-nascimento">Saitō e o nascimento da NIPPO</a></li>
+            <li><a href="#hirokichi-saito">Hirokichi Saitō</a></li>
+            <li><a href="#nascimento-nippo">O nascimento da NIPPO</a></li>
+            <li><a href="#antes-padrao">Antes do padrão, veio a pesquisa</a></li>
+            <li><a href="#padrao-nihon-ken">O padrão Nihon Ken</a></li>
+            <li><a href="#monumento-natural">Monumento Natural</a></li>
+            <li><a href="#shiba-moderno">O Shiba Inu moderno</a></li>
+            <li><a href="#filosofia-geracoes">Filosofia que atravessa gerações</a></li>
+            <li class="toc-part">Parte VI — Segunda Guerra</li>
+            <li><a href="#segunda-guerra">A guerra e a reconstrução</a></li>
+            <li><a href="#pais-ruinas">Um país em ruínas</a></li>
+            <li><a href="#inimigo-invisivel">Um inimigo invisível</a></li>
+            <li><a href="#geografia-protecao">Quando a geografia voltou a proteger</a></li>
+            <li><a href="#recomecar-zero">Recomeçar do zero</a></li>
+            <li><a href="#patrimonio-salvo">Patrimônio salvo por poucas gerações</a></li>
+            <li><a href="#legado-futuro">O legado para o futuro</a></li>
+            <li class="toc-part">Parte VII — O Shiba moderno</li>
+            <li><a href="#shiba-mundo">Um patrimônio que conquistou o mundo</a></li>
+            <li><a href="#japao-mundo">O Japão apresentou seus cães</a></li>
+            <li><a href="#preservar-fora">Preservar fora do país de origem</a></li>
+            <li><a href="#olhar-funcao">A importância da função</a></li>
+            <li><a href="#preservacao-evolucao">Preservação não é imobilidade</a></li>
+            <li><a href="#legado-construido">Um legado em construção</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li class="toc-part">Referências</li>
+            <li><a href="#fontes">Fontes e referências</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <div class="article-content">
+
+        <a href={pilarUrl} class="back-link">← {pilarName}</a>
+
+        <header class="article-header">
+          <span class="article-capitulo">Capítulo {capitulo}</span>
+          <time datetime={articleDate} class="article-date">3 de julho de 2026</time>
+          <h1>História do Shiba Inu</h1>
+          <p class="article-subtitle">Parte I — Antes do Shiba Inu existir: o Japão, os povos Jōmon e os primeiros cães</p>
+          <p class="article-author">Por <strong>Ninpozan Kennel</strong> — Blumenau, SC</p>
+        </header>
+
+        <div class="article-hero-images">
+          <figure>
+            <img
+              src="/estudos/historia/esqueleto-cao-jomon-kamikuroiwa.png"
+              alt="Esqueleto de cão do período Jōmon encontrado em Kamikuroiwa Rock Shelter, Ehime, Japão — um dos registros mais antigos de sepultamento de cães no arquipélago japonês"
+              width="949"
+              height="1024"
+              loading="eager"
+            />
+          </figure>
+          <figure>
+            <img
+              src="/estudos/historia/sitio-arqueologico-jomon-rock-shelter.png"
+              alt="Sítio arqueológico de um rock shelter do período Jōmon no Japão, onde foram encontrados vestígios de cães ancestrais dos cães japoneses nativos"
+              width="1017"
+              height="1024"
+              loading="eager"
+            />
+          </figure>
+          <figcaption class="hero-caption">O caso de Kamikuroiwa Rock Shelter, em Ehime</figcaption>
+        </div>
+
+        <div class="article-body">
+
+          <section id="introducao">
+
+            <p class="lead">Quando estudamos a história do Shiba Inu, é natural imaginar que ela começa com o surgimento da própria raça.</p>
+
+            <p>Na realidade, ela começa muito antes.</p>
+
+            <p>Muito antes de existir um padrão oficial.</p>
+
+            <p>Muito antes da criação da NIPPO.</p>
+
+            <p>Muito antes do próprio Japão tornar-se a nação que conhecemos atualmente.</p>
+
+            <p>Para compreender verdadeiramente o Shiba Inu, precisamos voltar milhares de anos no tempo e entender como se formou o arquipélago japonês, quem foram seus primeiros habitantes e qual papel os cães desempenhavam naquela sociedade.</p>
+
+            <p>Essa perspectiva é importante porque o Shiba Inu moderno não surgiu de forma espontânea.</p>
+
+            <p>Ele representa o resultado de um longo processo de adaptação natural, seleção funcional e, posteriormente, preservação conduzida pelo homem.</p>
+
+            <p>Por isso, ao longo deste capítulo faremos uma distinção importante.</p>
+
+            <p>Quando falarmos sobre os períodos mais antigos da história japonesa, estaremos nos referindo aos <strong>ancestrais dos cães japoneses modernos</strong>, e não ao Shiba Inu como raça formalmente definida.</p>
+
+            <p>Essa diferença pode parecer sutil, mas é fundamental para compreender a evolução da raça de maneira historicamente correta.</p>
+
+          </section>
+
+          <section id="japao-antes-do-japao">
+
+            <h2>O Japão antes do Japão</h2>
+
+            <div class="section-images">
+              <figure>
+                <img
+                  src="/estudos/historia/ceramica-jomon-periodo.png"
+                  alt="Cerâmica do período Jōmon com marcas de corda características — a cerâmica Jōmon é considerada uma das mais antigas do mundo"
+                  width="823"
+                  height="1024"
+                  loading="lazy"
+                />
+                <figcaption>Cerâmica Jōmon — as marcas de corda que deram nome ao período</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/estudos/historia/sannai-maruyama-aldeia-jomon.png"
+                  alt="Reconstrução de habitações do período Jōmon com telhados de palha — os Jōmon construíam comunidades estáveis integradas à natureza"
+                  width="1024"
+                  height="767"
+                  loading="lazy"
+                />
+                <figcaption>Reconstrução de habitações Jōmon — comunidades estáveis e organizadas</figcaption>
+              </figure>
+            </div>
+
+            <p>Muito antes da formação do Estado japonês, o arquipélago era composto por extensas florestas, cadeias montanhosas, rios e regiões costeiras extremamente ricas em recursos naturais.</p>
+
+            <p>Essas condições favoreceram o desenvolvimento de comunidades humanas que dependiam principalmente da caça, da pesca e da coleta para sobreviver.</p>
+
+            <p>Foi nesse contexto que surgiu o chamado <strong>período Jōmon</strong>, um dos mais longos da pré-história mundial.</p>
+
+            <p>Tradicionalmente datado entre aproximadamente <strong>14.000 a.C. e 300 a.C.</strong>, o período Jōmon recebeu esse nome devido às características marcas de cordas impressas na cerâmica produzida por seus habitantes — <em>jōmon</em> significa literalmente "marcas de corda".</p>
+
+            <p>Durante milhares de anos, diferentes comunidades desenvolveram formas próprias de viver em estreita relação com a natureza.</p>
+
+            <p>Ao contrário da imagem simplificada que muitas vezes fazemos dos povos pré-históricos, os Jōmon possuíam cultura material sofisticada, produziam cerâmica, construíam aldeias relativamente estáveis e mantinham uma relação extremamente próxima com os animais que compartilhavam seu ambiente.</p>
+
+            <p>Entre esses animais estavam os cães.</p>
+
+          </section>
+
+          <section id="primeiros-caes">
+
+            <h2>Os primeiros cães do arquipélago japonês</h2>
+
+            <div class="section-images">
+              <figure>
+                <img
+                  src="/estudos/historia/esqueleto-cao-jomon-sepultamento.png"
+                  alt="Esqueleto de cão do período Jōmon em posição de sepultamento — evidência arqueológica da importância social dos cães nas comunidades pré-históricas japonesas"
+                  width="1024"
+                  height="565"
+                  loading="lazy"
+                />
+                <figcaption>Sepultamento de cão Jōmon — posição organizada indica importância social</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/estudos/historia/ossadas-caes-jomon-analise.png"
+                  alt="Análise osteológica comparativa de ossadas de cães do período Jōmon — crânios e ossos longos utilizados em estudos sobre os ancestrais dos cães japoneses"
+                  width="675"
+                  height="1024"
+                  loading="lazy"
+                />
+                <figcaption>Análise osteológica de cães Jōmon — estudos que revelam sua função</figcaption>
+              </figure>
+            </div>
+
+            <p>A presença de cães no Japão durante o período Jōmon não é uma hipótese.</p>
+
+            <p><strong>Ela é comprovada pela arqueologia.</strong></p>
+
+            <p>Escavações realizadas em diferentes regiões do arquipélago identificaram esqueletos completos de cães enterrados individualmente, em posições cuidadosamente organizadas, indicando que esses animais ocupavam um papel muito mais significativo do que simples auxiliares de caça.</p>
+
+            <p>Um dos exemplos mais conhecidos encontra-se no sítio arqueológico de <strong>Kamikuroiwa Rock Shelter</strong>, na atual província de Ehime.</p>
+
+            <p>Ali foram encontrados sepultamentos de cães datados de aproximadamente <strong>oito mil anos atrás</strong>, considerados entre os registros mais antigos desse tipo em todo o Japão.</p>
+
+            <p>O cuidado empregado nesses enterros demonstra que aqueles cães possuíam importância social dentro das comunidades humanas.</p>
+
+            <p>Eles não eram descartados após a morte.</p>
+
+            <p><strong>Eram enterrados.</strong></p>
+
+            <p>Esse detalhe, aparentemente simples, revela muito sobre a relação construída entre seres humanos e cães desde os primeiros períodos da ocupação japonesa.</p>
+
+          </section>
+
+          <section id="muito-alem">
+
+            <h2>Muito além de companheiros</h2>
+
+            <p>Durante muito tempo acreditou-se que esses cães desempenhavam apenas funções de guarda ou companhia.</p>
+
+            <p>Entretanto, estudos arqueológicos mais recentes sugerem um papel muito mais complexo.</p>
+
+            <p>Diversos esqueletos apresentam sinais de lesões cicatrizadas, desgastes dentários e alterações ósseas compatíveis com intensa atividade física ao longo da vida.</p>
+
+            <p>Essas evidências indicam que muitos desses animais <strong>participaram ativamente da caça</strong>.</p>
+
+            <p>Em um território coberto por florestas densas e montanhas, localizar presas exigia habilidades extremamente específicas.</p>
+
+            <p>O cão precisava deslocar-se com rapidez, identificar rastros, movimentar-se em silêncio e manter contato constante com o caçador.</p>
+
+            <p>Essas características continuariam sendo valorizadas durante milhares de anos na seleção dos cães japoneses.</p>
+
+            <p>Embora não possamos afirmar que aqueles animais fossem Shibas no sentido moderno da palavra, é difícil não reconhecer neles o início de uma tradição funcional que seria preservada pelas futuras raças nativas do Japão.</p>
+
+          </section>
+
+          <section id="nascimento-parceria">
+
+            <h2>O nascimento de uma parceria</h2>
+
+            <p>Existe um aspecto particularmente fascinante quando observamos os cães do período Jōmon.</p>
+
+            <p>A relação entre humanos e cães parece ter sido construída sobre <strong>cooperação</strong>, e não apenas domesticação.</p>
+
+            <p>Enquanto os cães ampliavam a eficiência das atividades de caça, os grupos humanos ofereciam alimento, proteção e convivência.</p>
+
+            <p>Ambos dependiam um do outro.</p>
+
+            <p>Essa parceria ajudou a moldar não apenas a sobrevivência das comunidades humanas, mas também a evolução dos próprios cães.</p>
+
+            <p>Ao longo de inúmeras gerações, indivíduos mais aptos para trabalhar ao lado das pessoas possuíam maiores chances de permanecer naquele ambiente e transmitir suas características às gerações seguintes.</p>
+
+            <p>Muito antes de existir qualquer kennel club ou padrão oficial, a própria natureza já realizava um intenso processo de seleção.</p>
+
+          </section>
+
+          <section id="funcao-precedeu-raca">
+
+            <h2>A função precedeu a raça</h2>
+
+            <p>Esse talvez seja um dos conceitos mais importantes para compreender toda a história do Shiba Inu.</p>
+
+            <p>Hoje costumamos pensar primeiro na raça e depois em sua função.</p>
+
+            <p><strong>Na pré-história japonesa ocorreu exatamente o contrário.</strong></p>
+
+            <p>Primeiro surgiu a necessidade.</p>
+
+            <p>Depois vieram os cães capazes de atendê-la.</p>
+
+            <p>Somente muitos séculos mais tarde essas populações caninas seriam organizadas, preservadas e reconhecidas como raças distintas.</p>
+
+            <p>Essa inversão de perspectiva explica por que tantas características do Shiba Inu moderno — sua rusticidade, sua agilidade, sua independência e sua impressionante capacidade de adaptação ao ambiente — fazem muito mais sentido quando observadas sob a luz da história.</p>
+
+            <p>Elas não foram criadas para atender preferências estéticas.</p>
+
+            <p><strong>Foram moldadas por milhares de anos de convivência entre o homem, a natureza e a necessidade de sobreviver.</strong></p>
+
+          </section>
+
+          <div class="part-divider">
+            <span class="part-label">Parte II</span>
+          </div>
+
+          <section id="periodo-yayoi">
+
+            <h2>O período Yayoi: quando o Japão começou a mudar</h2>
+
+            <figure class="section-hero">
+              <img
+                src="/estudos/historia/aldeia-yayoi-reconstrucao.png"
+                alt="Reconstrução de aldeia fortificada do período Yayoi com habitações de telhado de palha e paliçadas — o período Yayoi introduziu agricultura e novas formas de organização social no Japão"
+                width="1024"
+                height="679"
+                loading="lazy"
+              />
+              <figcaption>Reconstrução de aldeia do período Yayoi — agricultura, paliçadas e uma nova organização social</figcaption>
+            </figure>
+
+            <p>Durante milhares de anos, os povos Jōmon desenvolveram uma cultura profundamente ligada à caça, à pesca e à coleta.</p>
+
+            <p>Seus cães evoluíram ao lado dessas comunidades, adaptando-se às montanhas, às florestas e às necessidades impostas por esse modo de vida.</p>
+
+            <p>Entretanto, por volta de <strong>300 a.C.</strong>, o arquipélago japonês começou a passar por uma transformação que alteraria definitivamente sua história.</p>
+
+            <p>Novos povos chegaram ao Japão vindos do continente asiático.</p>
+
+            <p>Esse período ficou conhecido como <strong>Yayoi</strong>, nome derivado do distrito de Tóquio onde os primeiros vestígios arqueológicos dessa cultura foram identificados no século XIX.</p>
+
+            <p>Assim como ocorreu em diversos momentos da história humana, essas migrações não trouxeram apenas novas pessoas.</p>
+
+            <p>Trouxeram também novos conhecimentos, novos costumes e, muito provavelmente, novos animais.</p>
+
+            <p>Entre eles, cães.</p>
+
+          </section>
+
+          <section id="nova-forma-viver">
+
+            <h2>Uma nova forma de viver</h2>
+
+            <p>A maior mudança introduzida pelos povos Yayoi foi a <strong>agricultura</strong>.</p>
+
+            <p>O cultivo intensivo do arroz transformou completamente a organização das comunidades japonesas.</p>
+
+            <p>As aldeias tornaram-se mais permanentes.</p>
+
+            <p>A produção de alimentos aumentou.</p>
+
+            <p>Novas ferramentas foram desenvolvidas.</p>
+
+            <p>As relações sociais tornaram-se progressivamente mais complexas.</p>
+
+            <p>Essa nova realidade modificou também a maneira como os cães eram utilizados.</p>
+
+            <p>Embora a caça continuasse desempenhando papel importante, ela deixou de ser praticamente a única fonte de alimento para muitas comunidades.</p>
+
+            <p>Consequentemente, os cães passaram a desempenhar funções mais diversificadas, acompanhando a própria evolução da sociedade japonesa.</p>
+
+          </section>
+
+          <section id="novos-caes">
+
+            <h2>Novos cães chegaram ao arquipélago?</h2>
+
+            <p>Essa é uma das perguntas mais discutidas pela arqueologia e pela genética moderna.</p>
+
+            <p>Atualmente, existe forte evidência de que as migrações do período Yayoi foram acompanhadas pela introdução de novas linhagens caninas provenientes do continente asiático.</p>
+
+            <p>Entretanto, é importante compreender exatamente o que isso significa.</p>
+
+            <p>Os estudos não sugerem que os antigos cães Jōmon desapareceram completamente.</p>
+
+            <p>Da mesma forma, também não indicam que os cães modernos descendem exclusivamente dos animais trazidos pelos Yayoi.</p>
+
+            <p><strong>O cenário mais aceito atualmente é muito mais interessante.</strong></p>
+
+            <p>Ao longo de vários séculos, diferentes populações de cães passaram a coexistir no arquipélago.</p>
+
+            <p>Essas populações provavelmente cruzaram entre si, combinando características desenvolvidas em contextos ambientais distintos.</p>
+
+            <p>O resultado foi um patrimônio genético progressivamente mais diverso, sobre o qual futuras gerações de criadores continuariam trabalhando durante muitos séculos.</p>
+
+            <p>Essa distinção é importante porque evita uma interpretação simplificada da história.</p>
+
+            <p>A formação dos cães japoneses modernos não foi consequência de uma única origem.</p>
+
+            <p><strong>Ela foi resultado de um longo processo de encontros, adaptações e seleção.</strong></p>
+
+          </section>
+
+          <section id="selecao-funcional">
+
+            <h2>O início da seleção funcional</h2>
+
+            <p>Embora ainda estivéssemos muito distantes do conceito moderno de raça, uma mudança importante começava a acontecer.</p>
+
+            <p>À medida que diferentes comunidades se estabeleciam em regiões específicas do arquipélago, determinados tipos de cães passaram a ser naturalmente favorecidos conforme a função que desempenhavam.</p>
+
+            <p>Nas áreas montanhosas, cães menores, ágeis e resistentes apresentavam vantagens evidentes.</p>
+
+            <p>Em outras regiões, características diferentes podiam ser mais úteis.</p>
+
+            <p>Esse processo não era conduzido por padrões escritos.</p>
+
+            <p>Também não existiam exposições de conformação.</p>
+
+            <p><strong>A própria necessidade diária funcionava como um mecanismo de seleção.</strong></p>
+
+            <p>Cães que executavam melhor seu trabalho tinham maiores chances de permanecer naquele ambiente e contribuir para as gerações seguintes.</p>
+
+            <p>Mais uma vez, a função antecedia qualquer preocupação estética.</p>
+
+          </section>
+
+          <section id="geografia-moldou">
+
+            <h2>A geografia moldou os cães japoneses</h2>
+
+            <figure class="section-hero">
+              <img
+                src="/estudos/historia/geografia-montanhosa-japao.png"
+                alt="Panorama das montanhas japonesas cobertas por florestas densas com picos nevados ao fundo — a geografia montanhosa do Japão isolou populações caninas e favoreceu a preservação de tipos regionais"
+                width="1024"
+                height="368"
+                loading="lazy"
+              />
+              <figcaption>A geografia montanhosa do Japão criou barreiras naturais que isolaram populações caninas por séculos</figcaption>
+            </figure>
+
+            <p>O Japão possui uma geografia singular.</p>
+
+            <p>Montanhas ocupam grande parte do território.</p>
+
+            <p>Vales isolados, rios, florestas densas e diferentes condições climáticas criaram barreiras naturais entre diversas regiões do arquipélago.</p>
+
+            <div class="geo-sidebar">
+              <figure>
+                <img
+                  src="/estudos/historia/mapa-topografico-japao.png"
+                  alt="Mapa topográfico do arquipélago japonês mostrando as ilhas principais (Hokkaido, Honshu, Shikoku e Kyushu), suas cadeias montanhosas e a proximidade com Coreia e China"
+                  width="935"
+                  height="1024"
+                  loading="lazy"
+                />
+                <figcaption>Mapa topográfico do Japão — montanhas, ilhas e isolamento natural</figcaption>
+              </figure>
+            </div>
+
+            <p>Essas barreiras influenciaram não apenas o desenvolvimento das comunidades humanas, mas também o dos cães.</p>
+
+            <p>Ao longo dos séculos, populações caninas permaneceram relativamente isoladas em determinadas áreas.</p>
+
+            <p>Esse isolamento favoreceu a preservação de características específicas dentro de cada região.</p>
+
+            <p>Muito tempo depois, quando estudiosos japoneses começaram a documentar sistematicamente os cães nativos, perceberam que diversos tipos regionais ainda conservavam identidades bastante distintas.</p>
+
+            <p>Entre eles encontravam-se aqueles que, futuramente, dariam origem às três grandes linhagens históricas do Shiba Inu: <strong>Shinshu</strong>, <strong>Mino</strong> e <strong>San'in</strong>.</p>
+
+            <p>Entretanto, essa etapa da história ainda levaria muitos séculos para acontecer.</p>
+
+          </section>
+
+          <section id="antes-pedigrees">
+
+            <h2>Muito antes dos pedigrees</h2>
+
+            <p>Existe um aspecto fascinante quando observamos esse período.</p>
+
+            <p>Nenhuma dessas comunidades imaginava estar "criando uma raça".</p>
+
+            <p>Elas apenas selecionavam os cães que melhor desempenhavam determinada função.</p>
+
+            <p>Essa lógica permaneceu praticamente inalterada durante boa parte da história japonesa.</p>
+
+            <p>Foi somente no século XX que esses diferentes tipos regionais passaram a ser estudados, catalogados e preservados de forma sistemática.</p>
+
+            <p>Em outras palavras, o Shiba Inu moderno não nasceu quando alguém decidiu criar uma nova raça.</p>
+
+            <p><strong>Ele nasceu quando o Japão percebeu que precisava preservar um patrimônio biológico e cultural construído ao longo de milhares de anos.</strong></p>
+
+            <h3>Preparando o próximo capítulo</h3>
+
+            <p>Durante os séculos seguintes, os cães japoneses continuaram evoluindo ao lado das diferentes comunidades espalhadas pelo arquipélago.</p>
+
+            <p>O isolamento geográfico permitiu que determinadas características fossem preservadas em regiões específicas, dando origem aos famosos tipos locais descritos pelos primeiros estudiosos da raça.</p>
+
+            <p>Esses cães regionais — Shinshu, Mino e San'in — tornaram-se a base sobre a qual o Shiba Inu moderno seria reconstruído muitos séculos depois.</p>
+
+            <p>Para compreender essa etapa, precisaremos entrar no Japão feudal, conhecer suas províncias históricas e entender como a geografia passou a influenciar diretamente a formação dos cães japoneses.</p>
+
+          </section>
+
+          <div class="part-divider">
+            <span class="part-label">Parte III</span>
+          </div>
+
+          <section id="japao-feudal">
+
+            <h2>O Japão feudal e o nascimento dos cães regionais</h2>
+
+            <figure class="section-hero">
+              <img
+                src="/estudos/historia/floresta-montanhosa-japao.png"
+                alt="Vales cobertos por densa floresta nas montanhas japonesas — o isolamento geográfico moldou os ancestrais do Shiba Inu ao longo de séculos"
+                width="1024"
+                height="679"
+                loading="lazy"
+              />
+              <figcaption>O isolamento geográfico moldou os ancestrais do Shiba Inu. Durante séculos, cadeias montanhosas, vales profundos e extensas florestas limitaram a circulação entre diferentes regiões do Japão. Esse isolamento favoreceu a preservação de populações caninas locais que, muitos séculos depois, contribuiriam para a formação do Shiba Inu moderno.</figcaption>
+            </figure>
+
+            <p>Ao longo dos séculos que sucederam o período Yayoi, o Japão continuou passando por profundas transformações políticas, sociais e culturais.</p>
+
+            <p>Reinos surgiram.</p>
+
+            <p>Províncias foram estabelecidas.</p>
+
+            <p>Novas formas de organização militar e administrativa modificaram gradualmente a sociedade japonesa.</p>
+
+            <p>Entretanto, enquanto o país mudava, uma característica permanecia praticamente inalterada.</p>
+
+            <p><strong>Sua geografia.</strong></p>
+
+            <p>Montanhas continuavam separando regiões inteiras.</p>
+
+            <p>Vales dificultavam deslocamentos.</p>
+
+            <p>Grandes áreas florestais permaneciam praticamente intactas.</p>
+
+            <p>Mesmo durante períodos de relativa estabilidade política, viajar de uma província para outra ainda era uma tarefa longa, difícil e, muitas vezes, desnecessária.</p>
+
+            <p>Esse isolamento influenciou profundamente a história dos cães japoneses.</p>
+
+          </section>
+
+          <section id="natureza-protege">
+
+            <h2>Quando a natureza protege a diversidade</h2>
+
+            <p>Hoje estamos acostumados a imaginar que cães podem ser transportados de um continente para outro em poucas horas.</p>
+
+            <p>Durante grande parte da história japonesa, essa realidade simplesmente não existia.</p>
+
+            <p>Os cães normalmente nasciam, trabalhavam e reproduziam-se dentro da mesma região durante inúmeras gerações.</p>
+
+            <p>Como consequência, determinadas características começaram a tornar-se cada vez mais comuns em diferentes partes do arquipélago.</p>
+
+            <p>Não porque alguém estivesse tentando criar novas raças.</p>
+
+            <p>Mas porque cada ambiente favorecia determinados indivíduos.</p>
+
+            <p>Nas montanhas centrais, por exemplo, cães menores e extremamente ágeis apresentavam enorme vantagem para perseguir pequenas presas entre rochas, vegetação densa e terrenos acidentados.</p>
+
+            <p>Em outras regiões, diferentes condições ambientais favoreciam características igualmente distintas.</p>
+
+            <p><strong>A própria geografia transformou-se em um poderoso mecanismo de seleção.</strong></p>
+
+          </section>
+
+          <section id="selecao-funcional-seculos">
+
+            <h2>Séculos de seleção funcional</h2>
+
+            <p>É importante compreender que essa seleção não era conduzida por aparência.</p>
+
+            <p>Nenhum caçador escolhia um cão por possuir determinada cor de pelagem ou formato específico de cabeça.</p>
+
+            <p>O critério era muito mais simples.</p>
+
+            <p><strong>O cão precisava funcionar.</strong></p>
+
+            <p>Precisava localizar a caça.</p>
+
+            <p>Precisava deslocar-se rapidamente.</p>
+
+            <p>Precisava suportar longas jornadas.</p>
+
+            <p>Precisava retornar vivo.</p>
+
+            <p>Ao longo de centenas de anos, essa seleção silenciosa acabou preservando indivíduos cada vez mais adaptados ao trabalho que desempenhavam.</p>
+
+            <p>Sem perceber, diferentes regiões japonesas começavam a construir patrimônios genéticos próprios.</p>
+
+            <p>Muito antes da palavra "pedigree" existir, a função já selecionava aquilo que permaneceria nas gerações seguintes.</p>
+
+          </section>
+
+          <section id="tipos-regionais">
+
+            <h2>O surgimento dos tipos regionais</h2>
+
+            <p>Quando pesquisadores japoneses iniciaram o levantamento sistemático dos cães nativos no início do século XX, encontraram algo extremamente interessante.</p>
+
+            <p>Embora todos aqueles cães compartilhassem muitas características em comum, existiam diferenças regionais bastante evidentes.</p>
+
+            <p>Entre os ancestrais do Shiba moderno destacavam-se três grupos principais.</p>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/montanhas-nagano-shinshu.png"
+                alt="Montanhas de Nagano no outono com picos nevados — antiga província de Shinshu onde se desenvolveu uma das linhagens ancestrais do Shiba Inu"
+                width="1024"
+                height="681"
+                loading="lazy"
+              />
+              <figcaption>Região de Nagano</figcaption>
+            </figure>
+
+            <p>O primeiro era encontrado na antiga província de <strong>Shinshu</strong>, correspondente aproximadamente à atual província de Nagano.</p>
+
+            <p>Esses cães viviam em regiões montanhosas, apresentando estrutura leve, excelente agilidade e pelagem particularmente adaptada ao clima rigoroso daquela região.</p>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/vale-rio-mino-gifu.png"
+                alt="Vale com rio cercado por montanhas florestadas na região de Gifu — antiga província de Mino onde se desenvolveu outro tipo regional ancestral do Shiba Inu"
+                width="763"
+                height="1024"
+                loading="lazy"
+              />
+              <figcaption>Região de Mino</figcaption>
+            </figure>
+
+            <p>Outro importante grupo encontrava-se na antiga província de <strong>Mino</strong>, atualmente parte da província de Gifu.</p>
+
+            <p>Ali predominavam cães ligeiramente diferentes em estrutura e expressão, mas igualmente utilizados para caça.</p>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/costa-sanin-tottori.png"
+                alt="Costa do Mar do Japão na região de Tottori com montanhas nevadas ao fundo — região de San'in onde se desenvolveu a terceira linhagem ancestral do Shiba Inu"
+                width="1024"
+                height="571"
+                loading="lazy"
+              />
+              <figcaption>Região de Sakaiminato, região de Tottori em San'in</figcaption>
+            </figure>
+
+            <p>O terceiro grupo desenvolveu-se na região de <strong>San'in</strong>, localizada ao longo da costa do Mar do Japão.</p>
+
+            <p>Cada uma dessas populações preservou características próprias durante muitos séculos.</p>
+
+            <p>Posteriormente, todas desempenhariam papel fundamental na reconstrução do Shiba Inu moderno.</p>
+
+          </section>
+
+          <section id="shiba-nao-existia">
+
+            <h2>O Shiba ainda não existia</h2>
+
+            <figure class="section-hero">
+              <img
+                src="/estudos/historia/mapa-provincias-feudais-japao.png"
+                alt="Mapa das antigas províncias do Japão feudal entre 1573–83 mostrando Shinano, Mino, San'in e outras regiões onde se desenvolveram os tipos regionais de cães japoneses"
+                width="1024"
+                height="774"
+                loading="lazy"
+              />
+              <figcaption>Antigas províncias do Japão feudal</figcaption>
+            </figure>
+
+            <p>Esse talvez seja um dos pontos mais importantes de toda a história da raça.</p>
+
+            <p>Apesar de frequentemente chamarmos esses animais de "Shibas", historicamente isso não é correto.</p>
+
+            <p>Ainda não existia um padrão.</p>
+
+            <p>Não existia um registro genealógico.</p>
+
+            <p>Não existia uma organização responsável por preservar a raça.</p>
+
+            <p>Existiam <strong>cães regionais extremamente funcionais</strong> que compartilhavam ancestralidade comum e desempenhavam papéis semelhantes na caça.</p>
+
+            <p>Somente muitos séculos depois esses diferentes grupos seriam reunidos dentro de um único projeto nacional de preservação.</p>
+
+            <p>Essa distinção ajuda a compreender por que a história do Shiba Inu não pode ser reduzida à história de um único cão ou de uma única região.</p>
+
+            <p><strong>Ela representa a união de diferentes populações caninas cuidadosamente preservadas ao longo do tempo.</strong></p>
+
+          </section>
+
+          <section id="alem-caca">
+
+            <h2>Muito além da caça</h2>
+
+            <p>Durante esse longo período histórico, os cães também passaram a ocupar espaço crescente dentro da cultura japonesa.</p>
+
+            <p>Além de auxiliarem na caça, aparecem em registros históricos, obras de arte, pinturas e narrativas tradicionais.</p>
+
+            <p>Em diversas regiões, eram reconhecidos como animais valiosos pela coragem, inteligência e resistência.</p>
+
+            <p>Essa presença cultural demonstra que os cães japoneses já ocupavam posição importante muito antes de serem formalmente reconhecidos como patrimônio nacional.</p>
+
+            <p>A relação construída entre homens e cães continuava evoluindo.</p>
+
+            <p>E, junto com ela, evoluíam também os ancestrais do Shiba Inu.</p>
+
+            <h3>Preparando o próximo capítulo</h3>
+
+            <p>Durante séculos, o isolamento geográfico ajudou a preservar esses diferentes tipos regionais.</p>
+
+            <p>Entretanto, no final do século XIX, o Japão iniciou uma das maiores transformações de toda a sua história.</p>
+
+            <p>Com a abertura do país ao Ocidente, não chegaram apenas novas tecnologias e novas ideias.</p>
+
+            <p>Chegaram também novos cães.</p>
+
+            <p>Raças europeias começaram a cruzar com os antigos cães japoneses, colocando em risco um patrimônio genético construído ao longo de milhares de anos.</p>
+
+            <p>Paradoxalmente, foi justamente essa ameaça que despertou o movimento responsável por salvar o Shiba Inu da extinção.</p>
+
+            <p>Essa é a história que conheceremos na próxima parte.</p>
+
+            <aside class="callout-image">
+              <figure>
+                <img
+                  src="/estudos/historia/relevo-montanhoso-japao-aereo.png"
+                  alt="Vista aérea das cadeias montanhosas do Japão com picos nevados entre nuvens — barreiras naturais que isolaram populações caninas durante séculos"
+                  width="1024"
+                  height="560"
+                  loading="lazy"
+                />
+              </figure>
+              <p class="callout-text">Ao observar o relevo japonês, torna-se fácil compreender por que diferentes populações humanas — e também diferentes populações de cães — permaneceram relativamente isoladas durante tantos séculos. Antes da existência de estradas, ferrovias e transporte moderno, montanhas e vales funcionavam como verdadeiras fronteiras naturais, permitindo que características regionais fossem preservadas por inúmeras gerações.</p>
+            </aside>
+
+          </section>
+
+          <div class="part-divider">
+            <span class="part-label">Parte IV</span>
+          </div>
+
+          <section id="era-meiji">
+
+            <h2>A Era Meiji: quando o Shiba Inu quase desapareceu</h2>
+
+            <figure class="section-hero">
+              <img
+                src="/estudos/historia/black-ships-chegada-japao-1853.png"
+                alt="Pintura histórica da chegada dos Black Ships ao Japão em 1853 — a abertura forçada do país ao Ocidente marcou o início de transformações que quase levaram à extinção dos cães nativos japoneses"
+                width="1024"
+                height="654"
+                loading="lazy"
+              />
+              <figcaption>Figura — A chegada dos "Black Ships" ao Japão em 1853. A abertura forçada do Japão ao Ocidente marcou o início de profundas transformações sociais, políticas e culturais. Com a modernização da Era Meiji, também chegaram raças caninas estrangeiras, iniciando um processo de cruzamentos que colocou em risco os antigos cães nativos japoneses.</figcaption>
+            </figure>
+
+            <p>Ao longo de milhares de anos, os cães japoneses evoluíram de maneira relativamente isolada.</p>
+
+            <p>Montanhas, vales e grandes distâncias naturais preservaram populações regionais que continuaram desempenhando suas funções tradicionais como cães de caça.</p>
+
+            <p>Entretanto, essa realidade começou a mudar de forma abrupta na segunda metade do século XIX.</p>
+
+            <p>Em <strong>1853</strong>, navios da Marinha dos Estados Unidos, liderados pelo Comodoro Matthew Perry, chegaram ao Japão.</p>
+
+            <p>Aquele episódio marcou o início do fim de mais de dois séculos de isolamento nacional.</p>
+
+            <p>Poucos anos depois, em <strong>1868</strong>, teve início a Restauração Meiji, um dos períodos de transformação mais profundos da história japonesa.</p>
+
+            <p>O Japão decidiu modernizar-se rapidamente.</p>
+
+            <p>Novas tecnologias foram importadas.</p>
+
+            <p>A indústria cresceu.</p>
+
+            <p>As cidades expandiram-se.</p>
+
+            <p>Ferrovias passaram a conectar regiões antes isoladas.</p>
+
+            <p>E, junto com tudo isso, chegaram também inúmeros animais vindos da Europa.</p>
+
+            <p>Entre eles, cães.</p>
+
+          </section>
+
+          <section id="caes-estrangeiros">
+
+            <h2>Quando os cães estrangeiros chegaram ao Japão</h2>
+
+            <p>Durante a Era Meiji, diversas raças europeias passaram a ser importadas.</p>
+
+            <p>Setters. Pointers. Mastiffs. Collies. Terriers. Spaniels.</p>
+
+            <p>E muitas outras.</p>
+
+            <p>Esses cães despertavam enorme interesse entre militares, caçadores e membros da aristocracia japonesa, que viam nas raças ocidentais um símbolo da modernização pela qual o país passava.</p>
+
+            <p>Naturalmente, cruzamentos começaram a ocorrer.</p>
+
+            <p>Em muitos casos, eram realizados intencionalmente, buscando combinar características consideradas desejáveis para determinadas atividades.</p>
+
+            <p>Na época, poucos imaginavam que essas decisões colocariam em risco um patrimônio genético preservado durante séculos.</p>
+
+          </section>
+
+          <section id="desaparecimento">
+
+            <h2>O desaparecimento silencioso</h2>
+
+            <p>Diferentemente de guerras ou desastres naturais, o desaparecimento dos antigos cães japoneses ocorreu de maneira lenta.</p>
+
+            <p>Quase imperceptível.</p>
+
+            <p>À medida que novos cruzamentos aconteciam, os antigos tipos regionais tornavam-se cada vez mais raros.</p>
+
+            <p>Em algumas regiões, praticamente desapareceram.</p>
+
+            <p>Em outras, sobreviveram apenas porque permaneciam isoladas em áreas montanhosas onde a influência das grandes cidades demorou mais tempo para chegar.</p>
+
+            <p>Foi justamente esse isolamento que, durante séculos, havia permitido a formação dos cães regionais.</p>
+
+            <p><strong>Agora, ele tornava-se a principal razão para sua sobrevivência.</strong></p>
+
+            <p>Sem que ninguém percebesse, os últimos representantes dos antigos cães japoneses permaneciam escondidos nas regiões mais remotas do arquipélago.</p>
+
+          </section>
+
+          <section id="patrimonio-ameacado">
+
+            <h2>Um patrimônio ameaçado</h2>
+
+            <p>É importante compreender que, naquele momento, ainda não existia a preocupação moderna com preservação genética.</p>
+
+            <p>A ideia de conservar uma raça como patrimônio cultural praticamente não fazia parte da mentalidade da época.</p>
+
+            <p>Os cruzamentos eram vistos, muitas vezes, como um sinal de progresso.</p>
+
+            <p>A preocupação com a perda dos cães nativos surgiu apenas quando estudiosos japoneses começaram a perceber que encontrar exemplares genuinamente tradicionais estava se tornando cada vez mais difícil.</p>
+
+            <p>A ameaça não era apenas cinófila.</p>
+
+            <p><strong>Era cultural.</strong></p>
+
+            <p>Se aqueles cães desaparecessem, desapareceria também uma parte importante da própria história do Japão.</p>
+
+          </section>
+
+          <section id="movimento-preservacao">
+
+            <h2>O nascimento de um movimento de preservação</h2>
+
+            <p>Foi justamente diante desse cenário que alguns intelectuais japoneses passaram a defender uma ideia considerada inovadora para a época.</p>
+
+            <p>Os cães nativos não deveriam ser substituídos.</p>
+
+            <p><strong>Deveriam ser preservados.</strong></p>
+
+            <p>Essa visão ultrapassava a simples criação de cães.</p>
+
+            <p>Tratava-se de proteger um patrimônio biológico, histórico e cultural construído ao longo de milhares de anos.</p>
+
+            <p>Começava, assim, um movimento que transformaria definitivamente a história das seis raças nativas japonesas.</p>
+
+            <p>Entre os principais responsáveis por esse movimento encontrava-se um homem cujo nome permaneceria para sempre ligado à preservação do Shiba Inu.</p>
+
+            <p><strong>Dr. Hirokichi Saitō.</strong></p>
+
+            <h3>Preparando o próximo capítulo</h3>
+
+            <p>Poucos nomes exerceram influência tão profunda sobre a preservação dos cães japoneses quanto Hirokichi Saitō.</p>
+
+            <p>Médico, pesquisador, escritor e profundo admirador dos cães nativos, ele compreendeu que o Japão corria o risco de perder uma parte importante de sua própria identidade cultural.</p>
+
+            <p>Em 1928, liderou a fundação da <strong>Nihon Ken Hozonkai</strong>, organização que o mundo conheceria simplesmente como <strong>NIPPO</strong>.</p>
+
+            <p>A partir desse momento, a história dos cães japoneses deixa de ser apenas uma história de evolução natural.</p>
+
+            <p>Ela passa a ser uma história de <strong>preservação consciente</strong>.</p>
+
+            <p>E é justamente nesse momento que nasce o Shiba Inu moderno.</p>
+
+          </section>
+
+          <div class="part-divider">
+            <span class="part-label">Parte V</span>
+          </div>
+
+          <section id="nippo-nascimento">
+
+            <h2>Hirokichi Saitō, a NIPPO e o nascimento do Shiba Inu moderno</h2>
+
+            <figure class="section-hero">
+              <img
+                src="/estudos/historia/japao-inicio-seculo-xx.png"
+                alt="Fotografia do Japão no início do século XX mostrando avenidas urbanas modernizadas durante a Era Taishō — período em que os cães nativos japoneses estavam ameaçados pela crescente ocidentalização"
+                width="1024"
+                height="657"
+                loading="lazy"
+              />
+            </figure>
+
+            <p>No início do século XX, os antigos cães japoneses encontravam-se em uma situação delicada.</p>
+
+            <p>Décadas de cruzamentos com raças estrangeiras haviam reduzido significativamente o número de exemplares que ainda preservavam as características tradicionais desenvolvidas ao longo de milhares de anos.</p>
+
+            <p>Em algumas regiões, encontrar um cão genuinamente nativo já se tornava extremamente difícil.</p>
+
+            <p>Talvez pela primeira vez na história do Japão, surgiu uma pergunta que poucos haviam feito até então.</p>
+
+            <p><em>E se esses cães desaparecessem para sempre?</em></p>
+
+            <p>A resposta para essa pergunta mudaria definitivamente a história da cinofilia japonesa.</p>
+
+          </section>
+
+          <section id="hirokichi-saito">
+
+            <h2>Muito além da criação de cães</h2>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/diretoria-nippo-fundadores.png"
+                alt="Reunião social da diretoria da NIPPO nos primeiros anos — ao centro Sr. Hyoemon Kyono e o Sr. Hirokichi Saito vestindo trajes tradicionais japoneses à sua direita"
+                width="1024"
+                height="742"
+                loading="lazy"
+              />
+              <figcaption>Reunião social da diretoria da NIPPO naqueles primeiros anos. Ao centro: Sr. Hyoemon Kyono; o Sr. Hirokichi Saito, vestindo trajes tradicionais japoneses, está imediatamente à sua direita.</figcaption>
+            </figure>
+
+            <p>É comum imaginar que organizações cinófilas surgem para registrar pedigrees, organizar exposições ou estabelecer padrões raciais.</p>
+
+            <p>No caso da <strong>Nihon Ken Hozonkai</strong>, conhecida mundialmente como <strong>NIPPO</strong>, essa visão é incompleta.</p>
+
+            <p>A NIPPO nasceu, antes de tudo, como um <strong>movimento de preservação</strong>.</p>
+
+            <p>Seu objetivo não era criar uma nova raça.</p>
+
+            <p>Era impedir que um patrimônio construído ao longo de milhares de anos desaparecesse diante da rápida modernização do Japão.</p>
+
+            <p>Para compreender a importância dessa missão, é necessário conhecer o homem que liderou esse movimento.</p>
+
+          </section>
+
+          <section id="nascimento-nippo">
+
+            <h2>Hirokichi Saitō</h2>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/hirokichi-saito-shiba-inu.png"
+                alt="Hirokichi Saitō com um cão japonês nativo — fundador da NIPPO e principal responsável pelo movimento de preservação dos cães japoneses no início do século XX"
+                width="770"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+
+            <p>Entre os grandes nomes da história da cinofilia japonesa, poucos exerceram influência comparável à de <strong>Hirokichi Saitō</strong>.</p>
+
+            <p>Pesquisador, escritor, artista e profundo estudioso dos cães nativos japoneses, Saitō acreditava que aqueles animais representavam muito mais do que excelentes companheiros de caça.</p>
+
+            <p>Eles faziam parte da própria identidade cultural do Japão.</p>
+
+            <p>Enquanto grande parte da sociedade voltava seus olhos para a modernização e para as influências vindas do Ocidente, Saitō defendia uma ideia aparentemente simples, mas extremamente visionária.</p>
+
+            <p><strong>O Japão precisava preservar seus próprios cães.</strong></p>
+
+            <p>Não por nostalgia.</p>
+
+            <p>Mas porque eles representavam um patrimônio biológico, histórico e cultural impossível de reconstruir caso fosse perdido.</p>
+
+            <p>Essa forma de pensar tornou-se a base de tudo aquilo que viria depois.</p>
+
+            <h3>O nascimento da NIPPO</h3>
+
+            <p>Em <strong>1928</strong>, Hirokichi Saitō reuniu pesquisadores, estudiosos e apaixonados pelos cães japoneses para fundar a Nihon Ken Hozonkai.</p>
+
+            <p>Seu nome pode ser traduzido como <em>Associação para a Preservação dos Cães Japoneses</em>.</p>
+
+            <p>Essa tradução, por si só, já revela muito sobre sua missão.</p>
+
+            <p>A palavra mais importante nunca foi "associação".</p>
+
+            <p>Foi <strong>preservação</strong>.</p>
+
+            <p>Desde sua fundação, a NIPPO estabeleceu objetivos bastante claros.</p>
+
+            <p>Localizar os últimos representantes dos antigos cães japoneses.</p>
+
+            <p>Estudar suas características.</p>
+
+            <p>Registrar sua origem.</p>
+
+            <p>Definir critérios que permitissem preservar sua identidade para as futuras gerações.</p>
+
+            <p>Mais do que selecionar os melhores cães da época, era necessário compreender quais características realmente representavam a essência dos antigos Nihon Ken.</p>
+
+            <p>Essa diferença permanece presente na filosofia da NIPPO até os dias atuais.</p>
+
+          </section>
+
+          <section id="antes-padrao">
+
+            <h2>Antes do padrão, veio a pesquisa</h2>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/shiba-inu-primeiros-registros.png"
+                alt="Cães japoneses nativos em caixotes durante uma das primeiras exposições organizadas pela NIPPO — registro histórico do levantamento dos tipos regionais de Nihon Ken"
+                width="1024"
+                height="521"
+                loading="lazy"
+              />
+            </figure>
+
+            <p>Existe um detalhe pouco conhecido que ajuda a compreender a seriedade desse trabalho.</p>
+
+            <p>A NIPPO não escreveu imediatamente um padrão da raça.</p>
+
+            <p><strong>Primeiro, pesquisadores viajaram por diferentes regiões do Japão</strong> procurando os cães que ainda preservavam as características tradicionais.</p>
+
+            <p>Esse levantamento permitiu identificar populações regionais que haviam permanecido relativamente protegidas dos cruzamentos ocorridos durante a Era Meiji.</p>
+
+            <p>Foi justamente graças a essa pesquisa de campo que os antigos tipos Shinshu, Mino e San'in puderam ser documentados antes que desaparecessem completamente.</p>
+
+            <p>Esse trabalho de documentação talvez tenha sido tão importante quanto a própria criação da associação.</p>
+
+            <p>Sem ele, muito do conhecimento sobre a origem do Shiba Inu moderno teria sido perdido para sempre.</p>
+
+          </section>
+
+          <section id="padrao-nihon-ken">
+
+            <h2>O padrão Nihon Ken</h2>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/nihon-ken-standard-primeiros-vencedores.png"
+                alt="Primeiros vencedores das exposições NIPPO com registros em japonês — cães que ajudaram a definir o padrão Nihon Ken Standard em 1934"
+                width="705"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+
+            <p>Após anos de observação e pesquisa, a NIPPO publicou, em <strong>1934</strong>, o primeiro <strong>Nihon Ken Standard</strong>.</p>
+
+            <p>Pela primeira vez, os cães nativos japoneses passaram a ser descritos de forma sistemática.</p>
+
+            <p>Em vez de criar padrões completamente independentes para cada raça, a NIPPO estabeleceu uma filosofia comum aos Nihon Ken.</p>
+
+            <p>Coragem.</p>
+
+            <p>Bom caráter.</p>
+
+            <p>Naturalidade.</p>
+
+            <p>Equilíbrio.</p>
+
+            <p>Funcionalidade.</p>
+
+            <p>Esses princípios orientavam a avaliação de todos os cães japoneses.</p>
+
+            <p>Posteriormente, cada raça passaria a desenvolver suas características particulares dentro dessa mesma filosofia.</p>
+
+            <p>Essa abordagem explica por que o Shiba Inu continua sendo avaliado, ainda hoje, muito além da simples aparência.</p>
+
+            <p>Seu <a href="/estudos/shiba-inu/temperamento/">temperamento</a>, sua expressão e sua funcionalidade fazem parte da própria definição da raça.</p>
+
+          </section>
+
+          <section id="monumento-natural">
+
+            <h2>O reconhecimento como Monumento Natural</h2>
+
+            <p>Poucos anos depois, em <strong>16 de dezembro de 1936</strong>, o governo japonês tomou uma decisão histórica.</p>
+
+            <p>O Shiba Inu foi oficialmente reconhecido como <strong>Monumento Natural do Japão</strong>.</p>
+
+            <p>Essa designação não representava apenas um título honorífico.</p>
+
+            <p>Ela reconhecia que o Shiba Inu constituía parte do patrimônio natural e cultural da nação japonesa.</p>
+
+            <p>Na prática, significava admitir que preservar aqueles cães era preservar uma parte da própria história do Japão.</p>
+
+            <p>Esse reconhecimento fortaleceu enormemente os esforços da NIPPO e consolidou a importância dos cães nativos dentro da cultura japonesa.</p>
+
+          </section>
+
+          <section id="shiba-moderno">
+
+            <h2>O nascimento do Shiba Inu moderno</h2>
+
+            <div class="section-images">
+              <figure>
+                <img
+                  src="/estudos/historia/shiba-inu-historico-frontal.png"
+                  alt="Um dos primeiros Shibas registrados pela NIPPO durante o período de preservação da raça — fotografia histórica mostrando o tipo racial que os pesquisadores buscavam documentar"
+                  width="1024"
+                  height="679"
+                  loading="lazy"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="/estudos/historia/shiba-inu-historico-perfil.png"
+                  alt="Shiba Inu histórico em perfil durante o período de consolidação da raça pela NIPPO — exemplar que ajudou a definir as características do Shiba moderno"
+                  width="834"
+                  height="704"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <figcaption class="hero-caption">Um dos primeiros Shibas registrados durante o período de preservação da raça. Fotografias históricas como esta permitem observar o tipo racial que os pesquisadores da NIPPO buscavam documentar e preservar antes que desaparecesse.</figcaption>
+
+            <p>É justamente neste momento que podemos dizer que nasce o Shiba Inu moderno.</p>
+
+            <p>Não porque um novo cão tenha sido criado.</p>
+
+            <p>Mas porque diferentes populações regionais passaram a ser preservadas dentro de um único projeto nacional.</p>
+
+            <p>O Shiba moderno representa a síntese de séculos de evolução natural, seleção funcional e pesquisa conduzida por estudiosos comprometidos com a preservação dos cães japoneses.</p>
+
+            <p>Sua existência depende tanto dos antigos caçadores Jōmon quanto dos pesquisadores que, muitos séculos depois, compreenderam a importância de proteger aquele patrimônio.</p>
+
+            <p>Sem um desses capítulos da história, o Shiba Inu provavelmente não existiria da forma como o conhecemos atualmente.</p>
+
+          </section>
+
+          <section id="filosofia-geracoes">
+
+            <h2>Uma filosofia que atravessa gerações</h2>
+
+            <figure class="nippo-badge">
+              <img
+                src="/estudos/historia/nippo-logo.png"
+                alt="Logo da NIPPO (Nihon Ken Hozonkai) — Associação para a Preservação dos Cães Japoneses, fundada em 1928"
+                width="114"
+                height="104"
+                loading="lazy"
+              />
+            </figure>
+
+            <p>Talvez o maior legado de Hirokichi Saitō não tenha sido a criação de uma associação.</p>
+
+            <p><strong>Seu maior legado foi uma maneira de pensar.</strong></p>
+
+            <p>A ideia de que preservar uma raça exige muito mais do que reproduzir bons cães.</p>
+
+            <p>Exige compreender sua história.</p>
+
+            <p>Respeitar sua função.</p>
+
+            <p>Conhecer suas origens.</p>
+
+            <p>Transmitir esse conhecimento às gerações seguintes.</p>
+
+            <p>Quase um século depois da fundação da NIPPO, essa filosofia continua orientando criadores em diferentes partes do mundo.</p>
+
+            <p>Inclusive o trabalho desenvolvido pelo <a href="/estudos/ninpozan/nossa-historia/">Ninpozan Kennel</a>.</p>
+
+            <p>Ao estudar profundamente a história da raça, entendemos que preservar um Shiba Inu significa preservar muito mais do que sua aparência.</p>
+
+            <p><strong>Significa preservar a própria identidade construída ao longo de milhares de anos.</strong></p>
+
+            <h3>Preparando o próximo capítulo</h3>
+
+            <p>O reconhecimento do Shiba Inu como Monumento Natural parecia garantir um futuro promissor para a raça.</p>
+
+            <p>Entretanto, poucos anos depois, um novo desafio surgiria.</p>
+
+            <p>A Segunda Guerra Mundial.</p>
+
+            <p>Bombardeios.</p>
+
+            <p>Escassez de alimentos.</p>
+
+            <p>Doenças.</p>
+
+            <p>Milhares de cães desapareceram durante esse período.</p>
+
+            <p>Mais uma vez, o Shiba Inu esteve muito próximo da extinção.</p>
+
+            <p>E, mais uma vez, um pequeno grupo de pessoas dedicou sua vida para reconstruir aquilo que parecia perdido.</p>
+
+            <p>Essa será a história da próxima parte.</p>
+
+          </section>
+
+          <div class="part-divider">
+            <span class="part-label">Parte VI</span>
+          </div>
+
+          <section id="segunda-guerra">
+
+            <h2>A Segunda Guerra Mundial e a reconstrução do Shiba Inu</h2>
+
+            <figure class="section-hero">
+              <img
+                src="/estudos/historia/japao-pos-guerra-destruicao-toquio.png"
+                alt="Tóquio devastada após os bombardeios da Segunda Guerra Mundial, aproximadamente 1945 — período em que os cães nativos japoneses enfrentaram o maior risco de extinção de sua história"
+                width="1024"
+                height="640"
+                loading="lazy"
+              />
+              <figcaption>Tóquio, aproximadamente 1945. Fonte: Biblioteca Nacional da Dieta do Japão. O Japão após a Segunda Guerra Mundial. Entre bombardeios, escassez de alimentos e doenças, os cães nativos japoneses enfrentaram o período mais crítico de sua história. A reconstrução da raça começou em um país que também precisava reconstruir a si próprio.</figcaption>
+            </figure>
+
+            <p>Em 1936, o reconhecimento do Shiba Inu como Monumento Natural parecia representar o início de uma nova era.</p>
+
+            <p>Pela primeira vez, o Japão havia reconhecido oficialmente que seus cães nativos constituíam parte do patrimônio nacional.</p>
+
+            <p>O trabalho iniciado pela NIPPO ganhava força.</p>
+
+            <p>Os antigos tipos regionais começavam a ser documentados.</p>
+
+            <p>A preservação parecia finalmente estar garantida.</p>
+
+            <p>Entretanto, a história ainda reservaria seu maior desafio.</p>
+
+            <p>Poucos anos depois, o mundo mergulharia no maior conflito armado já registrado.</p>
+
+          </section>
+
+          <section id="pais-ruinas">
+
+            <h2>Um país em ruínas</h2>
+
+            <p>A Segunda Guerra Mundial transformou profundamente o Japão.</p>
+
+            <p>Grandes cidades foram bombardeadas.</p>
+
+            <p>A infraestrutura foi destruída.</p>
+
+            <p>A produção agrícola entrou em colapso.</p>
+
+            <p>A escassez de alimentos atingiu praticamente toda a população.</p>
+
+            <p>Nesse cenário, manter cães tornou-se extremamente difícil.</p>
+
+            <p>Muitas famílias simplesmente já não possuíam condições de alimentá-los.</p>
+
+            <p>Em inúmeros casos, animais foram entregues, abandonados ou simplesmente desapareceram durante os anos de guerra.</p>
+
+            <p>Não porque deixassem de ser queridos.</p>
+
+            <p>Mas porque a sobrevivência das próprias famílias estava em risco.</p>
+
+          </section>
+
+          <section id="inimigo-invisivel">
+
+            <h2>Um inimigo invisível</h2>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/cinomose-canina-pos-guerra-japao.png"
+                alt="Comunidade rural japonesa no pós-guerra — a reconstrução sanitária e os surtos de cinomose contribuíram para reduzir drasticamente as populações caninas japonesas"
+                width="1024"
+                height="723"
+                loading="lazy"
+              />
+              <figcaption>A reconstrução sanitária do pós-guerra. Além da escassez de alimentos, surtos de cinomose contribuíram para reduzir drasticamente as populações caninas japonesas.</figcaption>
+            </figure>
+
+            <p>Como se a guerra não bastasse, outro problema agravou dramaticamente a situação.</p>
+
+            <p>A <strong>cinomose canina</strong>.</p>
+
+            <p>Antes da existência das vacinas modernas, surtos de cinomose eram capazes de dizimar populações inteiras de cães em poucos meses.</p>
+
+            <p>Durante os anos de guerra, com escassez de medicamentos, dificuldades sanitárias e praticamente nenhuma estrutura veterinária organizada, a doença espalhou-se rapidamente.</p>
+
+            <p>Diversas linhagens desapareceram para sempre.</p>
+
+            <p>Não restaram descendentes.</p>
+
+            <p>Não restaram registros.</p>
+
+            <p>Restaram apenas relatos históricos.</p>
+
+          </section>
+
+          <section id="geografia-protecao">
+
+            <h2>Quando a geografia voltou a proteger a raça</h2>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/montanhas-japao-isolamento-geografico.png"
+                alt="Montanhas e vales remotos do Japão — o isolamento geográfico que moldou os cães regionais também protegeu seus últimos representantes durante a Segunda Guerra Mundial"
+                width="1024"
+                height="574"
+                loading="lazy"
+              />
+              <figcaption>As montanhas voltaram a desempenhar um papel decisivo. O isolamento geográfico que havia permitido o desenvolvimento dos antigos cães regionais também contribuiu para que pequenos núcleos de sobreviventes permanecessem relativamente protegidos durante os anos mais difíceis da guerra.</figcaption>
+            </figure>
+
+            <p>Curiosamente, aquilo que havia moldado os cães japoneses durante milhares de anos voltou a desempenhar papel decisivo.</p>
+
+            <p><strong>As montanhas.</strong></p>
+
+            <p>Enquanto grandes centros urbanos sofriam intensamente com a guerra, algumas regiões rurais permaneceram relativamente isoladas.</p>
+
+            <p>Foi justamente ali que pequenos grupos de cães conseguiram sobreviver.</p>
+
+            <p>Mais uma vez, o isolamento geográfico revelou-se um aliado inesperado da preservação.</p>
+
+            <p>Os mesmos vales e montanhas que haviam permitido o surgimento dos antigos tipos regionais agora protegiam seus últimos representantes.</p>
+
+            <p>É difícil imaginar coincidência histórica mais significativa.</p>
+
+          </section>
+
+          <section id="recomecar-zero">
+
+            <h2>Recomeçar praticamente do zero</h2>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/shiba-inu-pesquisa-pos-guerra.png"
+                alt="Publicação japonesa do pós-guerra sobre pesquisa e preservação de cães nativos japoneses — esforços de reconstrução das linhagens do Shiba Inu"
+                width="598"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+
+            <p>Ao término da guerra, criadores e pesquisadores encontraram uma realidade extremamente dura.</p>
+
+            <p>Os cães tradicionais eram raríssimos.</p>
+
+            <p>Muitas linhagens haviam desaparecido completamente.</p>
+
+            <p>Outras sobreviviam através de pouquíssimos indivíduos.</p>
+
+            <p>Reconstruir a raça tornou-se uma verdadeira corrida contra o tempo.</p>
+
+            <p>Foi nesse contexto que os antigos tipos <strong>Shinshu</strong>, <strong>Mino</strong> e <strong>San'in</strong> assumiram importância definitiva.</p>
+
+            <p>Os exemplares remanescentes dessas populações regionais tornaram-se a base utilizada para reconstruir o Shiba Inu moderno.</p>
+
+            <p>Não existia abundância de opções.</p>
+
+            <p>Existia responsabilidade.</p>
+
+            <p>Cada decisão influenciaria o futuro da raça.</p>
+
+          </section>
+
+          <section id="patrimonio-salvo">
+
+            <h2>Um patrimônio salvo por poucas gerações</h2>
+
+            <p>Quando observamos um Shiba Inu moderno, raramente imaginamos quão próximo ele esteve da extinção.</p>
+
+            <p>Sua existência atual depende diretamente do trabalho realizado por um pequeno grupo de pesquisadores, criadores e apaixonados que se recusaram a aceitar o desaparecimento dos cães japoneses.</p>
+
+            <p>Eles não reconstruíram apenas uma população canina.</p>
+
+            <p><strong>Reconstruíram um patrimônio cultural.</strong></p>
+
+            <p>Graças a esse esforço coletivo, o Shiba Inu sobreviveu.</p>
+
+            <p>E pôde iniciar uma nova etapa de sua história.</p>
+
+          </section>
+
+          <section id="legado-futuro">
+
+            <h2>O legado deixado para o futuro</h2>
+
+            <p>Os desafios enfrentados durante a Segunda Guerra Mundial ensinaram uma lição que continua extremamente atual.</p>
+
+            <p><strong>Uma raça pode desaparecer muito mais rapidamente do que imaginamos.</strong></p>
+
+            <p>Preservá-la exige conhecimento.</p>
+
+            <p>Planejamento.</p>
+
+            <p>Diversidade genética.</p>
+
+            <p>E, acima de tudo, respeito por sua história.</p>
+
+            <p>Talvez esse seja o maior legado deixado pelos primeiros preservacionistas japoneses.</p>
+
+            <p>Eles compreenderam que criar cães nunca significou produzir o maior número possível de filhotes.</p>
+
+            <p>Sempre significou proteger aquilo que não pode ser recriado caso seja perdido.</p>
+
+            <p>Essa filosofia permanece viva até hoje.</p>
+
+            <p>E continua sendo um dos princípios fundamentais da NIPPO.</p>
+
+            <h3>Preparando o próximo capítulo</h3>
+
+            <p>Após superar a guerra, o Shiba Inu iniciou um novo período de expansão.</p>
+
+            <p>A raça voltou a crescer dentro do Japão.</p>
+
+            <p>Posteriormente, ultrapassou as fronteiras do arquipélago e passou a conquistar criadores na Europa, nos Estados Unidos e em diversas outras partes do mundo.</p>
+
+            <p>Mas, ao longo desse caminho, também surgiram diferentes interpretações sobre o padrão da raça.</p>
+
+            <p>Para compreender o Shiba moderno, será necessário entender como NIPPO, JKC e FCI passaram a influenciar sua criação em diferentes países.</p>
+
+            <p>Essa será a etapa final da nossa jornada histórica.</p>
+
+            <div class="registro-historico">
+              <div class="registro-header">
+                <span class="registro-icon">📜</span>
+                <strong>Documento Histórico</strong>
+              </div>
+              <p class="registro-titulo">1945–1950 — A reconstrução do Shiba Inu</p>
+              <figure class="registro-image">
+                <img
+                  src="/estudos/historia/shiba-inu-reconstrucao-documento-historico.png"
+                  alt="Shiba Inu do período de reconstrução pós-guerra — exemplar que representa as linhagens sobreviventes utilizadas para restaurar a raça entre 1945 e 1950"
+                  width="1024"
+                  height="767"
+                  loading="lazy"
+                />
+              </figure>
+              <p>Ao final da Segunda Guerra Mundial, poucos exemplares representativos dos antigos cães japoneses permaneciam vivos. A reconstrução da raça foi realizada a partir desses sobreviventes, preservando principalmente as linhagens históricas de Shinshu, Mino e San'in.</p>
+            </div>
+
+          </section>
+
+          <div class="part-divider">
+            <span class="part-label">Parte VII</span>
+          </div>
+
+          <section id="shiba-mundo">
+
+            <h2>O Shiba Inu moderno: um patrimônio japonês que conquistou o mundo</h2>
+
+            <figure class="section-hero">
+              <img
+                src="/estudos/historia/castelo-matsumoto-nagano-shinshu.png"
+                alt="Castelo de Matsumoto na antiga província de Shinshu, atual Nagano — um dos principais berços do Shiba Inu moderno, região que preservou durante séculos populações caninas decisivas para a reconstrução da raça"
+                width="1024"
+                height="436"
+                loading="lazy"
+              />
+              <figcaption>Castelo de Matsumoto, na antiga província de Shinshu (atual Nagano). Mais do que um monumento histórico, a região de Shinshu representa um dos principais berços do Shiba Inu moderno, preservando durante séculos populações caninas que contribuíram decisivamente para a reconstrução da raça.</figcaption>
+            </figure>
+
+            <p>Ao final da Segunda Guerra Mundial, poucos imaginavam que o Shiba Inu ultrapassaria as fronteiras do Japão.</p>
+
+            <p>A prioridade naquele momento era outra.</p>
+
+            <p>Reconstruir a raça.</p>
+
+            <p>Preservar sua diversidade genética.</p>
+
+            <p>Evitar que um patrimônio cuidadosamente protegido durante décadas desaparecesse definitivamente.</p>
+
+            <p>Graças ao trabalho iniciado pela NIPPO e continuado por inúmeros criadores japoneses, esse objetivo foi alcançado.</p>
+
+            <p>Pouco a pouco, o número de exemplares voltou a crescer.</p>
+
+            <p>As antigas linhagens regionais foram preservadas.</p>
+
+            <p>O padrão passou a orientar a criação de maneira cada vez mais consistente.</p>
+
+            <p>O Shiba Inu havia sobrevivido.</p>
+
+            <p>Mas sua história estava apenas começando.</p>
+
+          </section>
+
+          <section id="japao-mundo">
+
+            <h2>Quando o Japão apresentou seus cães ao mundo</h2>
+
+            <p>Nas décadas seguintes, o Japão iniciou um intenso processo de reconstrução econômica e cultural.</p>
+
+            <p>Ao mesmo tempo em que sua indústria conquistava reconhecimento internacional, diversos aspectos da cultura japonesa passaram a despertar interesse em diferentes países.</p>
+
+            <p>Arte.</p>
+
+            <p>Arquitetura.</p>
+
+            <p>Culinária.</p>
+
+            <p>Artes marciais.</p>
+
+            <p>E, naturalmente, seus cães nativos.</p>
+
+            <p>Os primeiros exemplares começaram a ser exportados para outros continentes, despertando a curiosidade de criadores que buscavam compreender aquelas raças tão diferentes dos cães ocidentais.</p>
+
+            <p>Entre todas elas, o Shiba Inu chamava atenção por reunir características pouco comuns.</p>
+
+            <p>Pequeno porte.</p>
+
+            <p>Estrutura extremamente funcional.</p>
+
+            <p>Movimentação eficiente.</p>
+
+            <p>Expressão singular.</p>
+
+            <p>Temperamento independente.</p>
+
+            <p>Era um cão que parecia carregar, em sua própria aparência, parte da história do Japão.</p>
+
+          </section>
+
+          <section id="preservar-fora">
+
+            <h2>O desafio de preservar uma raça fora de seu país de origem</h2>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/shiba-inu-moderno-padrao.png"
+                alt="Shiba Inu moderno em pose natural na neve — exemplar que representa o resultado de décadas de preservação e seleção cuidadosa das linhagens japonesas tradicionais"
+                width="1024"
+                height="689"
+                loading="lazy"
+              />
+            </figure>
+
+            <p>A expansão internacional trouxe enormes benefícios para a preservação da raça.</p>
+
+            <p>Novos programas de criação surgiram.</p>
+
+            <p>A população mundial aumentou.</p>
+
+            <p>Diversidade genética passou a existir também fora do Japão.</p>
+
+            <p>Entretanto, novos desafios começaram a aparecer.</p>
+
+            <p>Cada país possuía tradições cinófilas diferentes.</p>
+
+            <p>Diferentes sistemas de julgamento.</p>
+
+            <p>Diferentes interpretações do padrão.</p>
+
+            <p>Foi nesse contexto que organizações como a <strong>Japan Kennel Club (JKC)</strong> e a <strong>Fédération Cynologique Internationale (FCI)</strong> desempenharam papel fundamental ao adaptar e difundir internacionalmente os princípios desenvolvidos pela NIPPO.</p>
+
+            <p>Embora existam diferenças naturais entre exposições NIPPO e FCI, ambas compartilham uma origem comum.</p>
+
+            <p><strong>A preservação do cão japonês tradicional.</strong></p>
+
+            <p>Compreender essa origem é muito mais importante do que memorizar pequenas diferenças de interpretação.</p>
+
+          </section>
+
+          <section id="olhar-funcao">
+
+            <h2>A importância de olhar para a função</h2>
+
+            <p>Ao longo desta obra vimos que o Shiba Inu nunca foi desenvolvido para atender tendências estéticas.</p>
+
+            <p>Sua anatomia.</p>
+
+            <p>Sua pelagem.</p>
+
+            <p>Seu temperamento.</p>
+
+            <p>Sua movimentação.</p>
+
+            <p>Tudo isso surgiu porque, durante milhares de anos, essas características eram úteis para um pequeno cão de caça vivendo nas montanhas japonesas.</p>
+
+            <p>Quando essa perspectiva é esquecida, o padrão torna-se apenas uma lista de detalhes morfológicos.</p>
+
+            <p>Quando compreendemos sua história, cada característica passa a fazer sentido.</p>
+
+            <p>É justamente por esse motivo que estudar a história da raça não representa mera curiosidade.</p>
+
+            <p><strong>Representa uma das ferramentas mais importantes para compreender o Shiba Inu moderno.</strong></p>
+
+          </section>
+
+          <section id="preservacao-evolucao">
+
+            <h2>Preservação não significa imobilidade</h2>
+
+            <p>Existe um equívoco comum quando se fala em preservação.</p>
+
+            <p>Muitas pessoas imaginam que preservar uma raça significa impedir qualquer evolução.</p>
+
+            <p>Na realidade, preservar significa compreender quais características definem sua identidade e garantir que elas continuem presentes nas futuras gerações.</p>
+
+            <p>Todo bom programa de criação realiza seleção.</p>
+
+            <p>Todo criador toma decisões.</p>
+
+            <p>Todo acasalamento representa escolhas.</p>
+
+            <p>A diferença está no critério utilizado para tomar essas decisões.</p>
+
+            <p>Quando elas são orientadas pela história, pela função e pelo conhecimento acumulado ao longo das gerações, preservação e evolução deixam de ser conceitos opostos.</p>
+
+            <p><strong>Passam a caminhar juntas.</strong></p>
+
+            <p>Foi exatamente essa filosofia que permitiu ao Shiba Inu atravessar séculos sem perder sua identidade.</p>
+
+          </section>
+
+          <section id="legado-construido">
+
+            <h2>Um legado que continua sendo construído</h2>
+
+            <figure class="region-image">
+              <img
+                src="/estudos/historia/shiba-inu-yang-world-dog-show-2026.png"
+                alt="Yang, Shiba Inu melhor da raça no World Dog Show em Bolonha 2026 — criação e propriedade de Michaella Dun-Hill sob o afixo Vormund, uma das maiores criadoras do mundo da raça Shiba Inu, no Reino Unido"
+                width="1024"
+                height="680"
+                loading="lazy"
+              />
+              <figcaption>Yang, atual Shiba melhor da raça no World Dog Show em Bolonha, 2026. Criação e propriedade de Michaella Dun-Hill, criadora sob afixo Vormund, uma das maiores criadoras do mundo da raça Shiba, canil localizado no Reino Unido.</figcaption>
+            </figure>
+
+            <p>A história do Shiba Inu não terminou em 1936.</p>
+
+            <p>Também não terminou após a Segunda Guerra Mundial.</p>
+
+            <p>Ela continua sendo escrita diariamente.</p>
+
+            <p>Cada criador responsável.</p>
+
+            <p>Cada proprietário comprometido.</p>
+
+            <p>Cada pesquisador.</p>
+
+            <p>Cada juiz.</p>
+
+            <p>Cada estudioso da raça contribui, de alguma maneira, para definir como o Shiba Inu será visto pelas próximas gerações.</p>
+
+            <p>Essa responsabilidade talvez seja o maior legado deixado pela NIPPO.</p>
+
+            <p>Preservar uma raça não consiste apenas em admirar seu passado.</p>
+
+            <p><strong>Consiste em tomar decisões que respeitem esse passado enquanto constroem seu futuro.</strong></p>
+
+          </section>
+
+          <section id="conclusao">
+
+            <h2>Conclusão</h2>
+
+            <p>Ao iniciarmos este capítulo, voltamos aproximadamente quinze mil anos no tempo.</p>
+
+            <p>Conhecemos os povos Jōmon.</p>
+
+            <p>Acompanhamos a chegada dos Yayoi.</p>
+
+            <p>Percorremos as antigas províncias japonesas.</p>
+
+            <p>Assistimos ao nascimento da NIPPO.</p>
+
+            <p>Vivenciamos os desafios da Segunda Guerra Mundial.</p>
+
+            <p>Agora compreendemos que o Shiba Inu moderno não é fruto do acaso.</p>
+
+            <p><strong>Ele representa milhares de anos de adaptação, seleção funcional e preservação consciente.</strong></p>
+
+            <p>Talvez seja justamente essa combinação que torne a raça tão singular.</p>
+
+            <p>Conhecer essa história não muda apenas a forma como observamos um Shiba Inu.</p>
+
+            <p>Muda também a maneira como compreendemos a responsabilidade de preservá-lo.</p>
+
+            <h3>Para continuar seus estudos</h3>
+
+            <p>A partir deste ponto, cada característica da raça passa a ser analisada com muito mais profundidade nos próximos pilares da <a href="/estudos/">Biblioteca Técnica Ninpozan</a>.</p>
+
+            <p>Você descobrirá como a genética influencia as diferentes pelagens, entenderá por que o <a href="/estudos/shiba-inu/temperamento/">temperamento do Shiba</a> é frequentemente mal interpretado, conhecerá a função de sua pelagem dupla e compreenderá como o padrão moderno preserva características moldadas ao longo de milhares de anos.</p>
+
+            <p>Em outras palavras, a história termina aqui.</p>
+
+            <p><strong>Mas o estudo da raça está apenas começando.</strong></p>
+
+          </section>
+
+          <section id="fontes" class="fontes-section">
+
+            <h2>Fontes e referências utilizadas</h2>
+
+            <h3>Fontes primárias</h3>
+            <ul>
+              <li>Nihon Ken Hozonkai (NIPPO) — História institucional e missão de preservação.</li>
+              <li>Nihon Ken Standard (1934).</li>
+              <li>Banco de Dados Oficial de Propriedades Culturais do Japão — Designação do Shiba Inu como Monumento Natural (16 de dezembro de 1936).</li>
+              <li>Kamikuroiwa Rock Shelter — estudos arqueológicos sobre sepultamentos de cães do período Jōmon.</li>
+              <li>Journal of Anthropological Society of Nippon — análises osteológicas dos cães Jōmon.</li>
+              <li>Publicações do National Museum of Nature and Science (Japão).</li>
+              <li>Publicações históricas da Nihon Ken Hozonkai sobre os tipos regionais Shinshu, Mino e San'in.</li>
+            </ul>
+
+            <h3>Estudos científicos e históricos</h3>
+            <ul>
+              <li>Perri, A. et al. — pesquisas sobre cães de caça no período Jōmon.</li>
+              <li>Estudos de DNA mitocondrial de cães Jōmon publicados por pesquisadores japoneses.</li>
+              <li>Pesquisas de DNA antigo sobre cães Jōmon e Yayoi publicadas em <em>Molecular Biology and Evolution</em>.</li>
+              <li>Estudos arqueológicos sobre migrações humanas do período Yayoi.</li>
+              <li>Pesquisas sobre a formação geográfica do arquipélago japonês e a distribuição regional dos cães nativos.</li>
+              <li>Trabalhos acadêmicos sobre a origem dos tipos regionais que deram origem ao Shiba Inu moderno.</li>
+              <li>Pesquisas em arqueologia e genética publicadas em <em>Antiquity</em> e <em>Journal of Archaeological Science</em>.</li>
+              <li>Pesquisas sobre a Restauração Meiji e a abertura do Japão ao Ocidente.</li>
+              <li>Trabalhos sobre a introdução de raças caninas europeias no Japão e o declínio dos cães nativos.</li>
+              <li>Pesquisas biográficas sobre Hirokichi Saitō.</li>
+              <li>Estudos históricos sobre a formação da NIPPO e o levantamento dos tipos regionais.</li>
+              <li>Biblioteca Nacional da Dieta do Japão — registros fotográficos do pós-guerra.</li>
+              <li>Estudos sobre o impacto da Segunda Guerra Mundial nas populações caninas japonesas.</li>
+              <li>Pesquisas sobre a reconstrução das linhagens Shinshu, Mino e San'in no período 1945–1950.</li>
+            </ul>
+
+            <h3>Leitura complementar</h3>
+            <ul>
+              <li>Pesquisas sobre a transição Jōmon–Yayoi e a introdução da agricultura no Japão.</li>
+              <li>Estudos sobre evolução das populações caninas no Leste Asiático.</li>
+              <li>História das províncias históricas do Japão.</li>
+              <li>Estudos sobre a evolução funcional dos cães de caça japoneses.</li>
+              <li>Publicações da Agência para Assuntos Culturais do Japão.</li>
+              <li>Estudos sobre patrimônio cultural japonês e preservação das raças nativas.</li>
+              <li>Japan Kennel Club (JKC) — padrão e história do Shiba Inu.</li>
+              <li>Fédération Cynologique Internationale (FCI) — Standard N° 257.</li>
+              <li>Registros históricos sobre a exportação dos primeiros Shiba Inu para Europa e Estados Unidos.</li>
+            </ul>
+
+          </section>
+
+        </div>
+
+        <nav class="article-nav">
+          <h3>Continue lendo</h3>
+          <ul class="reading-list">
+            <li><a href="/estudos/shiba-inu/temperamento/">Temperamento do Shiba Inu</a></li>
+            <li><a href="/estudos/shiba-inu/cores/">As Cores Oficiais do Shiba Inu</a></li>
+            <li><a href="/estudos/shiba-inu/urajiro/">O que é Urajiro?</a></li>
+            <li><a href="/estudos/ninpozan/nossa-historia/">Nossa História: Ninpozan Kennel</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </article>
+
+</BaseLayout>
+
+<style>
+  .article-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 1024px) {
+    .article-layout {
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+    }
+  }
+
+  /* Table of Contents */
+  .toc {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .toc {
+      display: block;
+      position: sticky;
+      top: 2rem;
+      align-self: start;
+      margin-top: 12rem;
+      max-height: calc(100vh - 4rem);
+      overflow-y: auto;
+    }
+  }
+
+  .toc-nav {
+    padding: 1rem 0;
+  }
+  .toc-title {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dourado);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 96, 57, 0.1);
+  }
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: toc;
+  }
+  .toc-list li {
+    counter-increment: toc;
+    margin-bottom: 0.6rem;
+  }
+  .toc-list a {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--sumi);
+    line-height: 1.4;
+    padding: 0.3rem 0;
+    border-left: 2px solid transparent;
+    padding-left: 0.8rem;
+    transition: all 0.2s;
+  }
+  .toc-list a:hover {
+    color: var(--verde-rolex);
+    border-left-color: var(--verde-rolex);
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 720px;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--sumi);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--verde-rolex); }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--nanquim);
+  }
+  .article-capitulo {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dourado);
+    font-weight: 600;
+  }
+  .article-date {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--sumi-light);
+    margin-top: 0.3rem;
+  }
+  .article-header h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 2.2rem;
+    color: var(--verde-deep);
+    margin: 0.8rem 0 0.3rem;
+    line-height: 1.2;
+  }
+  .article-subtitle {
+    font-size: 0.95rem;
+    color: var(--sumi);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  .article-author {
+    font-size: 0.8rem;
+    color: var(--sumi-light);
+  }
+
+  /* Hero Images */
+  .article-hero-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+  }
+  .article-hero-images figure {
+    margin: 0;
+  }
+  .article-hero-images img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 96, 57, 0.1);
+  }
+  .hero-caption {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--sumi-light);
+    font-style: italic;
+    margin-top: 0.3rem;
+  }
+
+  @media (max-width: 600px) {
+    .article-hero-images {
+      grid-template-columns: 1fr;
+    }
+    .article-hero-images img {
+      height: 220px;
+    }
+  }
+
+  /* Section Images */
+  .section-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .section-images figure {
+    margin: 0;
+  }
+  .section-images img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 96, 57, 0.1);
+  }
+  .section-images figcaption {
+    font-size: 0.75rem;
+    color: var(--sumi-light);
+    font-style: italic;
+    margin-top: 0.4rem;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 600px) {
+    .section-images {
+      grid-template-columns: 1fr;
+    }
+    .section-images img {
+      height: 200px;
+    }
+  }
+
+  /* Article Body */
+  .article-body {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--sumi);
+  }
+  .article-body .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--verde-deep);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .article-body p {
+    margin-bottom: 1rem;
+  }
+  .article-body h2 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.4rem;
+    color: var(--verde-deep);
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 96, 57, 0.1);
+  }
+  .article-body h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.1rem;
+    color: var(--verde-deep);
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .article-body a {
+    color: var(--verde-rolex);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  .article-body a:hover {
+    color: var(--dourado);
+  }
+  .article-body ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .article-body ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .fontes-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--nanquim);
+  }
+  .fontes-section h2 {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  /* Article Nav */
+  .article-nav {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--nanquim);
+    margin-bottom: 4rem;
+  }
+  .article-nav h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.1rem;
+    color: var(--verde-deep);
+    margin-bottom: 1rem;
+  }
+  .reading-list {
+    list-style: none;
+    padding: 0;
+  }
+  .reading-list li {
+    margin-bottom: 0.8rem;
+  }
+  .reading-list a {
+    font-size: 1rem;
+    color: var(--verde-rolex);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .reading-list a:hover {
+    color: var(--dourado);
+  }
+
+  /* Part Divider */
+  .part-divider {
+    text-align: center;
+    margin: 4rem 0 3rem;
+    padding: 2rem 0;
+    border-top: 2px solid var(--nanquim);
+    border-bottom: 1px solid rgba(0, 96, 57, 0.1);
+  }
+  .part-label {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--dourado);
+    font-weight: 600;
+  }
+
+  /* Section Hero Image */
+  .section-hero {
+    margin: 0 0 2rem;
+  }
+  .section-hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 96, 57, 0.1);
+  }
+  .section-hero figcaption {
+    font-size: 0.75rem;
+    color: var(--sumi-light);
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  /* Geo Sidebar (map floating) */
+  .geo-sidebar {
+    float: right;
+    width: 280px;
+    margin: 0 0 1.5rem 1.5rem;
+  }
+  .geo-sidebar img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 96, 57, 0.1);
+  }
+  .geo-sidebar figcaption {
+    font-size: 0.7rem;
+    color: var(--sumi-light);
+    font-style: italic;
+    margin-top: 0.4rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .geo-sidebar {
+      float: none;
+      width: 100%;
+      margin: 1.5rem 0;
+    }
+  }
+
+  /* Region Images (inline with text) */
+  .region-image {
+    margin: 1.5rem 0;
+  }
+  .region-image img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 96, 57, 0.1);
+  }
+  .region-image figcaption {
+    font-size: 0.75rem;
+    color: var(--sumi-light);
+    font-style: italic;
+    margin-top: 0.4rem;
+    text-align: center;
+  }
+
+  /* Callout Image Box */
+  .callout-image {
+    margin: 3rem 0 2rem;
+    padding: 1.5rem;
+    background: var(--papel-escuro);
+    border: 1px solid rgba(0, 96, 57, 0.1);
+    border-radius: 4px;
+  }
+  .callout-image figure {
+    margin: 0 0 1rem;
+  }
+  .callout-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  .callout-text {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--sumi);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* TOC part labels */
+  .toc-part {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--dourado);
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    padding-left: 0.8rem;
+  }
+
+  .nippo-badge {
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+    max-width: 80px;
+  }
+  .nippo-badge img {
+    width: 100%;
+    height: auto;
+  }
+
+  .registro-historico {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: var(--papel-escuro);
+    border-left: 3px solid var(--dourado);
+  }
+  .registro-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1rem;
+    color: var(--verde-deep);
+  }
+  .registro-icon {
+    font-size: 1.2rem;
+  }
+  .registro-titulo {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dourado);
+    margin-bottom: 1rem !important;
+  }
+  .registro-image {
+    margin: 1rem 0;
+  }
+  .registro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  .registro-historico p {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .registro-historico p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 600px) {
+    .article-header h1 { font-size: 1.5rem; }
+    .article-body h2 { font-size: 1.2rem; }
+    .nippo-badge { float: none; margin: 0 auto 1rem; display: block; }
+  }
+</style>
