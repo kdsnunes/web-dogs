@@ -318,6 +318,9 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  html {
+    overflow-x: hidden;
+  }
   html, body {
     background: var(--papel);
     color: var(--nanquim);
@@ -325,7 +328,6 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
     font-size: 16px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
   }
 
   .page-texture {
