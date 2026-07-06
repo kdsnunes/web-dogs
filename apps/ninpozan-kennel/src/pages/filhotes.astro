@@ -23,17 +23,14 @@ const ultimaAtualizacao = '21/06/2026';
 
   <section class="filhotes">
     <div class="container">
-      <div class="filhotes-grid">
+      <div class="filhotes-grid filhotes-single">
         <div class="filhote-item panel">
-          <img src="/filhote-1.png" alt="Filhote Shiba Inu" loading="lazy" />
-        </div>
-        <div class="filhote-item panel">
-          <img src="/filhote-2.png" alt="Filhote Shiba Inu" loading="lazy" />
+          <img src="/filhote-2.png" alt="Filhote Shiba Inu vermelho disponível — Ninpozan Kennel" loading="lazy" />
         </div>
       </div>
 
       <div class="filhotes-desc panel">
-        <p>Temos 2 filhotes vermelhos para companhia/pet. 3 meses de idade, ambos com temperamento incrível.</p>
+        <p>Temos 1 filhote vermelho para companhia/pet. 3 meses de idade, com temperamento incrível.</p>
       </div>
 
       <div class="filhotes-cta">
@@ -94,6 +91,7 @@ const ultimaAtualizacao = '21/06/2026';
   }
   @media (min-width: 600px) {
     .filhotes-grid { grid-template-columns: repeat(2, 1fr); }
+    .filhotes-grid.filhotes-single { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
   }
   .filhote-item {
     overflow: hidden;
