@@ -6,6 +6,7 @@ Monorepo moderno com npm workspaces para múltiplos sites Astro estáticos do ec
 
 - `apps/shiba-departamento-rs`: site do Departamento da Raça Shiba Inu – RS
 - `apps/shiba-conselho`: site do futuro Conselho da Raça Shiba Inu do Brasil
+- `apps/kennel-club-londrina`: site institucional do Kennel Club de Londrina (KCL)
 - `packages/ui`: pacote compartilhado `@shiba/ui` (tema e componentes)
 
 ## Requisitos

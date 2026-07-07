@@ -11,7 +11,9 @@
     "dev:hw": "npm --workspace @apps/hungriawatchs run dev",
     "build:hw": "npm --workspace @apps/hungriawatchs run build",
     "dev:nk": "npm --workspace @apps/ninpozan-kennel run dev",
-    "build:nk": "npm --workspace @apps/ninpozan-kennel run build"
+    "build:nk": "npm --workspace @apps/ninpozan-kennel run build",
+    "dev:kcl": "npm --workspace @apps/kennel-club-londrina run dev",
+    "build:kcl": "npm --workspace @apps/kennel-club-londrina run build"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +24,7 @@
     "apps/shiba-conselho",
     "apps/hungriawatchs",
     "apps/ninpozan-kennel",
+    "apps/kennel-club-londrina",
     "packages/ui"
   ]
 }

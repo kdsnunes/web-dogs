@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const indice = [
+  { id: 'registros', label: 'Registros' },
+  { id: 'pedigree', label: 'Pedigree' },
+  { id: 'homologacao', label: 'Homologação de Títulos' },
+  { id: 'socios', label: 'Sócios' },
+  { id: 'taxas', label: 'Taxas' },
+];
+---
+<BaseLayout
+  title="Serviços — Kennel Club de Londrina"
+  description="Serviços do Kennel Club de Londrina: registro de ninhadas e canis, pedigree, homologação de títulos, sócios e taxas."
+  active="servicos"
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow-light">Serviços</span>
+      <h1>Serviços do KCL</h1>
+      <p>Conheça os serviços oferecidos pelo Kennel Club de Londrina aos criadores e associados.</p>
+    </div>
+  </section>
+
+  <nav class="anchor-nav">
+    <div class="container anchor-inner">
+      {indice.map((i) => <a href={`#${i.id}`}>{i.label}</a>)}
+    </div>
+  </nav>
+
+  <section class="section" id="registros">
+    <div class="container narrow">
+      <span class="eyebrow">Serviços</span>
+      <h2>Registros</h2>
+      <hr class="rule rule-left" />
+      <p>
+        O registro é o serviço que garante a origem e a rastreabilidade dos exemplares. Por meio dele,
+        o Kennel Club de Londrina apoia o criador em todas as etapas oficiais da criação.
+      </p>
+      <h3>Registro de ninhada</h3>
+      <p>
+        É o processo pelo qual o sócio encaminha as informações da sua criação para a obtenção dos
+        pedigrees dos filhotes. A partir do registro da ninhada, cada filhote passa a integrar o
+        cadastro oficial da cinofilia.
+      </p>
+      <h3>Registro de afixo (abertura de canil)</h3>
+      <p>
+        É o processo pelo qual o proprietário de um ou mais exemplares com pedigree obtém o afixo —
+        o nome do seu canil — que será utilizado na identificação da sua criação.
+      </p>
+      <a href="/formularios/" class="btn btn-outline">Ver formulários</a>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="pedigree">
+    <div class="container narrow">
+      <span class="eyebrow">Serviços</span>
+      <h2>Pedigree</h2>
+      <hr class="rule rule-left" />
+      <p>
+        O pedigree é o documento oficial que atesta a genealogia do cão, reunindo informações sobre
+        seus ascendentes. É a certidão de nascimento do exemplar de raça pura.
+      </p>
+      <h3>Emissão e 2ª via</h3>
+      <p>
+        O KCL orienta e encaminha a emissão do pedigree dos filhotes registrados, bem como a solicitação
+        de 2ª via em caso de perda ou dano do documento original.
+      </p>
+      <h3>Transferência de propriedade</h3>
+      <p>
+        É o procedimento por meio do qual o comprador de um cão com pedigree realiza a transferência de
+        propriedade do exemplar para o seu nome, mantendo o cadastro sempre atualizado.
+      </p>
+      <a href="/formularios/" class="btn btn-outline">Ver formulários</a>
+    </div>
+  </section>
+
+  <section class="section" id="homologacao">
+    <div class="container narrow">
+      <span class="eyebrow">Serviços</span>
+      <h2>Homologação de Títulos</h2>
+      <hr class="rule rule-left" />
+      <p>
+        A homologação de títulos é o serviço que reconhece oficialmente as conquistas obtidas pelos
+        exemplares em exposições e provas, incorporando os títulos ao registro do cão.
+      </p>
+      <p>
+        Para solicitar a homologação, o associado deve encaminhar o requerimento específico acompanhado
+        da documentação comprobatória.
+      </p>
+      <a href="/formularios/" class="btn btn-outline">Ver formulários</a>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="socios">
+    <div class="container narrow">
+      <span class="eyebrow">Serviços</span>
+      <h2>Sócios</h2>
+      <hr class="rule rule-left" />
+      <p>
+        Tornar-se sócio do Kennel Club de Londrina é integrar uma comunidade dedicada à cinofilia, com
+        acesso aos serviços de registro, participação nas atividades do clube e suporte para uma
+        criação ética e responsável.
+      </p>
+      <p>
+        Para se associar, preencha a proposta de sócio e entre em contato com a secretaria do clube.
+      </p>
+      <div class="btn-row">
+        <a href="/formularios/#socios" class="btn">Proposta de sócio</a>
+        <a href="/contato/" class="btn btn-outline">Falar com o clube</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="taxas">
+    <div class="container narrow">
+      <span class="eyebrow">Serviços</span>
+      <h2>Taxas</h2>
+      <hr class="rule rule-left" />
+      <p>
+        Os valores das taxas relativas aos serviços de registro, pedigree, homologação de títulos e
+        anuidade de sócios são definidos pela diretoria e podem ser consultados diretamente com a
+        secretaria do Kennel Club de Londrina.
+      </p>
+      <p class="muted">Entre em contato para receber a tabela de taxas atualizada.</p>
+      <a href="/contato/" class="btn btn-green">Consultar taxas</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--vermelho-escuro), var(--vermelho));
+    color: #fff; padding: 3.5rem 0;
+  }
+  .page-hero h1 { color: #fff; margin: 0.4rem 0 0.6rem; }
+  .page-hero p { color: rgba(255,255,255,0.9); max-width: 620px; }
+  .eyebrow-light { color: rgba(255,255,255,0.85); }
+
+  .anchor-nav {
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    position: sticky; top: 0; z-index: 20;
+  }
+  .anchor-inner { display: flex; gap: 6px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+  .anchor-nav a {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase; letter-spacing: 0.6px; font-weight: 600;
+    color: var(--tinta); font-size: 0.95rem; padding: 6px 12px; border-radius: 4px;
+  }
+  .anchor-nav a:hover { background: var(--prata-clara); color: var(--vermelho); }
+
+  .narrow { max-width: 800px; }
+  .narrow h3 { margin: 1.6rem 0 0.4rem; color: var(--vermelho-escuro); }
+  .narrow p { margin-bottom: 1rem; }
+  .rule-left { margin: 0.9rem 0 1.4rem; }
+  .section .eyebrow { display: block; }
+  .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 0.6rem; }
+</style>

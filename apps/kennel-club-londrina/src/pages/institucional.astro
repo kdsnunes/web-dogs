@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const diretoria = [
+  { cargo: 'Presidente', nome: 'A definir' },
+  { cargo: 'Vice-Presidente', nome: 'A definir' },
+  { cargo: 'Diretor Administrativo', nome: 'A definir' },
+  { cargo: 'Diretor Financeiro', nome: 'A definir' },
+  { cargo: 'Diretor de Exposições', nome: 'A definir' },
+  { cargo: 'Secretaria Geral', nome: 'A definir' },
+];
+---
+<BaseLayout
+  title="Institucional — Kennel Club de Londrina"
+  description="Conheça o Kennel Club de Londrina: história, missão, diretoria e estatuto da entidade cinófila de Londrina/PR."
+  active="institucional"
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow-light">Institucional</span>
+      <h1>Kennel Club de Londrina</h1>
+      <p>A entidade cinófila de Londrina, comprometida com a criação ética e o bem-estar animal.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <h2>Quem somos</h2>
+      <hr class="rule rule-left" />
+      <p>
+        O <strong>Kennel Club de Londrina (KCL)</strong> é uma entidade cinófila situada em Londrina,
+        no norte do Paraná, que tem por finalidade congregar os cinófilos, cuidando dos interesses
+        de todas as raças caninas.
+      </p>
+      <p>
+        Com trabalho, amor e dedicação à cinofilia, o <strong>Kennel Club de Londrina</strong> atua
+        para promover o desenvolvimento cultural e desportivo, por meio de atividades que visem ao
+        <strong> aprimoramento das raças caninas</strong>, seguindo os padrões e diretrizes do sistema
+        oficial da cinofilia brasileira e internacional.
+      </p>
+      <p>
+        Oferecer o suporte necessário para a <strong>criação ética e responsável de cães</strong> em
+        Londrina e região é o nosso compromisso constante. Nossa missão é preservar o patrimônio
+        genético constituído junto aos nossos associados, zelando sempre pelo bem-estar animal.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Missão</h3>
+          <p>Preservar o patrimônio genético das raças caninas e apoiar a criação responsável em Londrina e região.</p>
+        </div>
+        <div class="pillar">
+          <h3>Visão</h3>
+          <p>Ser referência regional em cinofilia, unindo criadores, expositores e apaixonados por cães.</p>
+        </div>
+        <div class="pillar">
+          <h3>Valores</h3>
+          <p>Ética, bem-estar animal, transparência e amor pela cinofilia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="diretoria">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Institucional</span>
+        <h2>Diretoria</h2>
+        <hr class="rule" />
+        <p>A diretoria do Kennel Club de Londrina é responsável pela condução das atividades e pela representação da entidade.</p>
+      </div>
+      <div class="cards cards-3">
+        {diretoria.map((m) => (
+          <div class="card member">
+            <span class="member-cargo">{m.cargo}</span>
+            <strong class="member-nome">{m.nome}</strong>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="estatuto">
+    <div class="container narrow">
+      <div class="section-head" style="text-align:left; margin-left:0;">
+        <span class="eyebrow">Institucional</span>
+        <h2>Estatuto</h2>
+        <hr class="rule rule-left" />
+      </div>
+      <p>
+        O Estatuto do Kennel Club de Londrina reúne as normas que regem a entidade: sua finalidade,
+        a organização dos associados, os direitos e deveres dos sócios, a estrutura de diretoria e as
+        diretrizes para o registro e o aprimoramento das raças caninas.
+      </p>
+      <p>
+        O documento na íntegra pode ser disponibilizado aos associados e interessados mediante solicitação
+        à secretaria do clube.
+      </p>
+      <a href="/contato/" class="btn">Solicitar o estatuto</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--vermelho-escuro), var(--vermelho));
+    color: #fff; padding: 3.5rem 0;
+  }
+  .page-hero h1 { color: #fff; margin: 0.4rem 0 0.6rem; }
+  .page-hero p { color: rgba(255,255,255,0.9); max-width: 620px; }
+  .eyebrow-light { color: rgba(255,255,255,0.85); }
+
+  .narrow { max-width: 800px; }
+  .narrow p { margin-bottom: 1.1rem; }
+  .rule-left { margin: 0.9rem 0 1.6rem; }
+
+  .pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.4rem; margin-top: 2.4rem; }
+  .pillar { background: var(--prata-clara); border-left: 4px solid var(--verde); border-radius: 6px; padding: 1.4rem; }
+  .pillar h3 { color: var(--verde-escuro); margin-bottom: 0.5rem; }
+  .pillar p { font-size: 0.96rem; margin: 0; }
+  @media (max-width: 780px) { .pillars { grid-template-columns: 1fr; } }
+
+  .member { border-top-color: var(--verde); text-align: center; }
+  .member-cargo {
+    display: block; font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase; letter-spacing: 1px; color: var(--vermelho);
+    font-weight: 600; font-size: 1.05rem;
+  }
+  .member-nome { display: block; margin-top: 0.3rem; color: var(--tinta); font-size: 1.1rem; }
+</style>

@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Contato — Kennel Club de Londrina"
+  description="Entre em contato com o Kennel Club de Londrina: telefone, WhatsApp, e-mail e endereço em Londrina/PR."
+  active="contato"
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow-light">Contato</span>
+      <h1>Fale com o KCL</h1>
+      <p>Estamos à disposição para atender criadores, associados e apaixonados por cães em Londrina e região.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h2>Canais de atendimento</h2>
+        <hr class="rule rule-left" />
+
+        <a class="contact-line" href="https://wa.me/5543999999999" target="_blank" rel="noopener">
+          <span class="contact-ic" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </span>
+          <span><strong>WhatsApp</strong>(43) 99999-9999</span>
+        </a>
+
+        <a class="contact-line" href="tel:+5543999999999">
+          <span class="contact-ic" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span><strong>Telefone</strong>(43) 99999-9999</span>
+        </a>
+
+        <a class="contact-line" href="mailto:contato@kclondrina.com.br">
+          <span class="contact-ic" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span><strong>E-mail</strong>contato@kclondrina.com.br</span>
+        </a>
+
+        <div class="contact-line contact-line-static">
+          <span class="contact-ic" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <span><strong>Endereço</strong>Londrina — Paraná / PR</span>
+        </div>
+
+        <div class="contact-social">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h2>Envie uma mensagem</h2>
+        <hr class="rule rule-left" />
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/contato@kclondrina.com.br"
+          method="POST"
+        >
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" required placeholder="Seu nome completo" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required placeholder="voce@email.com" />
+            </div>
+            <div class="field">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" type="tel" placeholder="(43) 99999-9999" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="assunto">Assunto</label>
+            <input id="assunto" name="assunto" type="text" placeholder="Registro, pedigree, sócio..." />
+          </div>
+          <div class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como podemos ajudar?"></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--vermelho-escuro), var(--vermelho));
+    color: #fff; padding: 3.5rem 0;
+  }
+  .page-hero h1 { color: #fff; margin: 0.4rem 0 0.6rem; }
+  .page-hero p { color: rgba(255,255,255,0.9); max-width: 620px; }
+  .eyebrow-light { color: rgba(255,255,255,0.85); }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; }
+  @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; gap: 2.4rem; } }
+
+  .rule-left { margin: 0.9rem 0 1.6rem; }
+
+  .contact-line {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 0; border-bottom: 1px solid var(--borda);
+    color: var(--tinta);
+  }
+  .contact-line span:last-child { display: flex; flex-direction: column; line-height: 1.3; }
+  .contact-line strong {
+    font-family: "Barlow Condensed", sans-serif; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--vermelho); font-size: 0.85rem; font-weight: 600;
+  }
+  .contact-line-static { color: var(--texto); }
+  .contact-ic {
+    flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%;
+    background: var(--prata-clara); color: var(--vermelho);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .contact-social { display: flex; gap: 14px; margin-top: 1.4rem; }
+  .contact-social a {
+    font-family: "Barlow Condensed", sans-serif; text-transform: uppercase;
+    letter-spacing: 1px; font-weight: 600;
+    border: 1.5px solid var(--vermelho); color: var(--vermelho);
+    padding: 6px 16px; border-radius: 4px; transition: all 0.2s;
+  }
+  .contact-social a:hover { background: var(--vermelho); color: #fff; }
+
+  .contact-form-wrap {
+    background: var(--branco); border: 1px solid var(--borda);
+    border-top: 4px solid var(--vermelho); border-radius: 10px; padding: 2rem;
+  }
+  .field { margin-bottom: 1.1rem; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 480px) { .field-row { grid-template-columns: 1fr; } }
+  .field label {
+    display: block; font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600;
+    color: var(--tinta); font-size: 0.9rem; margin-bottom: 0.35rem;
+  }
+  .field input, .field textarea {
+    width: 100%; padding: 11px 13px; font-size: 1rem; font-family: inherit;
+    border: 1px solid var(--borda); border-radius: 6px; background: var(--cinza-fundo);
+    color: var(--tinta); transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .field input:focus, .field textarea:focus {
+    outline: none; border-color: var(--vermelho);
+    box-shadow: 0 0 0 3px rgba(176,30,46,0.12); background: #fff;
+  }
+  .contact-form .btn { width: 100%; justify-content: center; margin-top: 0.4rem; }
+</style>
