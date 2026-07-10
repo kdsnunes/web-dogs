@@ -5,9 +5,9 @@ const ultimaAtualizacao = '21/06/2026';
 ---
 
 <BaseLayout
-  title="Filhotes de Shiba Inu Disponíveis — Ninpozan Kennel"
-  description="Filhotes de Shiba Inu disponíveis no Ninpozan Kennel, Blumenau SC. Criação responsável, temperamento selecionado e linhagem campeã."
-  breadcrumbs={[{ name: "Filhotes Disponíveis", url: "/filhotes/" }]}
+  title="Filhotes de Shiba Inu — Ninpozan Kennel"
+  description="Filhotes de Shiba Inu do Ninpozan Kennel: criação responsável, temperamento selecionado e linhagem de campeões. Colocação criteriosa e acompanhamento no Brasil e no exterior."
+  breadcrumbs={[{ name: "Filhotes", url: "/filhotes/" }]}
 >
 
   <section class="page-header">
@@ -16,16 +16,21 @@ const ultimaAtualizacao = '21/06/2026';
       <div class="divider">
         <span class="divider-symbol">◆</span>
       </div>
-      <h1>Filhotes Disponíveis</h1>
+      <h1>Filhotes de Shiba Inu</h1>
       <p class="page-update">Última atualização: {ultimaAtualizacao}</p>
     </div>
   </section>
 
   <section class="filhotes">
     <div class="container">
+      <div class="filhotes-intro">
+        <p>No Ninpozan, os filhotes nascem de acasalamentos planejados, com foco em tipo racial, saúde e temperamento — fruto de uma linhagem de campeões e do estudo contínuo da raça. Mais do que disponibilizar filhotes, buscamos a <strong>colocação criteriosa</strong> de cada exemplar na família ou no criador certo.</p>
+        <p>Cada filhote acompanha pedigree, vacinação, vermifugação, orientação de manejo e <strong>acompanhamento vitalício</strong> do canil. Levamos o Shiba Inu Ninpozan para todo o Brasil e também para o exterior, com transporte seguro por via terrestre ou aérea através de parceiros especializados.</p>
+      </div>
+
       <div class="filhotes-grid filhotes-single">
         <div class="filhote-item panel">
-          <img src="/filhote-2.png" alt="Filhote Shiba Inu vermelho disponível — Ninpozan Kennel" loading="lazy" />
+          <img src="/filhote-2.png" alt="Filhote de Shiba Inu vermelho do Ninpozan Kennel" loading="lazy" />
         </div>
       </div>
 
@@ -34,7 +39,7 @@ const ultimaAtualizacao = '21/06/2026';
       </div>
 
       <div class="filhotes-cta">
-        <a href="https://wa.me/5551991481685?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20filhotes%20dispon%C3%ADveis!" class="btn-panel" target="_blank" rel="noopener">Entrar em Contato</a>
+        <a href="https://wa.me/5551991481685?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20filhotes%20do%20Ninpozan!" class="btn-panel" target="_blank" rel="noopener" onclick="trackWhatsApp()">Falar com o canil</a>
       </div>
     </div>
   </section>
@@ -84,6 +89,18 @@ const ultimaAtualizacao = '21/06/2026';
     position: relative;
     z-index: 1;
   }
+  .filhotes-intro {
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+  }
+  .filhotes-intro p {
+    color: var(--sumi);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+  .filhotes-intro p:last-child { margin-bottom: 0; }
   .filhotes-grid {
     display: grid;
     grid-template-columns: 1fr;

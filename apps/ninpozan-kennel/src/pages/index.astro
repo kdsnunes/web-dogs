@@ -7,11 +7,18 @@ const conquistas = [
   { titulo: 'Shiba Jovem Nº 1', ano: '2025' },
   { titulo: 'Shiba Jovem Nº 1', ano: '2024' },
 ];
+
+const estudos = [
+  { titulo: 'Conhecendo o Shiba Inu', desc: 'História, temperamento, padrão oficial, pelagem, cores e saúde da raça.', slug: '/estudos/shiba-inu/' },
+  { titulo: 'Criação Responsável', desc: 'Seleção, planejamento, pedigrees e avaliação de filhotes.', slug: '/estudos/criacao/' },
+  { titulo: 'Exposições de Conformação', desc: 'Julgamentos, títulos, rankings e os maiores eventos do mundo.', slug: '/estudos/exposicoes/' },
+  { titulo: 'Genética', desc: 'Cores, loci, hereditariedade, consanguinidade e diversidade genética.', slug: '/estudos/genetica/' },
+];
 ---
 
 <BaseLayout
-  title="Ninpozan Kennel — Criação de Shiba Inu | Blumenau SC"
-  description="Ninpozan Kennel: canil de Shiba Inu em Blumenau, SC. Shiba Nº 1 do Brasil 2026. Criação responsável com linhagem de campeões mundiais. Filhotes disponíveis."
+  title="Ninpozan Kennel — Shiba Inu | Criação e Referência na Raça"
+  description="Ninpozan Kennel: referência em Shiba Inu no Brasil. Proprietário do Shiba Nº 1 do país por 3 anos (2024–2026), criação responsável, linhagem de campeões mundiais e biblioteca técnica sobre a raça."
 >
 
   <!-- Hero -->
@@ -107,7 +114,46 @@ const conquistas = [
       <!-- Nav links -->
       <div class="home-nav">
         <a href="/nossos-caes" class="btn-panel">Nossos Cães</a>
+        <a href="/estudos" class="btn-panel">Estudos</a>
         <a href="/contato" class="btn-panel">Contato</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estudos / Autoridade -->
+  <section class="estudos-home">
+    <div class="container">
+      <div class="divider">
+        <span class="divider-symbol">學</span>
+      </div>
+      <div class="estudos-intro">
+        <h2>Uma referência na raça Shiba Inu</h2>
+        <p>Mais do que criar, dedicamo-nos a estudar e divulgar o Shiba Inu. Reunimos uma biblioteca técnica sobre história, padrão da raça, genética, pelagem, temperamento, criação responsável e exposições — baseada nas referências japonesas (NIPPO) e na experiência de quem acompanha a raça no mais alto nível.</p>
+      </div>
+
+      <div class="estudos-grid">
+        {estudos.map((e) => (
+          <a href={e.slug} class="estudo-card panel">
+            <h3>{e.titulo}</h3>
+            <p>{e.desc}</p>
+            <span class="estudo-cta">Ler →</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="estudos-all">
+        <a href="/estudos" class="btn-panel">Ver todos os estudos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alcance -->
+  <section class="alcance">
+    <div class="container">
+      <div class="alcance-frame panel">
+        <span class="alcance-symbol">世界</span>
+        <h2>Do Ninpozan para o Brasil e o mundo</h2>
+        <p>Nossos exemplares acompanham famílias e criadores em todo o Brasil e também no exterior. Quando um filhote é destinado a outra cidade ou país, organizamos o transporte com segurança — por via terrestre ou aérea, sempre com parceiros especializados e todo o cuidado com o bem-estar do animal.</p>
       </div>
     </div>
   </section>
@@ -391,6 +437,107 @@ const conquistas = [
     font-weight: 500;
     color: var(--nanquim);
     font-style: italic;
+  }
+
+  /* ===== ESTUDOS / AUTORIDADE ===== */
+  .estudos-home {
+    padding: 2rem 0 3rem;
+    position: relative;
+    z-index: 1;
+  }
+  .estudos-intro {
+    max-width: 740px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+  }
+  .estudos-intro h2 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.8rem;
+    color: var(--verde-rolex);
+    margin-bottom: 1.2rem;
+  }
+  .estudos-intro p {
+    color: var(--sumi);
+    font-size: 0.95rem;
+    line-height: 1.9;
+  }
+  .estudos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  @media (min-width: 700px) {
+    .estudos-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .estudo-card {
+    display: block;
+    padding: 1.8rem;
+    background: var(--papel-escuro);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .estudo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 96, 57, 0.1);
+  }
+  .estudo-card h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.2rem;
+    color: var(--verde-deep);
+    margin-bottom: 0.6rem;
+  }
+  .estudo-card p {
+    font-size: 0.88rem;
+    color: var(--sumi);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+  .estudo-cta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--dourado);
+    font-weight: 600;
+  }
+  .estudos-all {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  /* ===== ALCANCE ===== */
+  .alcance {
+    padding: 2rem 0 4rem;
+    position: relative;
+    z-index: 1;
+  }
+  .alcance-frame {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem;
+    background: var(--papel);
+    text-align: center;
+    position: relative;
+  }
+  .alcance-symbol {
+    display: block;
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.4rem;
+    letter-spacing: 6px;
+    color: var(--verde-rolex);
+    opacity: 0.7;
+    margin-bottom: 0.8rem;
+  }
+  .alcance-frame h2 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 1.6rem;
+    color: var(--verde-deep);
+    margin-bottom: 1rem;
+  }
+  .alcance-frame p {
+    color: var(--sumi);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    max-width: 620px;
+    margin: 0 auto;
   }
 
 
