@@ -28,7 +28,16 @@ export function LoginPage() {
     setSubmitting(false);
 
     if (signInError) {
-      setError('Não foi possível entrar. Verifique seu e-mail e senha.');
+      // eslint-disable-next-line no-console
+      console.error('[login] erro ao autenticar:', signInError);
+      const message = signInError.message ?? '';
+      if (/email not confirmed/i.test(message)) {
+        setError('Seu e-mail ainda não foi confirmado no Supabase.');
+      } else if (/invalid login credentials/i.test(message)) {
+        setError('E-mail ou senha incorretos.');
+      } else {
+        setError(`Erro: ${message}`);
+      }
       return;
     }
 
