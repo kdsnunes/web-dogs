@@ -142,7 +142,7 @@ export function HealthPage() {
                       </div>
                       <p className="mt-1 text-sm text-ink-soft">
                         {healthTypeLabels[event.event_type]}
-                        {event.description ? ` · ${event.description}` : ''}
+                        {event.product ? ` · ${event.product}` : ''}
                       </p>
                       <p className="mt-1 text-xs text-ink-muted">
                         Previsto: {formatDateBR(event.next_due_date)}
@@ -187,8 +187,11 @@ export function HealthPage() {
                         <td className="px-4 py-3 font-medium text-ink">
                           {event.dogs?.name ?? '—'}
                         </td>
-                        <td className="px-4 py-3 text-ink-soft">
-                          {healthTypeLabels[event.event_type]}
+                        <td className="px-4 py-3">
+                          <div className="text-ink-soft">{healthTypeLabels[event.event_type]}</div>
+                          {event.product && (
+                            <div className="text-xs text-ink-muted">{event.product}</div>
+                          )}
                         </td>
                         <td className="px-4 py-3 text-ink-soft">{formatDateBR(event.event_date)}</td>
                         <td className="px-4 py-3 text-ink-soft">{event.description ?? '—'}</td>

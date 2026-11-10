@@ -1,6 +1,7 @@
 export type HealthEventType =
   | 'vacina'
   | 'vermifugo'
+  | 'antiparasitario'
   | 'medicamento'
   | 'consulta'
   | 'cio'
@@ -12,6 +13,7 @@ export interface HealthEvent {
   organization_id: string;
   dog_id: string;
   event_type: HealthEventType;
+  product: string | null;
   event_date: string;
   description: string | null;
   next_due_date: string | null;
@@ -23,6 +25,7 @@ export interface HealthEvent {
 export const healthTypeLabels: Record<HealthEventType, string> = {
   vacina: 'Vacina',
   vermifugo: 'Vermífugo',
+  antiparasitario: 'Antiparasitário',
   medicamento: 'Medicamento',
   consulta: 'Consulta',
   cio: 'Cio',

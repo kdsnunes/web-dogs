@@ -10,6 +10,7 @@ function toPayload(values: HealthEventFormValues) {
   return {
     dog_id: values.dog_id,
     event_type: values.event_type,
+    product: nullable(values.product),
     event_date: values.event_date,
     description: nullable(values.description),
     next_due_date: nullable(values.next_due_date),
