@@ -1,0 +1,11 @@
+{
+  // Configuração explícita para a Cloudflare servir o app como site estático (SPA).
+  // Sem isto, `wrangler deploy` tenta auto-configurar via plugin do Vite e exige Vite >= 6.
+  "name": "ninpozan-management",
+  "compatibility_date": "2026-11-10",
+  "assets": {
+    "directory": "./dist",
+    // Qualquer rota não encontrada serve index.html (roteamento client-side do React Router).
+    "not_found_handling": "single-page-application"
+  }
+}
