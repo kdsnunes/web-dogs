@@ -4,6 +4,7 @@ import { ProtectedRoute } from './modules/authentication/ProtectedRoute';
 import { LoginPage } from './modules/authentication/LoginPage';
 import { AppLayout } from './components/layout/AppLayout';
 import { DashboardPage } from './modules/dashboard/DashboardPage';
+import { DogsPage } from './modules/dogs/DogsPage';
 import { ComingSoon } from './components/ComingSoon';
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
           }
         >
           <Route path="/" element={<DashboardPage />} />
-          <Route path="/caes" element={<ComingSoon title="Cães" />} />
+          <Route path="/caes" element={<DogsPage />} />
           <Route path="/saude" element={<ComingSoon title="Saúde & Protocolos" />} />
           <Route path="/estoque" element={<ComingSoon title="Estoque" />} />
           <Route path="/ponto" element={<ComingSoon title="Ponto dos Funcionários" />} />

@@ -2,10 +2,11 @@ import { CheckCircle2, Circle } from 'lucide-react';
 
 const roadmap = [
   { phase: 'Fase 1 — Fundação', done: true },
-  { phase: 'Fase 2 — Autenticação & Organização', done: false },
-  { phase: 'Fase 3 — Cães, Saúde & Protocolos', done: false },
-  { phase: 'Fase 4 — Estoque & Ponto', done: false },
-  { phase: 'Fase 5 — Relatórios & Notificações', done: false },
+  { phase: 'Fase 2 — Autenticação & Organização', done: true },
+  { phase: 'Fase 3 — Cães (cadastro)', done: true },
+  { phase: 'Fase 4 — Saúde & Protocolos', done: false },
+  { phase: 'Fase 5 — Estoque & Ponto', done: false },
+  { phase: 'Fase 6 — Relatórios & Notificações', done: false },
 ];
 
 export function DashboardPage() {
