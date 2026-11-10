@@ -5,8 +5,9 @@ const roadmap = [
   { phase: 'Fase 2 — Autenticação & Organização', done: true },
   { phase: 'Fase 3 — Cães (cadastro)', done: true },
   { phase: 'Fase 4 — Saúde & Protocolos', done: true },
-  { phase: 'Fase 5 — Estoque & Ponto', done: false },
-  { phase: 'Fase 6 — Relatórios & Notificações', done: false },
+  { phase: 'Fase 5 — Estoque', done: true },
+  { phase: 'Fase 6 — Ponto da equipe', done: false },
+  { phase: 'Fase 7 — Relatórios & Notificações', done: false },
 ];
 
 export function DashboardPage() {

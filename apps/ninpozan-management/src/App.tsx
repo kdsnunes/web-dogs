@@ -6,6 +6,7 @@ import { AppLayout } from './components/layout/AppLayout';
 import { DashboardPage } from './modules/dashboard/DashboardPage';
 import { DogsPage } from './modules/dogs/DogsPage';
 import { HealthPage } from './modules/health/HealthPage';
+import { InventoryPage } from './modules/inventory/InventoryPage';
 import { ComingSoon } from './components/ComingSoon';
 
 export default function App() {
@@ -23,7 +24,7 @@ export default function App() {
           <Route path="/" element={<DashboardPage />} />
           <Route path="/caes" element={<DogsPage />} />
           <Route path="/saude" element={<HealthPage />} />
-          <Route path="/estoque" element={<ComingSoon title="Estoque" />} />
+          <Route path="/estoque" element={<InventoryPage />} />
           <Route path="/ponto" element={<ComingSoon title="Ponto dos Funcionários" />} />
           <Route path="/relatorios" element={<ComingSoon title="Relatórios" />} />
           <Route path="/configuracoes" element={<ComingSoon title="Configurações" />} />
