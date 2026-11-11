@@ -28,3 +28,9 @@ export const movementKindLabels: Record<MovementKind, string> = {
   entrada: 'Entrada',
   saida: 'Saída',
 };
+
+/** Categorias pré-definidas de itens de estoque. */
+export const itemCategories = ['Ração', 'Grooming', 'Medicamentos'] as const;
+
+/** Unidades pré-definidas. */
+export const itemUnits = ['un', 'ml', 'g', 'kg', 'mg', 'cx'] as const;

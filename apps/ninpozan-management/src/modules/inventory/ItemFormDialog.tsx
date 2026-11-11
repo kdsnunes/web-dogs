@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { itemFormSchema, type ItemFormValues } from './schema';
 import { useCreateItem, useUpdateItem } from './hooks';
-import { Button, LabeledInput, LabeledTextarea, Modal } from '@/components/ui';
-import type { InventoryItem } from './types';
+import { Button, LabeledInput, LabeledSelect, LabeledTextarea, Modal } from '@/components/ui';
+import { itemCategories, itemUnits, type InventoryItem } from './types';
 
 function toDefaults(item: InventoryItem | null): ItemFormValues {
   return {
@@ -58,18 +58,25 @@ export function ItemFormDialog({
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <LabeledInput label="Nome" error={errors.name?.message} {...register('name')} />
         <div className="grid grid-cols-2 gap-4">
-          <LabeledInput
+          <LabeledSelect
             label="Categoria"
-            placeholder="Ração, higiene, saúde…"
             error={errors.category?.message}
             {...register('category')}
-          />
-          <LabeledInput
-            label="Unidade"
-            placeholder="un, kg, L, ml, comprimido…"
-            error={errors.unit?.message}
-            {...register('unit')}
-          />
+          >
+            <option value="">Selecione…</option>
+            {itemCategories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </LabeledSelect>
+          <LabeledSelect label="Unidade" error={errors.unit?.message} {...register('unit')}>
+            {itemUnits.map((unit) => (
+              <option key={unit} value={unit}>
+                {unit}
+              </option>
+            ))}
+          </LabeledSelect>
         </div>
         <LabeledInput
           label="Estoque mínimo (para alerta)"
