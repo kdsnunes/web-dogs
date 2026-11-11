@@ -4,8 +4,9 @@ import { differenceInCalendarDays, parseISO } from 'date-fns';
 import { useHealthEvents, useDeleteHealthEvent } from './hooks';
 import { useOrganization } from '@/modules/organization/useOrganization';
 import { useDogs } from '@/modules/dogs/hooks';
+import { useItems } from '@/modules/inventory/hooks';
 import { HealthEventFormDialog } from './HealthEventFormDialog';
-import { healthTypeLabels, type HealthEvent } from './types';
+import type { HealthEvent } from './types';
 import { Button } from '@/components/ui';
 import { formatDateBR } from '@/lib/date';
 
@@ -23,10 +24,16 @@ function dueInfo(dueDate: string): { label: string; className: string } {
   return { label: `Em ${days}d`, className: 'bg-brand/10 text-brand' };
 }
 
+function eventLabel(event: HealthEvent): string {
+  const sub = event.subcategory ?? event.category ?? '—';
+  return event.inventory_items?.name ? `${sub} · ${event.inventory_items.name}` : sub;
+}
+
 export function HealthPage() {
   const { data: org } = useOrganization();
   const { data: events, isLoading, isError } = useHealthEvents();
   const { data: dogs } = useDogs();
+  const { data: items } = useItems();
   const deleteEvent = useDeleteHealthEvent();
 
   const [open, setOpen] = useState(false);
@@ -57,7 +64,11 @@ export function HealthPage() {
   }
 
   async function handleDelete(event: HealthEvent) {
-    if (window.confirm('Remover este registro de saúde?')) {
+    if (
+      window.confirm(
+        'Remover este registro? Se ele gerou uma saída de estoque, ela também será desfeita.',
+      )
+    ) {
       await deleteEvent.mutateAsync(event.id);
     }
   }
@@ -70,7 +81,7 @@ export function HealthPage() {
         <div>
           <h1 className="text-2xl font-semibold text-ink">Saúde &amp; Protocolos</h1>
           <p className="mt-1 text-sm text-ink-muted">
-            Vacinas, vermífugos, cios, consultas e próximos vencimentos.
+            Aplicações de produtos (com baixa no estoque) e eventos clínicos.
           </p>
         </div>
         <Button onClick={openNew} disabled={!org || !hasDogs}>
@@ -140,10 +151,7 @@ export function HealthPage() {
                           {info.label}
                         </span>
                       </div>
-                      <p className="mt-1 text-sm text-ink-soft">
-                        {healthTypeLabels[event.event_type]}
-                        {event.product ? ` · ${event.product}` : ''}
-                      </p>
+                      <p className="mt-1 text-sm text-ink-soft">{eventLabel(event)}</p>
                       <p className="mt-1 text-xs text-ink-muted">
                         Previsto: {formatDateBR(event.next_due_date)}
                       </p>
@@ -174,9 +182,9 @@ export function HealthPage() {
                   <thead>
                     <tr className="border-b border-black/5 text-left text-xs uppercase tracking-wide text-ink-muted">
                       <th className="px-4 py-3 font-medium">Cão</th>
-                      <th className="px-4 py-3 font-medium">Tipo</th>
+                      <th className="px-4 py-3 font-medium">Grupo</th>
+                      <th className="px-4 py-3 font-medium">Item</th>
                       <th className="px-4 py-3 font-medium">Data</th>
-                      <th className="px-4 py-3 font-medium">Descrição</th>
                       <th className="px-4 py-3 font-medium">Próximo</th>
                       <th className="px-4 py-3" />
                     </tr>
@@ -188,13 +196,18 @@ export function HealthPage() {
                           {event.dogs?.name ?? '—'}
                         </td>
                         <td className="px-4 py-3">
-                          <div className="text-ink-soft">{healthTypeLabels[event.event_type]}</div>
-                          {event.product && (
-                            <div className="text-xs text-ink-muted">{event.product}</div>
+                          <div className="text-ink-soft">{event.subcategory ?? '—'}</div>
+                          {event.category && (
+                            <div className="text-xs text-ink-muted">{event.category}</div>
                           )}
                         </td>
+                        <td className="px-4 py-3 text-ink-soft">
+                          {event.inventory_items?.name ?? '—'}
+                          {event.quantity != null && event.inventory_items?.unit
+                            ? ` (${event.quantity} ${event.inventory_items.unit})`
+                            : ''}
+                        </td>
                         <td className="px-4 py-3 text-ink-soft">{formatDateBR(event.event_date)}</td>
-                        <td className="px-4 py-3 text-ink-soft">{event.description ?? '—'}</td>
                         <td className="px-4 py-3 text-ink-soft">
                           {formatDateBR(event.next_due_date)}
                         </td>
@@ -228,12 +241,13 @@ export function HealthPage() {
         </>
       )}
 
-      {org && dogs && (
+      {org && dogs && items && (
         <HealthEventFormDialog
           open={open}
           onClose={() => setOpen(false)}
           event={editing}
           dogs={dogs}
+          items={items}
           organizationId={org.organizationId}
         />
       )}

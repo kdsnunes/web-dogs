@@ -1,31 +1,34 @@
 import { z } from 'zod';
-import { typeRequiresProduct } from './catalog';
+import { isStockCategory } from '@/modules/taxonomy';
+
+const optionalPositiveNumber = z.preprocess(
+  (v) => (v === '' || v === null || v === undefined ? undefined : v),
+  z.coerce.number().positive().optional(),
+);
 
 export const healthEventFormSchema = z
   .object({
     dog_id: z.string().uuid('Selecione um cão'),
-    event_type: z.enum([
-      'vacina',
-      'vermifugo',
-      'antiparasitario',
-      'medicamento',
-      'consulta',
-      'cio',
-      'peso',
-      'outro',
-    ]),
-    product: z.string().trim().optional(),
+    category: z.string().min(1, 'Selecione a categoria'),
+    subcategory: z.string().min(1, 'Selecione a subcategoria'),
+    item_id: z.string().optional(),
+    quantity: optionalPositiveNumber,
     event_date: z.string().min(1, 'Informe a data'),
     description: z.string().trim().optional(),
     next_due_date: z.string().optional(),
   })
   .superRefine((values, ctx) => {
-    if (typeRequiresProduct(values.event_type) && !values.product?.trim()) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        path: ['product'],
-        message: 'Selecione o produto',
-      });
+    if (isStockCategory(values.category)) {
+      if (!values.item_id) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['item_id'], message: 'Selecione o item' });
+      }
+      if (!values.quantity || values.quantity <= 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['quantity'],
+          message: 'Informe a quantidade',
+        });
+      }
     }
   });
 

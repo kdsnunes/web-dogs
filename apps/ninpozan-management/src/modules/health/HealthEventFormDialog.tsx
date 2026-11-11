@@ -3,17 +3,20 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { healthEventFormSchema, type HealthEventFormValues } from './schema';
 import { useCreateHealthEvent, useUpdateHealthEvent } from './hooks';
-import { healthTypeLabels, type HealthEvent } from './types';
-import { computeNextDue, findProduct, getProducts } from './catalog';
+import type { HealthEvent } from './types';
 import { Button, LabeledInput, LabeledSelect, LabeledTextarea, Modal } from '@/components/ui';
-import { todayISO } from '@/lib/date';
+import { todayISO, computeNextDue } from '@/lib/date';
+import { healthCategories, isStockCategory, subcategoriesFor } from '@/modules/taxonomy';
 import type { Dog } from '@/modules/dogs/types';
+import type { InventoryItem } from '@/modules/inventory/types';
 
 function toDefaults(event: HealthEvent | null, preferredDogId?: string): HealthEventFormValues {
   return {
     dog_id: event?.dog_id ?? preferredDogId ?? '',
-    event_type: event?.event_type ?? 'vacina',
-    product: event?.product ?? '',
+    category: event?.category ?? '',
+    subcategory: event?.subcategory ?? '',
+    item_id: event?.item_id ?? '',
+    quantity: event?.quantity ?? undefined,
     event_date: event?.event_date ?? todayISO(),
     description: event?.description ?? '',
     next_due_date: event?.next_due_date ?? '',
@@ -25,12 +28,14 @@ export function HealthEventFormDialog({
   onClose,
   event,
   dogs,
+  items,
   organizationId,
 }: {
   open: boolean;
   onClose: () => void;
   event: HealthEvent | null;
   dogs: Dog[];
+  items: InventoryItem[];
   organizationId: string;
 }) {
   const createEvent = useCreateHealthEvent(organizationId);
@@ -53,29 +58,42 @@ export function HealthEventFormDialog({
     if (open) reset(toDefaults(event, dogs[0]?.id));
   }, [open, event, dogs, reset]);
 
-  const eventType = watch('event_type');
-  const products = getProducts(eventType);
+  const category = watch('category');
+  const subcategory = watch('subcategory');
+  const itemId = watch('item_id');
 
-  // Ao trocar o tipo, limpa o produto e o vencimento (serão recalculados).
-  function handleTypeChange() {
-    setValue('product', '');
-    setValue('next_due_date', '');
-  }
+  const stock = category ? isStockCategory(category) : false;
+  const subcategories = category ? subcategoriesFor(category) : [];
+  const filteredItems = items.filter(
+    (i) => i.category === category && i.subcategory === subcategory,
+  );
+  const selectedItem = items.find((i) => i.id === itemId) ?? null;
 
-  // Ao escolher o produto, preenche o próximo vencimento pelo protocolo.
-  function handleProductChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    const product = findProduct(getValues('event_type'), e.target.value);
-    if (product?.interval) {
-      setValue('next_due_date', computeNextDue(getValues('event_date'), product.interval));
+  function recomputeDue(itemForDue: InventoryItem | null, dateValue: string) {
+    if (itemForDue?.protocol_amount && itemForDue.protocol_unit) {
+      setValue(
+        'next_due_date',
+        computeNextDue(dateValue, itemForDue.protocol_amount, itemForDue.protocol_unit),
+      );
     }
   }
 
-  // Ao mudar a data do evento, recalcula o vencimento se houver protocolo.
+  function handleCategoryChange() {
+    setValue('subcategory', '');
+    setValue('item_id', '');
+  }
+
+  function handleSubcategoryChange() {
+    setValue('item_id', '');
+  }
+
+  function handleItemChange(e: React.ChangeEvent<HTMLSelectElement>) {
+    const next = items.find((i) => i.id === e.target.value) ?? null;
+    recomputeDue(next, getValues('event_date'));
+  }
+
   function handleDateChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const product = findProduct(getValues('event_type'), getValues('product') ?? '');
-    if (product?.interval) {
-      setValue('next_due_date', computeNextDue(e.target.value, product.interval));
-    }
+    recomputeDue(selectedItem, e.target.value);
   }
 
   async function onSubmit(values: HealthEventFormValues) {
@@ -99,31 +117,69 @@ export function HealthEventFormDialog({
           ))}
         </LabeledSelect>
 
-        <LabeledSelect
-          label="Tipo"
-          error={errors.event_type?.message}
-          {...register('event_type', { onChange: handleTypeChange })}
-        >
-          {Object.entries(healthTypeLabels).map(([value, label]) => (
-            <option key={value} value={value}>
-              {label}
-            </option>
-          ))}
-        </LabeledSelect>
-
-        {products && (
+        <div className="grid grid-cols-2 gap-4">
           <LabeledSelect
-            label="Produto"
-            error={errors.product?.message}
-            {...register('product', { onChange: handleProductChange })}
+            label="Categoria"
+            error={errors.category?.message}
+            {...register('category', { onChange: handleCategoryChange })}
           >
             <option value="">Selecione…</option>
-            {products.map((product) => (
-              <option key={product.value} value={product.value}>
-                {product.label}
+            {healthCategories.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
               </option>
             ))}
           </LabeledSelect>
+          <LabeledSelect
+            label="Subcategoria"
+            disabled={!category}
+            error={errors.subcategory?.message}
+            {...register('subcategory', { onChange: handleSubcategoryChange })}
+          >
+            <option value="">Selecione…</option>
+            {subcategories.map((sub) => (
+              <option key={sub} value={sub}>
+                {sub}
+              </option>
+            ))}
+          </LabeledSelect>
+        </div>
+
+        {stock && subcategory && (
+          <>
+            {filteredItems.length === 0 ? (
+              <p className="rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-800">
+                Nenhum item de <strong>{subcategory}</strong> no estoque. Cadastre em{' '}
+                <strong>Estoque</strong> para poder usá-lo aqui.
+              </p>
+            ) : (
+              <div className="grid grid-cols-2 gap-4">
+                <LabeledSelect
+                  label="Item (estoque)"
+                  error={errors.item_id?.message}
+                  {...register('item_id', { onChange: handleItemChange })}
+                >
+                  <option value="">Selecione…</option>
+                  {filteredItems.map((item) => (
+                    <option key={item.id} value={item.id}>
+                      {item.name}
+                    </option>
+                  ))}
+                </LabeledSelect>
+                <LabeledInput
+                  label={`Quantidade usada${selectedItem ? ` (${selectedItem.unit})` : ''}`}
+                  type="number"
+                  step="any"
+                  min="0"
+                  error={errors.quantity?.message}
+                  {...register('quantity')}
+                />
+              </div>
+            )}
+            <p className="-mt-1 text-xs text-ink-muted">
+              Ao salvar, é gerada automaticamente uma <strong>saída</strong> desse item no estoque.
+            </p>
+          </>
         )}
 
         <div className="grid grid-cols-2 gap-4">
@@ -141,17 +197,10 @@ export function HealthEventFormDialog({
           />
         </div>
 
-        {products && (
-          <p className="-mt-1 text-xs text-ink-muted">
-            O próximo vencimento é preenchido automaticamente pelo protocolo do produto. Ajuste se
-            precisar.
-          </p>
-        )}
-
         <LabeledTextarea
           label="Observações"
           rows={3}
-          placeholder="Ex.: 2ª dose do protocolo filhote / lote da vacina / reação…"
+          placeholder="Ex.: início do cio / 2ª dose do protocolo filhote / lote…"
           error={errors.description?.message}
           {...register('description')}
         />

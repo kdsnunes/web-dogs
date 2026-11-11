@@ -9,9 +9,12 @@ function itemPayload(values: ItemFormValues) {
   };
   return {
     name: values.name.trim(),
-    category: nullable(values.category),
+    category: values.category,
+    subcategory: values.subcategory,
     unit: values.unit.trim(),
     min_quantity: values.min_quantity,
+    protocol_amount: values.protocol_amount ?? null,
+    protocol_unit: values.protocol_amount ? values.protocol_unit : null,
     notes: nullable(values.notes),
   };
 }
