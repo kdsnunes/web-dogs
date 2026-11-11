@@ -216,25 +216,10 @@ export function PontoPage() {
           </Button>
         </div>
 
-        {/* Seletor de descanso semanal */}
-        <label className="text-sm">
-          <span className="mb-1 block text-xs text-ink-muted">Descanso semanal</span>
-          <select
-            value={restWeekday ?? ''}
-            onChange={(e) => void handleChooseRestWeekday(Number(e.target.value))}
-            disabled={!win.canRest || busy}
-            className="rounded-lg border border-black/10 bg-white px-3 py-2 text-ink outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 disabled:opacity-60"
-          >
-            <option value="" disabled>
-              Escolher dia…
-            </option>
-            {weekdayFullLabels.map((label, i) => (
-              <option key={i} value={i}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </label>
+        <p className="text-xs text-ink-muted">
+          Clique em um <strong className="text-amber-700">dia da semana</strong> abaixo para definir
+          seu descanso semanal.
+        </p>
       </div>
 
       {/* Aviso da janela do mês */}
@@ -249,12 +234,26 @@ export function PontoPage() {
 
       {/* Calendário */}
       <div className="overflow-hidden rounded-2xl border border-black/5 bg-paper-card p-4 shadow-sm">
-        <div className="mb-2 grid grid-cols-7 gap-1 text-center text-xs font-medium uppercase tracking-wide text-ink-muted">
-          {weekdayLabels.map((w) => (
-            <div key={w} className="py-1">
-              {w}
-            </div>
-          ))}
+        <div className="mb-2 grid grid-cols-7 gap-1 text-center text-xs font-medium uppercase tracking-wide">
+          {weekdayLabels.map((w, i) => {
+            const selected = restWeekday === i;
+            return (
+              <button
+                key={w}
+                type="button"
+                disabled={!win.canRest || busy}
+                onClick={() => void handleChooseRestWeekday(i)}
+                title={`Definir ${weekdayFullLabels[i]} como descanso semanal`}
+                className={`rounded-md py-1 transition disabled:cursor-not-allowed disabled:opacity-60 ${
+                  selected
+                    ? 'bg-amber-100 text-amber-800 ring-1 ring-amber-300'
+                    : 'text-ink-muted hover:bg-paper-alt'
+                }`}
+              >
+                {w}
+              </button>
+            );
+          })}
         </div>
 
         <div className="grid grid-cols-7 gap-1">
