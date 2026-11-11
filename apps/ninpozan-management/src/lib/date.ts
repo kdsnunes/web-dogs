@@ -26,3 +26,22 @@ export function formatDateBR(value: string | null): string {
   if (!year || !month || !day) return value;
   return `${day}/${month}/${year}`;
 }
+
+const SP_TZ = 'America/Sao_Paulo';
+
+/** Formata um timestamp ISO como data e hora no fuso de São Paulo. */
+export function formatDateTimeBR(iso: string): string {
+  return new Intl.DateTimeFormat('pt-BR', {
+    dateStyle: 'short',
+    timeStyle: 'short',
+    timeZone: SP_TZ,
+  }).format(new Date(iso));
+}
+
+/** Formata um timestamp ISO só com a hora, no fuso de São Paulo. */
+export function formatTimeBR(iso: string): string {
+  return new Intl.DateTimeFormat('pt-BR', {
+    timeStyle: 'short',
+    timeZone: SP_TZ,
+  }).format(new Date(iso));
+}

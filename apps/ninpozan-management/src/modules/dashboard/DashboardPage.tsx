@@ -6,7 +6,7 @@ const roadmap = [
   { phase: 'Fase 3 — Cães (cadastro)', done: true },
   { phase: 'Fase 4 — Saúde & Protocolos', done: true },
   { phase: 'Fase 5 — Estoque', done: true },
-  { phase: 'Fase 6 — Ponto da equipe', done: false },
+  { phase: 'Fase 6 — Ponto da equipe', done: true },
   { phase: 'Fase 7 — Relatórios & Notificações', done: false },
 ];
 
