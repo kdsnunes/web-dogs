@@ -1,4 +1,6 @@
 import { CheckCircle2, Circle } from 'lucide-react';
+import { useAlerts } from '@/modules/reports/hooks';
+import { AlertsPanel } from '@/modules/reports/AlertsPanel';
 
 const roadmap = [
   { phase: 'Fase 1 — Fundação', done: true },
@@ -7,10 +9,11 @@ const roadmap = [
   { phase: 'Fase 4 — Saúde & Protocolos', done: true },
   { phase: 'Fase 5 — Estoque', done: true },
   { phase: 'Fase 6 — Ponto da equipe', done: true },
-  { phase: 'Fase 7 — Relatórios & Notificações', done: false },
+  { phase: 'Fase 7 — Relatórios & Notificações', done: true },
 ];
 
 export function DashboardPage() {
+  const alerts = useAlerts();
   return (
     <div>
       <header className="mb-8">
@@ -19,6 +22,11 @@ export function DashboardPage() {
           Bem-vindo ao sistema de gestão do canil Ninpozan.
         </p>
       </header>
+
+      <section className="mb-8">
+        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-ink-muted">Avisos</h2>
+        <AlertsPanel alerts={alerts} />
+      </section>
 
       <section className="rounded-2xl border border-black/5 bg-paper-card p-6 shadow-sm">
         <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-ink-muted">

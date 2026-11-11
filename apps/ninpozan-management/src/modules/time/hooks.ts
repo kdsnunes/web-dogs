@@ -4,6 +4,7 @@ import {
   getMonthLock,
   getRestPref,
   listDayEntries,
+  listMonthEntries,
   listOrgMembers,
   setDayStatus,
   setMonthLock,
@@ -20,6 +21,18 @@ export function useDayEntries(
     queryKey: ['day-entries', profileId, monthStartISO],
     queryFn: () => listDayEntries(profileId!, monthStartISO, nextMonthStartISO),
     enabled: !!profileId,
+  });
+}
+
+export function useMonthEntries(
+  organizationId: string | undefined,
+  monthStartISO: string,
+  nextMonthStartISO: string,
+) {
+  return useQuery({
+    queryKey: ['month-entries', organizationId, monthStartISO],
+    queryFn: () => listMonthEntries(organizationId!, monthStartISO, nextMonthStartISO),
+    enabled: !!organizationId,
   });
 }
 

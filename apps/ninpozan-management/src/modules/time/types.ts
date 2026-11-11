@@ -10,6 +10,7 @@ export interface DayEntry {
   note: string | null;
   created_at: string;
   updated_at: string;
+  profiles?: { full_name: string | null } | null;
 }
 
 export interface MonthLock {

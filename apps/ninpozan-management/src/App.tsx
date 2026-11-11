@@ -8,6 +8,7 @@ import { DogsPage } from './modules/dogs/DogsPage';
 import { HealthPage } from './modules/health/HealthPage';
 import { InventoryPage } from './modules/inventory/InventoryPage';
 import { PontoPage } from './modules/time/PontoPage';
+import { ReportsPage } from './modules/reports/ReportsPage';
 import { ComingSoon } from './components/ComingSoon';
 
 export default function App() {
@@ -27,7 +28,7 @@ export default function App() {
           <Route path="/saude" element={<HealthPage />} />
           <Route path="/estoque" element={<InventoryPage />} />
           <Route path="/ponto" element={<PontoPage />} />
-          <Route path="/relatorios" element={<ComingSoon title="Relatórios" />} />
+          <Route path="/relatorios" element={<ReportsPage />} />
           <Route path="/configuracoes" element={<ComingSoon title="Configurações" />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />

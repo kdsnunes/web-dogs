@@ -20,6 +20,22 @@ export async function listDayEntries(
   return (data ?? []) as DayEntry[];
 }
 
+/** Todos os lançamentos da organização em um mês (para relatórios). */
+export async function listMonthEntries(
+  organizationId: string,
+  monthStartISO: string,
+  nextMonthStartISO: string,
+): Promise<DayEntry[]> {
+  const { data, error } = await supabase
+    .from('day_entries')
+    .select('*, profiles(full_name)')
+    .eq('organization_id', organizationId)
+    .gte('entry_date', monthStartISO)
+    .lt('entry_date', nextMonthStartISO);
+  if (error) throw error;
+  return (data ?? []) as DayEntry[];
+}
+
 export async function setDayStatus(params: {
   organizationId: string;
   profileId: string;
