@@ -21,6 +21,26 @@ create unique index if not exists idx_organizations_invite_code
   on public.organizations (invite_code);
 
 -- ---------------------------------------------------------------------------
+-- Helper: o usuário atual é administrador (owner/manager) na organização?
+-- (também definido na 0008; recriado aqui para a migração ser autossuficiente)
+-- ---------------------------------------------------------------------------
+create or replace function public.is_org_admin(org uuid)
+returns boolean
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select exists (
+    select 1
+    from public.memberships
+    where profile_id = auth.uid()
+      and organization_id = org
+      and role in ('owner', 'manager')
+  );
+$$;
+
+-- ---------------------------------------------------------------------------
 -- RPC: entrar em uma organização pelo código (cria membership como 'staff')
 -- ---------------------------------------------------------------------------
 create or replace function public.join_organization(p_code text)
