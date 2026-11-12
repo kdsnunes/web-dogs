@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight, Lock, Unlock, CalendarDays } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight, Lock, Unlock, CalendarDays, BarChart3 } from 'lucide-react';
 import { useAuth } from '@/modules/authentication/AuthProvider';
 import { useOrganization } from '@/modules/organization/useOrganization';
 import { Button } from '@/components/ui';
@@ -52,6 +53,7 @@ export function PontoPage() {
 
   const profileId = selectedProfileId ?? user?.id;
   const orgId = org?.organizationId;
+  const viewingSelf = !profileId || profileId === user?.id;
 
   const mKey = monthKey(viewDate);
   const currentMonthKey = monthKey(new Date());
@@ -76,6 +78,18 @@ export function PontoPage() {
   });
 
   const restWeekday = restPref?.weekday ?? null;
+
+  const orderedMembers = useMemo(() => {
+    const list = members ?? [];
+    return [...list].sort((a, b) => {
+      if (a.profile_id === user?.id) return -1;
+      if (b.profile_id === user?.id) return 1;
+      return a.full_name.localeCompare(b.full_name, 'pt-BR');
+    });
+  }, [members, user?.id]);
+
+  const viewingName =
+    orderedMembers.find((m) => m.profile_id === profileId)?.full_name ?? 'funcionário';
 
   const entriesByDate = useMemo(() => {
     const map = new Map<string, DayEntry>();
@@ -166,26 +180,35 @@ export function PontoPage() {
         <div>
           <h1 className="text-2xl font-semibold text-ink">Ponto</h1>
           <p className="mt-1 text-sm text-ink-muted">
-            Marque os dias trabalhados e o descanso semanal no calendário.
+            {viewingSelf
+              ? 'Seu registro de ponto — marque os dias trabalhados e o descanso semanal.'
+              : `Modo gerencial: visualizando o ponto de ${viewingName}.`}
           </p>
         </div>
 
-        {isAdmin && members && (
-          <label className="text-sm">
-            <span className="mb-1 block text-xs text-ink-muted">Funcionário</span>
-            <select
-              value={profileId ?? ''}
-              onChange={(e) => setSelectedProfileId(e.target.value)}
-              className="rounded-lg border border-black/10 bg-white px-3 py-2 text-ink outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
+        {isAdmin && orderedMembers.length > 0 && (
+          <div className="flex items-end gap-3">
+            <label className="text-sm">
+              <span className="mb-1 block text-xs text-ink-muted">Ver ponto de</span>
+              <select
+                value={profileId ?? ''}
+                onChange={(e) => setSelectedProfileId(e.target.value)}
+                className="rounded-lg border border-black/10 bg-white px-3 py-2 text-ink outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
+              >
+                {orderedMembers.map((m) => (
+                  <option key={m.profile_id} value={m.profile_id}>
+                    {m.profile_id === user?.id ? `${m.full_name} (você)` : m.full_name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <Link
+              to="/relatorios"
+              className="inline-flex items-center gap-2 rounded-lg border border-black/10 px-3 py-2 text-sm text-ink-soft transition hover:bg-paper-alt"
             >
-              {members.map((m) => (
-                <option key={m.profile_id} value={m.profile_id}>
-                  {m.full_name}
-                  {m.profile_id === user?.id ? ' (você)' : ''}
-                </option>
-              ))}
-            </select>
-          </label>
+              <BarChart3 size={16} /> Resumo da equipe
+            </Link>
+          </div>
         )}
       </header>
 
