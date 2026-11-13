@@ -1,0 +1,372 @@
+{
+    "schema_version": 1,
+    "revisado_em": "2026-11-13",
+    "canil": "Ninpozan",
+    "raca": "Shiba",
+    "raca_fci": 257,
+    "meta": {
+      "ano": 2027,
+      "escopo": "classificacao_geral_criadores",
+      "posicao_maxima": 5
+    },
+    "status": "REFERENCIA_2026_NAO_REGULAMENTO_2027",
+    "nota": "IDs desta tabela identificam entradas do ranking; criar IDs de domínio estáveis para títulos no sistema. Pontos são condicionais à elegibilidade anual e não requisitos de pista.",
+    "fontes": [
+      {
+        "arquivo": "regulamentos_12.pdf",
+        "sha256": "fdfe08247b4a6e8605f4391efa20c32a5dc7620df15891d356d852e9a1c74945",
+        "ano": 2026
+      },
+      {
+        "arquivo": "regulamentos_15.pdf",
+        "sha256": "cc9a3f08467769b21c851a85e2b21d2ad07f59ca4e34dc6e067f8276d27134f9",
+        "ano": 2026
+      },
+      {
+        "arquivo": "regulamentos_16.pdf",
+        "sha256": "2e21dcdc5854545c28d17b3ecced538f6024c83f9d5cb64e2929aff0aeb03357",
+        "ano": 2026
+      },
+      {
+        "arquivo": "regulamentos_17.pdf",
+        "sha256": "65375b704d452509bd543b3ecc2b038564d746cc7f23efd04b33422af3160ed1",
+        "ano": 2026
+      },
+      {
+        "arquivo": "regulamentos_37.pdf",
+        "sha256": "3ceb914e8184fc15662200f209854abdeb73898ed054c3aed250ffce8042a7d2",
+        "ano": 2025
+      }
+    ],
+    "pontuacao": [
+      {
+        "id": "CBKC_RANK_2026_01",
+        "titulo": "Teste de Cão Sociável – TCS CBKC",
+        "pontos": 10,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_02",
+        "titulo": "Campeão Inicial",
+        "pontos": 5,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_03",
+        "titulo": "Campeão Filhote",
+        "pontos": 10,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_04",
+        "titulo": "Campeão Jovem",
+        "pontos": 15,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_05",
+        "titulo": "Campeão Nacional Veterano de Beleza",
+        "pontos": 15,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_06",
+        "titulo": "Campeão Nacional de Beleza",
+        "pontos": 25,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_07",
+        "titulo": "Campeão Pleno",
+        "pontos": 30,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_08",
+        "titulo": "Grande Campeão Jovem",
+        "pontos": 25,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_09",
+        "titulo": "Grande Campeão Nacional de Beleza",
+        "pontos": 40,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_10",
+        "titulo": "Campeão Inicial da Copa do Brasil",
+        "pontos": 5,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_11",
+        "titulo": "Campeão Filhote da Copa do Brasil",
+        "pontos": 10,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_12",
+        "titulo": "Campeão Jovem da Copa do Brasil",
+        "pontos": 15,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_13",
+        "titulo": "Campeão da Copa do Brasil",
+        "pontos": 20,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_14",
+        "titulo": "Campeão Veterano da Copa do Brasil",
+        "pontos": 15,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_15",
+        "titulo": "Campeão Pan-americano Jovem",
+        "pontos": 15,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_16",
+        "titulo": "Campeão Pan-americano de Beleza",
+        "pontos": 25,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_17",
+        "titulo": "Campeão Pan-americano Veterano de Beleza",
+        "pontos": 20,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_18",
+        "titulo": "Grande Campeão Pan-americano Jovem",
+        "pontos": 25,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_19",
+        "titulo": "Grande Campeão Pan-americano de Beleza",
+        "pontos": 45,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_20",
+        "titulo": "Grande Campeão Pan-americano Veterano de Beleza",
+        "pontos": 30,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_21",
+        "titulo": "Campeão Latino-americano Jovem",
+        "pontos": 20,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_22",
+        "titulo": "Campeão Latino-americano",
+        "pontos": 25,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_23",
+        "titulo": "Campeão Latino-americano Veterano",
+        "pontos": 20,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_24",
+        "titulo": "Título Nacional Conquistado no Exterior",
+        "pontos": 20,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_25",
+        "titulo": "Campeão do Brasil",
+        "pontos": 40,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_26",
+        "titulo": "Jovem Vencedor Nacional",
+        "pontos": 45,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_27",
+        "titulo": "Grande Vencedor Nacional",
+        "pontos": 50,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_28",
+        "titulo": "Promissor Vencedor Exposição Seccional (FCI)",
+        "pontos": 30,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_29",
+        "titulo": "Jovem Vencedor Exposição Seccional (FCI)",
+        "pontos": 35,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_30",
+        "titulo": "Vencedor Exposição Seccional (FCI)",
+        "pontos": 40,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_31",
+        "titulo": "Jovem Vencedor Mundial",
+        "pontos": 40,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_32",
+        "titulo": "Vencedor Mundial",
+        "pontos": 45,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_33",
+        "titulo": "Campeão Internacional Jovem de Beleza",
+        "pontos": 45,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_34",
+        "titulo": "Campeão Internacional de Beleza",
+        "pontos": 55,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_35",
+        "titulo": "Campeão Internacional de Exposição",
+        "pontos": 55,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_36",
+        "titulo": "Campeão Internacional Veterano de Beleza",
+        "pontos": 45,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_37",
+        "titulo": "Campeão Reprodutor",
+        "pontos": 50,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_38",
+        "titulo": "Promissor Campeão da Guanabara",
+        "pontos": 20,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_39",
+        "titulo": "Jovem Campeão da Guanabara",
+        "pontos": 25,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_40",
+        "titulo": "Campeão da Guanabara",
+        "pontos": 30,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      },
+      {
+        "id": "CBKC_RANK_2026_41",
+        "titulo": "Veterano Campeão da Guanabara",
+        "pontos": 25,
+        "fonte": "regulamentos_17.pdf, art. 2",
+        "validade": "2026",
+        "uso_2027": "somente_simulacao"
+      }
+    ]
+  }
+  

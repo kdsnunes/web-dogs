@@ -9,6 +9,12 @@ import {
   upsertPlan,
   type ShowFormValues,
 } from './api';
+import {
+  deleteDogTitle,
+  listDogTitles,
+  upsertDogTitle,
+  type DogTitleFormValues,
+} from './titlesApi';
 import type { ShowPlanStatus } from './types';
 
 export function useShows(year: number) {
@@ -64,5 +70,26 @@ export function useDeletePlan() {
   return useMutation({
     mutationFn: ({ showId, dogId }: { showId: string; dogId: string }) => deletePlan(showId, dogId),
     onSuccess: () => qc.invalidateQueries({ queryKey: ['show-plans'] }),
+  });
+}
+
+export function useDogTitles() {
+  return useQuery({ queryKey: ['dog-titles'], queryFn: listDogTitles });
+}
+
+export function useUpsertDogTitle() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (p: { organizationId: string; dogId: string; values: DogTitleFormValues }) =>
+      upsertDogTitle(p),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['dog-titles'] }),
+  });
+}
+
+export function useDeleteDogTitle() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (id: string) => deleteDogTitle(id),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['dog-titles'] }),
   });
 }

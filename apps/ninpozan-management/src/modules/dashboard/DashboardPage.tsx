@@ -12,7 +12,8 @@ const roadmap = [
   { phase: 'Fase 7 — Relatórios & Notificações', done: true },
   { phase: 'Configurações & Equipe', done: true },
   { phase: 'Shows — Calendário & Campanha', done: true },
-  { phase: 'Shows — Resultados & Títulos (aguardando regras)', done: false },
+  { phase: 'Shows — Títulos & homologações (simulação 2026)', done: true },
+  { phase: 'Shows — Resultados de pista & importador DogShow', done: false },
 ];
 
 export function DashboardPage() {

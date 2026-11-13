@@ -16,9 +16,10 @@ import { formatDateBR, todayISO } from '@/lib/date';
 import { useShows, useShowPlans, useDeleteShow } from './hooks';
 import { ShowFormDialog } from './ShowFormDialog';
 import { ShowPlansDialog } from './ShowPlansDialog';
+import { TitlesTab } from './TitlesTab';
 import { showPlanStatusLabels, type Show, type ShowPlan } from './types';
 
-type Tab = 'calendario' | 'resultados';
+type Tab = 'calendario' | 'resultados' | 'titulos';
 
 const currentYear = new Date().getFullYear();
 const yearOptions = [currentYear - 1, currentYear, currentYear + 1];
@@ -40,16 +41,17 @@ export function ShowsPage() {
         <TabButton active={tab === 'calendario'} onClick={() => setTab('calendario')}>
           <CalendarDays size={16} /> Calendário
         </TabButton>
+        <TabButton active={tab === 'titulos'} onClick={() => setTab('titulos')}>
+          <Award size={16} /> Títulos
+        </TabButton>
         <TabButton active={tab === 'resultados'} onClick={() => setTab('resultados')}>
           <Trophy size={16} /> Resultados
         </TabButton>
       </div>
 
-      {tab === 'calendario' ? (
-        <CalendarTab orgId={org?.organizationId} />
-      ) : (
-        <ResultsTab />
-      )}
+      {tab === 'calendario' && <CalendarTab orgId={org?.organizationId} />}
+      {tab === 'titulos' && <TitlesTab orgId={org?.organizationId} />}
+      {tab === 'resultados' && <ResultsTab />}
     </div>
   );
 }
@@ -282,10 +284,11 @@ function ResultsTab() {
       <div className="mb-4 flex items-start gap-3 rounded-xl border border-gold/20 bg-gold/5 px-4 py-3 text-sm text-ink-soft">
         <Award size={18} className="mt-0.5 text-gold" />
         <div>
-          <strong className="text-ink">Acompanhamento de títulos — em breve.</strong> Esta seção
-          vai calcular os títulos obtidos e quanto falta para homologar cada um, assim que você
-          enviar as regras de homologação. Por enquanto, mostramos a participação planejada em
-          shows.
+          <strong className="text-ink">Resultados de pista.</strong> Esta seção vai consolidar os
+          resultados obtidos (CACs, CGC, juízes) e o quanto falta em pista para cada título — virá
+          junto com o importador do DogShow. A gestão de títulos e homologações já está na aba{' '}
+          <strong className="text-ink">Títulos</strong>. Por enquanto, mostramos a participação
+          planejada em shows.
         </div>
       </div>
 
