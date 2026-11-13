@@ -10,6 +10,7 @@ import { DashboardPage } from './modules/dashboard/DashboardPage';
 import { DogsPage } from './modules/dogs/DogsPage';
 import { HealthPage } from './modules/health/HealthPage';
 import { InventoryPage } from './modules/inventory/InventoryPage';
+import { ShowsPage } from './modules/shows/ShowsPage';
 import { PontoPage } from './modules/time/PontoPage';
 import { ReportsPage } from './modules/reports/ReportsPage';
 
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/caes" element={<DogsPage />} />
           <Route path="/saude" element={<HealthPage />} />
           <Route path="/estoque" element={<InventoryPage />} />
+          <Route path="/shows" element={<ShowsPage />} />
           <Route path="/ponto" element={<PontoPage />} />
           <Route path="/relatorios" element={<ReportsPage />} />
           <Route path="/configuracoes" element={<SettingsPage />} />

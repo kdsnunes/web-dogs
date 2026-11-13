@@ -18,6 +18,7 @@ function toPayload(values: DogFormValues) {
     microchip: nullable(values.microchip),
     registration_number: nullable(values.registration_number),
     status: values.status,
+    in_campaign: values.in_campaign ?? false,
     notes: nullable(values.notes),
   };
 }

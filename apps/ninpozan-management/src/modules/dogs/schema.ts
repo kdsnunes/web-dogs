@@ -10,6 +10,7 @@ export const dogFormSchema = z.object({
   microchip: z.string().trim().optional(),
   registration_number: z.string().trim().optional(),
   status: z.enum(['ativo', 'aposentado', 'vendido', 'falecido']),
+  in_campaign: z.boolean().default(false),
   notes: z.string().trim().optional(),
 });
 

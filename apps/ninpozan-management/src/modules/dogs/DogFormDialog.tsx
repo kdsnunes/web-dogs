@@ -17,6 +17,7 @@ function toDefaults(dog: Dog | null): DogFormValues {
     microchip: dog?.microchip ?? '',
     registration_number: dog?.registration_number ?? '',
     status: dog?.status ?? 'ativo',
+    in_campaign: dog?.in_campaign ?? false,
     notes: dog?.notes ?? '',
   };
 }
@@ -101,6 +102,19 @@ export function DogFormDialog({
           error={errors.registration_number?.message}
           {...register('registration_number')}
         />
+        <label className="flex items-center gap-3 rounded-lg border border-black/10 bg-paper-alt/40 px-3 py-2.5">
+          <input
+            type="checkbox"
+            className="h-4 w-4 rounded border-black/20 text-brand focus:ring-brand/30"
+            {...register('in_campaign')}
+          />
+          <span className="text-sm">
+            <span className="font-medium text-ink">Em campanha</span>
+            <span className="block text-xs text-ink-muted">
+              Cão participando de exposições — aparece no planejamento de shows e nos resultados.
+            </span>
+          </span>
+        </label>
         <LabeledTextarea
           label="Observações"
           rows={3}

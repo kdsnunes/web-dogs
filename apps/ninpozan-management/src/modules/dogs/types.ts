@@ -15,6 +15,7 @@ export interface Dog {
   status: DogStatus;
   photo_url: string | null;
   notes: string | null;
+  in_campaign: boolean;
   created_at: string;
   updated_at: string;
 }

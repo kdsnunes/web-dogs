@@ -10,6 +10,9 @@ const roadmap = [
   { phase: 'Fase 5 — Estoque', done: true },
   { phase: 'Fase 6 — Ponto da equipe', done: true },
   { phase: 'Fase 7 — Relatórios & Notificações', done: true },
+  { phase: 'Configurações & Equipe', done: true },
+  { phase: 'Shows — Calendário & Campanha', done: true },
+  { phase: 'Shows — Resultados & Títulos (aguardando regras)', done: false },
 ];
 
 export function DashboardPage() {

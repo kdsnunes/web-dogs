@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Pencil, Trash2, Dog as DogIcon } from 'lucide-react';
+import { Plus, Pencil, Trash2, Dog as DogIcon, Trophy } from 'lucide-react';
 import { useDogs, useDeleteDog } from './hooks';
 import { useOrganization } from '@/modules/organization/useOrganization';
 import { DogFormDialog } from './DogFormDialog';
@@ -97,7 +97,14 @@ export function DogsPage() {
               {dogs.map((dog) => (
                 <tr key={dog.id} className="border-b border-black/5 last:border-0">
                   <td className="px-4 py-3">
-                    <div className="font-medium text-ink">{dog.name}</div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium text-ink">{dog.name}</span>
+                      {dog.in_campaign && (
+                        <span className="inline-flex items-center gap-1 rounded-full bg-gold/10 px-2 py-0.5 text-xs font-medium text-gold">
+                          <Trophy size={11} /> Campanha
+                        </span>
+                      )}
+                    </div>
                     {dog.registered_name && (
                       <div className="text-xs text-ink-muted">{dog.registered_name}</div>
                     )}
