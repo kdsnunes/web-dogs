@@ -177,8 +177,8 @@ export function HealthPage() {
                 </div>
               </div>
             ) : (
-              <div className="overflow-hidden rounded-2xl border border-black/5 bg-paper-card">
-                <table className="w-full text-sm">
+              <div className="overflow-x-auto rounded-2xl border border-black/5 bg-paper-card">
+                <table className="w-full min-w-[640px] text-sm">
                   <thead>
                     <tr className="border-b border-black/5 text-left text-xs uppercase tracking-wide text-ink-muted">
                       <th className="px-4 py-3 font-medium">Cão</th>

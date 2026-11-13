@@ -172,8 +172,8 @@ function MembersCard({
     <Card title="Equipe">
       {isLoading && <p className="text-sm text-ink-muted">Carregando…</p>}
       {members && (
-        <div className="overflow-hidden rounded-xl border border-black/5">
-          <table className="w-full text-sm">
+        <div className="overflow-x-auto rounded-xl border border-black/5">
+          <table className="w-full min-w-[480px] text-sm">
             <thead>
               <tr className="border-b border-black/5 text-left text-xs uppercase tracking-wide text-ink-muted">
                 <th className="px-4 py-3 font-medium">Nome</th>

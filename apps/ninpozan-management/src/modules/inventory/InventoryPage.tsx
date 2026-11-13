@@ -105,8 +105,8 @@ export function InventoryPage() {
       )}
 
       {!isLoading && !isError && items && items.length > 0 && (
-        <div className="overflow-hidden rounded-2xl border border-black/5 bg-paper-card">
-          <table className="w-full text-sm">
+        <div className="overflow-x-auto rounded-2xl border border-black/5 bg-paper-card">
+          <table className="w-full min-w-[640px] text-sm">
             <thead>
               <tr className="border-b border-black/5 text-left text-xs uppercase tracking-wide text-ink-muted">
                 <th className="px-4 py-3 font-medium">Item</th>
@@ -184,8 +184,8 @@ export function InventoryPage() {
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-ink-muted">
             Movimentações recentes
           </h2>
-          <div className="overflow-hidden rounded-2xl border border-black/5 bg-paper-card">
-            <table className="w-full text-sm">
+          <div className="overflow-x-auto rounded-2xl border border-black/5 bg-paper-card">
+            <table className="w-full min-w-[640px] text-sm">
               <tbody>
                 {recentMovements.map((movement) => (
                   <tr key={movement.id} className="border-b border-black/5 last:border-0">
