@@ -3,6 +3,12 @@
   // Sem isto, `wrangler deploy` tenta auto-configurar via plugin do Vite e exige Vite >= 6.
   "name": "ninpozan-management",
   "compatibility_date": "2026-11-10",
+  // Endereço definitivo. A zona ninpozankennel.com.br está na Cloudflare; o deploy cria o
+  // registro DNS e o certificado do subdomínio automaticamente.
+  "routes": [{ "pattern": "gestao.ninpozankennel.com.br", "custom_domain": true }],
+  // Com `routes` definido o padrão passa a ser desligar o endereço *.workers.dev.
+  // Mantido ligado até o domínio próprio estar validado (Supabase e equipe migrados).
+  "workers_dev": true,
   "assets": {
     "directory": "./dist",
     // Qualquer rota não encontrada serve index.html (roteamento client-side do React Router).
