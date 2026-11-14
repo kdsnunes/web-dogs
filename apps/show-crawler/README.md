@@ -60,7 +60,7 @@ src/
 - **Fonte** (`core/source.ts`): `listEvents(year)` e `fetchJudgements(event, { breeds })`.
 - **HTTP educado** (`core/http.ts`): uma requisição por vez por fonte, intervalo mínimo,
   novas tentativas em falha transitória, cookies de sessão e decodificação do charset.
-  O crawler se identifica no `User-Agent`.
+  O `User-Agent` é `DogsCrawler/<versão>`: declara que é um crawler, sem citar o canil.
 - **Falhas visíveis**: se uma página não tem o formato esperado, o adaptador lança erro em
   vez de devolver vazio. Um evento que falha não interrompe os demais; cinco falhas
   seguidas interrompem a execução.

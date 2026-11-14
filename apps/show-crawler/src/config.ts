@@ -46,7 +46,8 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
     dogRegistrations: list(env.CRAWLER_DOG_REGISTRATIONS),
     // Nunca abaixo de meio segundo, para não sobrecarregar a fonte.
     minIntervalMs: Number.isFinite(interval) && interval >= 500 ? interval : 1500,
-    userAgent: 'NinpozanShowCrawler/0.1 (+https://ninpozankennel.com.br)',
+    // Identifica-se como crawler, com um nome genérico: nada no tráfego aponta para o canil.
+    userAgent: 'DogsCrawler/0.1',
     dataDir: join(appRoot, 'data'),
   };
 }

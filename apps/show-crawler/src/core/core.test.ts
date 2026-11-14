@@ -61,7 +61,7 @@ describe('text', () => {
 describe('TargetMatcher', () => {
   const matcher = new TargetMatcher([
     { registrationNumber: 'RG/SPX/24/04395', registeredName: null },
-    { registrationNumber: null, registeredName: 'Ninpozan Go Hayato' },
+    { registrationNumber: null, registeredName: 'Exemplo Go Hayato' },
   ]);
 
   it('casa pelo registro, tolerando grafias diferentes', () => {
@@ -69,7 +69,7 @@ describe('TargetMatcher', () => {
   });
 
   it('casa pelo nome registrado quando o registro difere', () => {
-    expect(matcher.matches(result('PEDIGREE-ESTRANGEIRO', 'NINPOZAN GO HAYATO'))).toBe(true);
+    expect(matcher.matches(result('PEDIGREE-ESTRANGEIRO', 'EXEMPLO GO HAYATO'))).toBe(true);
   });
 
   it('não casa cães de fora do canil', () => {

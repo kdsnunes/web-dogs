@@ -8,12 +8,12 @@
     "node": ">=20"
   },
   "scripts": {
-    "crawl": "tsx src/cli.ts",
+    "crawl": "node --disable-warning=DEP0040 --import tsx src/cli.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.45.4",
+    "@supabase/supabase-js": "2.45.4",
     "cheerio": "1.0.0"
   },
   "devDependencies": {
