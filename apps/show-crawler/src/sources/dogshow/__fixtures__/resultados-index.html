@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>DogShow</title></head>
+<body>
+<div class="content">
+	<div class="container">
+		<div class="page-title">
+			R E S U L T A D O S - &nbsp;CLUSC - 31/01/2026
+			<br>
+			<span class="page-description">
+				<a href="resultados.asp?idioma=1"><img src="../img/Brasil.gif" border="0" width="40" height="25"></a>
+				Português
+				<a href="resultados.asp?idioma=2"><img src="../img/Espanha.gif" border="0" width="40" height="25"></a>
+				Español
+				<a href="resultados.asp?idioma=3"><img src="../img/UK.gif" border="0" width="40" height="25"></a>
+				English
+			</span>
+		</div>
+		<div class="row">
+			<div class="page-description">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-10">
+					<h5>Selecione a exposição da qual você deseja o resultado e abaixo os critérios de busca, pressionando o botão correspondente ao critério selecionado.</h5>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">
+				<div class="form-frame-head">
+					Seleção principal
+				</div>
+				<div class="form-frame-body">
+					<form class="form-horizontal" id="frmPrincipal" name="frmPrincipal" method="post" role="form">
+						<fieldset>
+							<div class="form-group">
+								<label for="cboExpoMain" class="col-sm-2 control-label">Exposição:</label>
+								<div class="col-sm-10">
+									<label class="custom-select">
+										<select class="form-control" id="cboExpoMain" name="cboExpo">
+											<option value="0" selected>
+												Todas
+											</option>
+											<option value="1">
+												112ª EXPOSIÇÃO PANAMERICANA
+											</option>
+											<option value="2">
+												113ª EXPOSIÇÃO PANAMERICANA
+											</option>
+											<option value="3">
+												114ª EXPOSIÇÃO PANAMERICANA
+											</option>
+										</select>
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">&nbsp;</label>
+								<div class="col-sm-10">
+									<div class="radio radio-inline">
+										<input id="radResultRaca" type="radio" name="radResult" value="1">
+										<label for="radResultRaca">Raça</label>
+									</div>
+									<div class="radio radio-inline">
+										<input id="radResultGrupo" type="radio" name="radResult" value="2">
+										<label for="radResultGrupo">Grupo</label>
+									</div>
+									<div class="radio radio-inline">
+										<input id="radResultBis" type="radio" name="radResult" value="3">
+										<label for="radResultBis">Best In Show</label>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+					<div id="divRaca" hidden>
+						<form class="form-horizontal" id="frmRaca" name="frmRaca" action="resultado-raca.asp?idioma=1" method="post" role="form">
+							<input type="hidden" id="cboExpoRaca" name="cboExpo" value="0">
+							<fieldset>
+								<div class="form-group">
+									<label for="cboRaca" class="col-sm-2 control-label">Raça:</label>
+									<div class="col-sm-6">
+										<label class="custom-select">
+											<select class="form-control" id="cboRaca" name="cboRaca">
+												<option value="84">
+AFGHAN HOUND
+												</option>
+												<option value="58">
+AKITA
+												</option>
+												<option value="167">
+AMERICAN PIT BULL TERRIER
+												</option>
+												<option value="89">
+AMERICAN STAFFORDSHIRE TERRIER
+												</option>
+												<option value="2">
+AUSTRALIAN CATTLE DOG
+												</option>
+												<option value="177">
+AUSTRALIAN SHEPHERD
+												</option>
+												<option value="166">
+AZAWAKH
+												</option>
+												<option value="60">
+BEAGLE
+												</option>
+												<option value="172">
+BLOODHOUND
+												</option>
+												<option value="36">
+BOIADEIRO BERNÊS
+												</option>
+												<option value="101">
+BORDER COLLIE
+												</option>
+												<option value="85">
+BORZOI
+												</option>
+												<option value="161">
+BOSTON TERRIER
+												</option>
+												<option value="26">
+BOXER
+												</option>
+												<option value="105">
+BRACO ALEMÃO DE PELO CURTO
+												</option>
+												<option value="112">
+BULDOGUE FRANCÊS
+												</option>
+												<option value="40">
+BULL TERRIER
+												</option>
+												<option value="31">
+BULLDOG
+												</option>
+												<option value="32">
+BULLMASTIFF
+												</option>
+												<option value="128">
+CAIRN TERRIER
+												</option>
+												<option value="155">
+CANE CORSO ITALIANO
+												</option>
+												<option value="132">
+CAVALIER KING CHARLES SPANIEL
+												</option>
+												<option value="143">
+CHIHUAHUA PÊLO CURTO
+												</option>
+												<option value="79">
+CHIHUAHUA PÊLO LONGO
+												</option>
+												<option value="16">
+COLLIE PELO LONGO
+												</option>
+												<option value="48">
+DACHSHUND MINIATURA PELO DURO
+												</option>
+												<option value="44">
+DACHSHUND STANDARD PELO LONGO
+												</option>
+												<option value="82">
+DÁLMATA
+												</option>
+												<option value="20">
+DOBERMANN
+												</option>
+												<option value="133">
+DOGO ARGENTINO
+												</option>
+												<option value="27">
+DOGUE ALEMÃO  AZUL
+												</option>
+												<option value="99">
+DOGUE ALEMÃO  DOURADO E TIGRADO
+												</option>
+												<option value="100">
+DOGUE ALEMÃO  PRETO E ARLEQUIM
+												</option>
+												<option value="29">
+FILA BRASILEIRO
+												</option>
+												<option value="37">
+FOX TERRIER PELO LISO
+												</option>
+												<option value="90">
+GOLDEN RETRIEVER
+												</option>
+												<option value="256">
+GRIFFON BELGA
+												</option>
+												<option value="214">
+JACK RUSSELL TERRIER
+												</option>
+												<option value="103">
+KERRY BLUE TERRIER
+												</option>
+												<option value="54">
+MALAMUTE DO ALASKA
+												</option>
+												<option value="72">
+MALTÊS
+												</option>
+												<option value="33">
+MASTIFF
+												</option>
+												<option value="34">
+MASTINO NAPOLETANO
+												</option>
+												<option value="509">
+MONSTER BULL
+												</option>
+												<option value="191">
+OVELHEIRO GAÚCHO
+												</option>
+												<option value="318">
+PASTOR ALEMÃO PELO LONGO
+												</option>
+												<option value="327">
+PASTOR AMERICANO MINIATURA
+												</option>
+												<option value="139">
+PASTOR BELGA TERVUEREN
+												</option>
+												<option value="96">
+PASTOR DE SHETLAND
+												</option>
+												<option value="88">
+PEQUENO LEBREL ITALIANO
+												</option>
+												<option value="145">
+PEQUENO SPANIEL CONTINENTAL - PAPILLON
+												</option>
+												<option value="149">
+PETIT BASSET GRIFFON VERDÉEN
+												</option>
+												<option value="77">
+POODLE TOY (BRANCO, PRETO E MARROM)
+												</option>
+												<option value="505">
+POODLE TOY (CINZA E FULVO)
+												</option>
+												<option value="228">
+PULI (PRETO, FULVO CINZA)
+												</option>
+												<option value="28">
+ROTTWEILER
+												</option>
+												<option value="53">
+SAMOIEDA
+												</option>
+												<option value="140">
+SCHNAUZER GIGANTE PRETO
+												</option>
+												<option value="127">
+SHIBA
+												</option>
+												<option value="81">
+SHIH TZU
+												</option>
+												<option value="93">
+SPITZ ALEMÃO ANÃO - POMERÂNIA
+												</option>
+												<option value="156">
+SPITZ ALEMÃO PEQUENO LARANJA/CINZA/OUTRA
+												</option>
+												<option value="42">
+TERRIER BRASILEIRO
+												</option>
+												<option value="189">
+WELSH CORGI PEMBROKE
+												</option>
+												<option value="87">
+WHIPPET
+												</option>
+												<option value="264">
+XOLOITZCUINTLE SEM PELO STANDARD
+												</option>
+												<option value="322">
+YAKUTIAN LAIKA
+												</option>
+												<option value="41">
+YORKSHIRE TERRIER
+												</option>
+											</select>
+										</label>
+									</div>
+									<div class="col-sm-1">
+										<button type="submit" id="btnExibeRaca" class="btn5 btn btn-default">Exibir</a>
+									</div>
+									<div class="col-sm-3"></div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div id="divGrupo" hidden>
+						<form class="form-horizontal" id="frmGrupo" name="frmGrupo" action="resultado-grupo.asp?idioma=1" method="post" role="form">
+							<input type="hidden" id="cboExpoGrupo" name="cboExpo" value="0">
+							<fieldset>
+								<div class="form-group">
+									<label for="cboGrupo" class="col-sm-2 control-label">Grupo:</label>
+									<div class="col-sm-6">
+										<label class="custom-select">
+											<select class="form-control" id="cboGrupo" name="cboGrupo">
+												<option value="1">
+1 - PASTORES E BOIADEIROS
+												</option>
+												<option value="2">
+2 - PINSCHER, MOLOSSOS, SCHNAUZER
+												</option>
+												<option value="3">
+3 - TERRIERS
+												</option>
+												<option value="4">
+4 - DACHSHUNDS
+												</option>
+												<option value="5">
+5 - SPITZ E DE TIPO PRIMITIVO
+												</option>
+												<option value="6">
+6 - HOUNDS E RASTREADORES
+												</option>
+												<option value="7">
+7 - DE APONTE
+												</option>
+												<option value="8">
+8 - LEVANTADORES E RETRIEVERS
+												</option>
+												<option value="9">
+9 - COMPANHIA
+												</option>
+												<option value="10">
+10 - GALGOS E ASSEMELHADOS
+												</option>
+												<option value="11">
+11 - RAÇAS NÃO HOMOLOGADAS PELA FCI
+												</option>
+											</select>
+										</label>
+									</div>
+									<div class="col-sm-4"></div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label"></label>
+									<div class="col-sm-7">
+										<div class="radio radio-inline">
+											<input id="radGrupoClasseFilhote" type="radio" name="radGrupoClasse" value="1">
+											<label for="radGrupoClasseFilhote">Filhotes</label>
+										</div>
+										<div class="radio radio-inline">
+											<input id="radGrupoClasseJovem" type="radio" name="radGrupoClasse" value="2">
+											<label for="radGrupoClasseJovem">Jovens</label>
+										</div>
+										<div class="radio radio-inline">
+											<input id="radGrupoClasseAdulto" type="radio" name="radGrupoClasse" value="3" checked>
+											<label for="radGrupoClasseAdulto">Adultos</label>
+										</div>
+									</div>
+									<div class="col-sm-1">
+										<button type="submit" id="btnExibeGrupo" class="btn5 btn btn-default">Exibir</a>
+									</div>
+									<div class="col-sm-2"></div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div id="divBis" hidden>
+						<form class="form-horizontal" id="frmBis" name="frmBis" method="post" role="form">
+							<input type="hidden" id="cboExpoBis" name="cboExpo" value="0">
+							<fieldset>
+								<div class="form-group">
+									<label class="col-sm-2 control-label"></label>
+									<div class="col-sm-7">
+										<div class="radio radio-inline">
+											<input id="radClasseInicial" type="radio" name="radClasse" value="0">
+											<label for="radClasseInicial">Iniciais</label>
+										</div>
+										<div class="radio radio-inline">
+											<input id="radClasseFilhote" type="radio" name="radClasse" value="1">
+											<label for="radClasseFilhote">Filhotes</label>
+										</div>
+										<div class="radio radio-inline">
+											<input id="radClasseJovem" type="radio" name="radClasse" value="2">
+											<label for="radClasseJovem">Jovens</label>
+										</div>
+										<div class="radio radio-inline">
+											<input id="radClasseAdulto" type="radio" name="radClasse" value="3" checked>
+											<label for="radClasseAdulto">Adultos</label>
+										</div>
+										<div class="radio radio-inline">
+											<input id="radClasseVeterano" type="radio" name="radClasse" value="4">
+											<label for="radClasseVeterano">Veteranos</label>
+										</div>
+										<div class="radio radio-inline">
+											<input id="radClasseOwner" type="radio" name="radClasse" value="5">
+											<label for="radClasseOwner">Proprietário</label>
+										</div>
+									</div>
+									<div class="col-sm-1">
+										<button type="submit" id="btnExibeBIS" class="btn5 btn btn-default">Exibir</a>
+									</div>
+									<div class="col-sm-2"></div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	</div>
+</div>
+<p/>
+
+</body></html>
