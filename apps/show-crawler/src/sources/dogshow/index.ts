@@ -48,7 +48,8 @@ export class DogShowSource implements Source {
 
     const judgements: BreedJudgement[] = [];
     for (const breed of breeds) {
-      for (const show of index.shows) {
+      const shows = index.shows.filter((s) => breed.showIds?.includes(s.id) ?? true);
+      for (const show of shows) {
         const page = await session.postForm(
           `${BASE}/Resultados/mapa-resultado.asp?idioma=1`,
           { optCao: '', Exposicao: show.id, cboRaca: breed.id },

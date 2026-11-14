@@ -73,31 +73,71 @@ export interface ParsedOption {
   name: string;
 }
 
+export interface ParsedBreedOption extends ParsedOption {
+  /** Exposições em que a raça aparece; `null` quando a página não informa (tentar todas). */
+  showIds: string[] | null;
+}
+
 export interface ParsedResultsIndex {
   /** Data do evento ativo na sessão, para conferir se é o evento pedido. */
   date: string | null;
   shows: ParsedOption[];
-  breeds: ParsedOption[];
+  breeds: ParsedBreedOption[];
 }
 
+/**
+ * O índice de resultados tem dois layouts: o padrão (`resultados.asp`, com listas de seleção)
+ * e o "on line" (`resultado-online.asp`, com as raças já julgadas de cada exposição em links).
+ */
 export function parseResultsIndex(html: string): ParsedResultsIndex {
   const $ = cheerio.load(html);
-  const expoSelect = $('select[name="cboExpo"]').first();
-  if (expoSelect.length === 0) {
-    throw new SourceError(DOGSHOW_ID, 'página de resultados sem a lista de exposições');
-  }
-  const options = (select: ReturnType<typeof $>): ParsedOption[] =>
-    select
-      .find('option')
-      .map((_, o) => ({ id: ($(o).attr('value') ?? '').trim(), name: cleanText($(o).text()) }))
-      .get()
-      .filter((o) => o.id !== '' && o.name !== '');
+  const date = titleDate($);
 
-  return {
-    date: titleDate($),
-    shows: options(expoSelect).filter((o) => o.id !== '0'),
-    breeds: options($('select[name="cboRaca"]').first()),
-  };
+  const expoSelect = $('select[name="cboExpo"]').first();
+  if (expoSelect.length > 0) {
+    const options = (select: ReturnType<typeof $>): ParsedOption[] =>
+      select
+        .find('option')
+        .map((_, o) => ({ id: ($(o).attr('value') ?? '').trim(), name: cleanText($(o).text()) }))
+        .get()
+        .filter((o) => o.id !== '' && o.name !== '');
+    return {
+      date,
+      shows: options(expoSelect).filter((o) => o.id !== '0'),
+      breeds: options($('select[name="cboRaca"]').first()).map((b) => ({ ...b, showIds: null })),
+    };
+  }
+
+  const online = $('.online-raca').first();
+  if (online.length > 0) {
+    const shows = new Map<string, ParsedOption>();
+    const breeds = new Map<string, ParsedBreedOption>();
+    let showName = '';
+    // O nome da exposição vem como texto solto, seguido da lista das raças julgadas nela.
+    online.contents().each((_, node) => {
+      if (node.type === 'text') {
+        const text = cleanText($(node).text());
+        if (text) showName = text;
+        return;
+      }
+      $(node)
+        .find('a[id^="lnkRaca"]')
+        .addBack('a[id^="lnkRaca"]')
+        .each((_, a) => {
+          const breedId = ($(a).attr('id') ?? '').slice('lnkRaca'.length);
+          const showId = ($(a).attr('value') ?? '').trim();
+          const name = cleanText($(a).text());
+          if (!breedId || !showId || !name) return;
+          if (!shows.has(showId)) shows.set(showId, { id: showId, name: showName });
+          const breed = breeds.get(breedId) ?? { id: breedId, name, showIds: [] };
+          breed.showIds?.push(showId);
+          breeds.set(breedId, breed);
+        });
+    });
+    return { date, shows: [...shows.values()], breeds: [...breeds.values()] };
+  }
+
+  throw new SourceError(DOGSHOW_ID, 'página de resultados sem a lista de exposições');
 }
 
 // ---------------------------------------------------------------------------

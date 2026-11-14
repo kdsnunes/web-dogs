@@ -82,7 +82,15 @@ describe('parseResultsIndex', () => {
 
   it('lista as raças com resultado no evento', () => {
     expect(index.breeds).toHaveLength(68);
-    expect(index.breeds).toContainEqual({ id: '127', name: 'SHIBA' });
+    expect(index.breeds).toContainEqual({ id: '127', name: 'SHIBA', showIds: null });
+  });
+
+  it('lê o layout "on line", com as raças julgadas em cada exposição', () => {
+    const online = parseResultsIndex(fixture('resultados-online.html'));
+    expect(online.date).toBe('2026-06-20');
+    expect(online.shows).toEqual([{ id: '139', name: 'I EXPO. ESTADUAL DO GRUPO 2' }]);
+    expect(online.breeds).toHaveLength(9);
+    expect(online.breeds).toContainEqual({ id: '28', name: 'ROTTWEILER', showIds: ['139'] });
   });
 
   it('acusa página sem a lista de exposições', () => {
